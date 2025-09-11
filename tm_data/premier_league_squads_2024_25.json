@@ -1,0 +1,4329 @@
+{
+  "season": "2024-25",
+  "league": "Premier League",
+  "total_teams": 20,
+  "fetched_at": "2025-09-11 14:49:12 UTC",
+  "teams": [
+    {
+      "team_name": "arsenal",
+      "team_id": 11,
+      "squad_count": 23,
+      "squad": [
+        {
+          "playerId": "262749",
+          "clubId": "11",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "111819",
+          "clubId": "11",
+          "shirtNumber": 32,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "495666",
+          "clubId": "11",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "435338",
+          "clubId": "11",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "425918",
+          "clubId": "11",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "331560",
+          "clubId": "11",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "890721",
+          "clubId": "11",
+          "shirtNumber": 49,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "502821",
+          "clubId": "11",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "203853",
+          "clubId": "11",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "300716",
+          "clubId": "11",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "420243",
+          "clubId": "11",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "335721",
+          "clubId": "11",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "230784",
+          "clubId": "11",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "357662",
+          "clubId": "11",
+          "shirtNumber": 41,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "338424",
+          "clubId": "11",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "316264",
+          "clubId": "11",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "890719",
+          "clubId": "11",
+          "shirtNumber": 53,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "655488",
+          "clubId": "11",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "144028",
+          "clubId": "11",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "433177",
+          "clubId": "11",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "134425",
+          "clubId": "11",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "309400",
+          "clubId": "11",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "363205",
+          "clubId": "11",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "man city",
+      "team_id": 281,
+      "squad_count": 32,
+      "squad": [
+        {
+          "playerId": "238223",
+          "clubId": "281",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "85941",
+          "clubId": "281",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "116648",
+          "clubId": "281",
+          "shirtNumber": 13,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "14555",
+          "clubId": "281",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "475959",
+          "clubId": "281",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "258004",
+          "clubId": "281",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "763079",
+          "clubId": "281",
+          "shirtNumber": 45,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1005575",
+          "clubId": "281",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "284730",
+          "clubId": "281",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "186590",
+          "clubId": "281",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "177476",
+          "clubId": "281",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "578391",
+          "clubId": "281",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "701057",
+          "clubId": "281",
+          "shirtNumber": 82,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "357565",
+          "clubId": "281",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "460939",
+          "clubId": "281",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "466805",
+          "clubId": "281",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "601883",
+          "clubId": "281",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "51471",
+          "clubId": "281",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "743413",
+          "clubId": "281",
+          "shirtNumber": 75,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "53622",
+          "clubId": "281",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "241641",
+          "clubId": "281",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "88755",
+          "clubId": "281",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "583199",
+          "clubId": "281",
+          "shirtNumber": 87,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "994536",
+          "clubId": "281",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "486049",
+          "clubId": "281",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "203460",
+          "clubId": "281",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "406635",
+          "clubId": "281",
+          "shirtNumber": 47,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "743591",
+          "clubId": "281",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "607223",
+          "clubId": "281",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "661207",
+          "clubId": "281",
+          "shirtNumber": 52,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "418560",
+          "clubId": "281",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "445939",
+          "clubId": "281",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "liverpool",
+      "team_id": 31,
+      "squad_count": 24,
+      "squad": [
+        {
+          "playerId": "105470",
+          "clubId": "31",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "340918",
+          "clubId": "31",
+          "shirtNumber": 62,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "486604",
+          "clubId": "31",
+          "shirtNumber": 56,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "706815",
+          "clubId": "31",
+          "shirtNumber": 95,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "357119",
+          "clubId": "31",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "139208",
+          "clubId": "31",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "256178",
+          "clubId": "31",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "632349",
+          "clubId": "31",
+          "shirtNumber": 78,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "338070",
+          "clubId": "31",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "234803",
+          "clubId": "31",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "624258",
+          "clubId": "31",
+          "shirtNumber": 84,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "478573",
+          "clubId": "31",
+          "shirtNumber": 38,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "146310",
+          "clubId": "31",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "618494",
+          "clubId": "31",
+          "shirtNumber": 80,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "534033",
+          "clubId": "31",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "433188",
+          "clubId": "31",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "451276",
+          "clubId": "31",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "565822",
+          "clubId": "31",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "480692",
+          "clubId": "31",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "434675",
+          "clubId": "31",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "340950",
+          "clubId": "31",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "148455",
+          "clubId": "31",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "341092",
+          "clubId": "31",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "546543",
+          "clubId": "31",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "chelsea",
+      "team_id": 631,
+      "squad_count": 58,
+      "squad": [
+        {
+          "playerId": "403151",
+          "clubId": "631",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "585323",
+          "clubId": "631",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "834397",
+          "clubId": "631",
+          "shirtNumber": 39,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "656316",
+          "clubId": "631",
+          "shirtNumber": 44,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "490606",
+          "clubId": "631",
+          "shirtNumber": 47,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "116648",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "827435",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "857792",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "614258",
+          "clubId": "631",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "805714",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "346314",
+          "clubId": "631",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "475411",
+          "clubId": "631",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "386047",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "463603",
+          "clubId": "631",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "258878",
+          "clubId": "631",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "910905",
+          "clubId": "631",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1145504",
+          "clubId": "631",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "985691",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "936841",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "284857",
+          "clubId": "631",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "316125",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "922698",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "620322",
+          "clubId": "631",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "472423",
+          "clubId": "631",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1004708",
+          "clubId": "631",
+          "shirtNumber": 34,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1045121",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "868920",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "687626",
+          "clubId": "631",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "628451",
+          "clubId": "631",
+          "shirtNumber": 45,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "670717",
+          "clubId": "631",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "906214",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1108471",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "648195",
+          "clubId": "631",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "743600",
+          "clubId": "631",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "475188",
+          "clubId": "631",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "659459",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "622380",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1010854",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "954125",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1108464",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "568177",
+          "clubId": "631",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "581675",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "926135",
+          "clubId": "631",
+          "shirtNumber": 37,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "401173",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "936874",
+          "clubId": "631",
+          "shirtNumber": 32,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "537860",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "487465",
+          "clubId": "631",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503987",
+          "clubId": "631",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1016556",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "462250",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "626724",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "776890",
+          "clubId": "631",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "610849",
+          "clubId": "631",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "344381",
+          "clubId": "631",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "938158",
+          "clubId": "631",
+          "shirtNumber": 38,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1082850",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "787232",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "982097",
+          "clubId": "631",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "man united",
+      "team_id": 985,
+      "squad_count": 29,
+      "squad": [
+        {
+          "playerId": "234509",
+          "clubId": "985",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "336077",
+          "clubId": "985",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "34130",
+          "clubId": "985",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "923831",
+          "clubId": "985",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "480762",
+          "clubId": "985",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "326031",
+          "clubId": "985",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "177907",
+          "clubId": "985",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "184573",
+          "clubId": "985",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1078163",
+          "clubId": "985",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "42412",
+          "clubId": "985",
+          "shirtNumber": 35,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "926952",
+          "clubId": "985",
+          "shirtNumber": 13,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "183288",
+          "clubId": "985",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1011738",
+          "clubId": "985",
+          "shirtNumber": 41,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "357147",
+          "clubId": "985",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "340456",
+          "clubId": "985",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "476701",
+          "clubId": "985",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "16306",
+          "clubId": "985",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "654253",
+          "clubId": "985",
+          "shirtNumber": 43,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "820374",
+          "clubId": "985",
+          "shirtNumber": 37,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "747153",
+          "clubId": "985",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "240306",
+          "clubId": "985",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "346483",
+          "clubId": "985",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "69633",
+          "clubId": "985",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "811779",
+          "clubId": "985",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "536835",
+          "clubId": "985",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "610442",
+          "clubId": "985",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "435648",
+          "clubId": "985",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1042886",
+          "clubId": "985",
+          "shirtNumber": 56,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "888639",
+          "clubId": "985",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "tottenham",
+      "team_id": 148,
+      "squad_count": 30,
+      "squad": [
+        {
+          "playerId": "286047",
+          "clubId": "148",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "725912",
+          "clubId": "148",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "52570",
+          "clubId": "148",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "428016",
+          "clubId": "148",
+          "shirtNumber": 40,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "282823",
+          "clubId": "148",
+          "shirtNumber": 41,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "355915",
+          "clubId": "148",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "557459",
+          "clubId": "148",
+          "shirtNumber": 37,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "263236",
+          "clubId": "148",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "568559",
+          "clubId": "148",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "192765",
+          "clubId": "148",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "556385",
+          "clubId": "148",
+          "shirtNumber": 13,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "483348",
+          "clubId": "148",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "282429",
+          "clubId": "148",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "553875",
+          "clubId": "148",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "922693",
+          "clubId": "148",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "354362",
+          "clubId": "148",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "410425",
+          "clubId": "148",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "866246",
+          "clubId": "148",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "568693",
+          "clubId": "148",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "431755",
+          "clubId": "148",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "294057",
+          "clubId": "148",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "470607",
+          "clubId": "148",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "91845",
+          "clubId": "148",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "743498",
+          "clubId": "148",
+          "shirtNumber": 28,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1011147",
+          "clubId": "148",
+          "shirtNumber": 47,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "170527",
+          "clubId": "148",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "258889",
+          "clubId": "148",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "801734",
+          "clubId": "148",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "378710",
+          "clubId": "148",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "670883",
+          "clubId": "148",
+          "shirtNumber": 44,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "aston villa",
+      "team_id": 405,
+      "squad_count": 24,
+      "squad": [
+        {
+          "playerId": "111873",
+          "clubId": "405",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "75458",
+          "clubId": "405",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "413403",
+          "clubId": "405",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "399776",
+          "clubId": "405",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "386047",
+          "clubId": "405",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "645686",
+          "clubId": "405",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "253677",
+          "clubId": "405",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "233124",
+          "clubId": "405",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "485585",
+          "clubId": "405",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "126664",
+          "clubId": "405",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "425334",
+          "clubId": "405",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1063329",
+          "clubId": "405",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "485706",
+          "clubId": "405",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "394327",
+          "clubId": "405",
+          "shirtNumber": 44,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "249565",
+          "clubId": "405",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503749",
+          "clubId": "405",
+          "shirtNumber": 41,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "193116",
+          "clubId": "405",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "131978",
+          "clubId": "405",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503743",
+          "clubId": "405",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "296622",
+          "clubId": "405",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "258923",
+          "clubId": "405",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "387626",
+          "clubId": "405",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "326029",
+          "clubId": "405",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "324358",
+          "clubId": "405",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "newcastle united",
+      "team_id": 762,
+      "squad_count": 31,
+      "squad": [
+        {
+          "playerId": "192080",
+          "clubId": "762",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "124419",
+          "clubId": "762",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "74960",
+          "clubId": "762",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "142389",
+          "clubId": "762",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "29712",
+          "clubId": "762",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "361093",
+          "clubId": "762",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "135343",
+          "clubId": "762",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "134270",
+          "clubId": "762",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "183318",
+          "clubId": "762",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "670858",
+          "clubId": "762",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "250478",
+          "clubId": "762",
+          "shirtNumber": 13,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "346018",
+          "clubId": "762",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "900601",
+          "clubId": "762",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503981",
+          "clubId": "762",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "95810",
+          "clubId": "762",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "184528",
+          "clubId": "762",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "559130",
+          "clubId": "762",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "520624",
+          "clubId": "762",
+          "shirtNumber": 39,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "206225",
+          "clubId": "762",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "397033",
+          "clubId": "762",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "333241",
+          "clubId": "762",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "340329",
+          "clubId": "762",
+          "shirtNumber": 28,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "922769",
+          "clubId": "762",
+          "shirtNumber": 67,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "346707",
+          "clubId": "762",
+          "shirtNumber": 36,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "614811",
+          "clubId": "762",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503733",
+          "clubId": "762",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "398065",
+          "clubId": "762",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "199527",
+          "clubId": "762",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "349066",
+          "clubId": "762",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "123682",
+          "clubId": "762",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "609556",
+          "clubId": "762",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "brighton & hove albion",
+      "team_id": 1237,
+      "squad_count": 31,
+      "squad": [
+        {
+          "playerId": "565093",
+          "clubId": "1237",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "646353",
+          "clubId": "1237",
+          "shirtNumber": 39,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "73564",
+          "clubId": "1237",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "406556",
+          "clubId": "1237",
+          "shirtNumber": 37,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "576314",
+          "clubId": "1237",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "380350",
+          "clubId": "1237",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "212847",
+          "clubId": "1237",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "581330",
+          "clubId": "1237",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "148153",
+          "clubId": "1237",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "349599",
+          "clubId": "1237",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "369316",
+          "clubId": "1237",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "504148",
+          "clubId": "1237",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "111195",
+          "clubId": "1237",
+          "shirtNumber": 34,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "567597",
+          "clubId": "1237",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "973085",
+          "clubId": "1237",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "415381",
+          "clubId": "1237",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "867688",
+          "clubId": "1237",
+          "shirtNumber": 41,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "667287",
+          "clubId": "1237",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "406634",
+          "clubId": "1237",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "996897",
+          "clubId": "1237",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "3333",
+          "clubId": "1237",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "504849",
+          "clubId": "1237",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "658536",
+          "clubId": "1237",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "568005",
+          "clubId": "1237",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1012534",
+          "clubId": "1237",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "700106",
+          "clubId": "1237",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "209212",
+          "clubId": "1237",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "878150",
+          "clubId": "1237",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "626724",
+          "clubId": "1237",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "538977",
+          "clubId": "1237",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "67063",
+          "clubId": "1237",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "crystal palace",
+      "team_id": 873,
+      "squad_count": 29,
+      "squad": [
+        {
+          "playerId": "258919",
+          "clubId": "873",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "425306",
+          "clubId": "873",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "670840",
+          "clubId": "873",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "196722",
+          "clubId": "873",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "392757",
+          "clubId": "873",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "434224",
+          "clubId": "873",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "689637",
+          "clubId": "873",
+          "shirtNumber": 34,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "578539",
+          "clubId": "873",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "730893",
+          "clubId": "873",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "316125",
+          "clubId": "873",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "493003",
+          "clubId": "873",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "85177",
+          "clubId": "873",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1047261",
+          "clubId": "873",
+          "shirtNumber": 58,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "92572",
+          "clubId": "873",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "744149",
+          "clubId": "873",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "543387",
+          "clubId": "873",
+          "shirtNumber": 28,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "262980",
+          "clubId": "873",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "865993",
+          "clubId": "873",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "860078",
+          "clubId": "873",
+          "shirtNumber": 42,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "207014",
+          "clubId": "873",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "479999",
+          "clubId": "873",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "356141",
+          "clubId": "873",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "743597",
+          "clubId": "873",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "747009",
+          "clubId": "873",
+          "shirtNumber": 55,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "410225",
+          "clubId": "873",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "967319",
+          "clubId": "873",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "512354",
+          "clubId": "873",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "420002",
+          "clubId": "873",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "340324",
+          "clubId": "873",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "afc bournemouth",
+      "team_id": 989,
+      "squad_count": 26,
+      "squad": [
+        {
+          "playerId": "192279",
+          "clubId": "989",
+          "shirtNumber": 13,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "357658",
+          "clubId": "989",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "582078",
+          "clubId": "989",
+          "shirtNumber": 40,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "659089",
+          "clubId": "989",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "469781",
+          "clubId": "989",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "480987",
+          "clubId": "989",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "611793",
+          "clubId": "989",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "994604",
+          "clubId": "989",
+          "shirtNumber": 45,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "939615",
+          "clubId": "989",
+          "shirtNumber": 48,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "730861",
+          "clubId": "989",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1009658",
+          "clubId": "989",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "513970",
+          "clubId": "989",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "61841",
+          "clubId": "989",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "332705",
+          "clubId": "989",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "855256",
+          "clubId": "989",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "249089",
+          "clubId": "989",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "188077",
+          "clubId": "989",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "399434",
+          "clubId": "989",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "330659",
+          "clubId": "989",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "823231",
+          "clubId": "989",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "512385",
+          "clubId": "989",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "583255",
+          "clubId": "989",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "277033",
+          "clubId": "989",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "711337",
+          "clubId": "989",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "251106",
+          "clubId": "989",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "746740",
+          "clubId": "989",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "leicester",
+      "team_id": 1003,
+      "squad_count": 30,
+      "squad": [
+        {
+          "playerId": "400536",
+          "clubId": "1003",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "260841",
+          "clubId": "1003",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "203026",
+          "clubId": "1003",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "486144",
+          "clubId": "1003",
+          "shirtNumber": 41,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "292808",
+          "clubId": "1003",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "461833",
+          "clubId": "1003",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "298091",
+          "clubId": "1003",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "128901",
+          "clubId": "1003",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "99331",
+          "clubId": "1003",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "714458",
+          "clubId": "1003",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "564529",
+          "clubId": "1003",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "505194",
+          "clubId": "1003",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "413220",
+          "clubId": "1003",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "215876",
+          "clubId": "1003",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "592975",
+          "clubId": "1003",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "274839",
+          "clubId": "1003",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "344605",
+          "clubId": "1003",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "406638",
+          "clubId": "1003",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "249126",
+          "clubId": "1003",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "936842",
+          "clubId": "1003",
+          "shirtNumber": 34,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "654982",
+          "clubId": "1003",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "983989",
+          "clubId": "1003",
+          "shirtNumber": 40,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "340328",
+          "clubId": "1003",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "864121",
+          "clubId": "1003",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "186186",
+          "clubId": "1003",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "621193",
+          "clubId": "1003",
+          "shirtNumber": 35,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "365172",
+          "clubId": "1003",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "344152",
+          "clubId": "1003",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "108354",
+          "clubId": "1003",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "197838",
+          "clubId": "1003",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "ipswich",
+      "team_id": 677,
+      "squad_count": 29,
+      "squad": [
+        {
+          "playerId": "371021",
+          "clubId": "677",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "208379",
+          "clubId": "677",
+          "shirtNumber": 28,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "245625",
+          "clubId": "677",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "621997",
+          "clubId": "677",
+          "shirtNumber": 13,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "693095",
+          "clubId": "677",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "401320",
+          "clubId": "677",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "343475",
+          "clubId": "677",
+          "shirtNumber": 44,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "527425",
+          "clubId": "677",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "255788",
+          "clubId": "677",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "596446",
+          "clubId": "677",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "146509",
+          "clubId": "677",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "468002",
+          "clubId": "677",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "342046",
+          "clubId": "677",
+          "shirtNumber": 40,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "351749",
+          "clubId": "677",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "468066",
+          "clubId": "677",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "458178",
+          "clubId": "677",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "123551",
+          "clubId": "677",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "181687",
+          "clubId": "677",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "255731",
+          "clubId": "677",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "660867",
+          "clubId": "677",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "741238",
+          "clubId": "677",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "292139",
+          "clubId": "677",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "288323",
+          "clubId": "677",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "665390",
+          "clubId": "677",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "559794",
+          "clubId": "677",
+          "shirtNumber": 47,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "344009",
+          "clubId": "677",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "392591",
+          "clubId": "677",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "349503",
+          "clubId": "677",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "420808",
+          "clubId": "677",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "southampton",
+      "team_id": 180,
+      "squad_count": 32,
+      "squad": [
+        {
+          "playerId": "427568",
+          "clubId": "180",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "585550",
+          "clubId": "180",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "336367",
+          "clubId": "180",
+          "shirtNumber": 13,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "95976",
+          "clubId": "180",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503977",
+          "clubId": "180",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "243028",
+          "clubId": "180",
+          "shirtNumber": 35,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "467563",
+          "clubId": "180",
+          "shirtNumber": 37,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503990",
+          "clubId": "180",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "163744",
+          "clubId": "180",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "986298",
+          "clubId": "180",
+          "shirtNumber": 39,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "646738",
+          "clubId": "180",
+          "shirtNumber": 28,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "262300",
+          "clubId": "180",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "729264",
+          "clubId": "180",
+          "shirtNumber": 34,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "195633",
+          "clubId": "180",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "341051",
+          "clubId": "180",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "405385",
+          "clubId": "180",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "324223",
+          "clubId": "180",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "711999",
+          "clubId": "180",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "506189",
+          "clubId": "180",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "747951",
+          "clubId": "180",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "880245",
+          "clubId": "180",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "468198",
+          "clubId": "180",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "444211",
+          "clubId": "180",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503866",
+          "clubId": "180",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "43530",
+          "clubId": "180",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "746695",
+          "clubId": "180",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "146795",
+          "clubId": "180",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "866655",
+          "clubId": "180",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "250426",
+          "clubId": "180",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "533662",
+          "clubId": "180",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "272855",
+          "clubId": "180",
+          "shirtNumber": 32,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "447995",
+          "clubId": "180",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "fulham",
+      "team_id": 931,
+      "squad_count": 26,
+      "squad": [
+        {
+          "playerId": "72476",
+          "clubId": "931",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "381469",
+          "clubId": "931",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "260827",
+          "clubId": "931",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "461883",
+          "clubId": "931",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "272622",
+          "clubId": "931",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "494880",
+          "clubId": "931",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "349701",
+          "clubId": "931",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "392775",
+          "clubId": "931",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "206746",
+          "clubId": "931",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "262226",
+          "clubId": "931",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "333014",
+          "clubId": "931",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "245056",
+          "clubId": "931",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "226973",
+          "clubId": "931",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "123275",
+          "clubId": "931",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1011131",
+          "clubId": "931",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "392765",
+          "clubId": "931",
+          "shirtNumber": 32,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "203394",
+          "clubId": "931",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "242631",
+          "clubId": "931",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "340325",
+          "clubId": "931",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "52769",
+          "clubId": "931",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "992686",
+          "clubId": "931",
+          "shirtNumber": 47,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "279455",
+          "clubId": "931",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "204103",
+          "clubId": "931",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "735571",
+          "clubId": "931",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "206040",
+          "clubId": "931",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "525287",
+          "clubId": "931",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "everton",
+      "team_id": 29,
+      "squad_count": 25,
+      "squad": [
+        {
+          "playerId": "130164",
+          "clubId": "29",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "329813",
+          "clubId": "29",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "33873",
+          "clubId": "29",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "661053",
+          "clubId": "29",
+          "shirtNumber": 32,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "711544",
+          "clubId": "29",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "173504",
+          "clubId": "29",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "118534",
+          "clubId": "29",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "404842",
+          "clubId": "29",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "424015",
+          "clubId": "29",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "14086",
+          "clubId": "29",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "68390",
+          "clubId": "29",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "289592",
+          "clubId": "29",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "505219",
+          "clubId": "29",
+          "shirtNumber": 37,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "126665",
+          "clubId": "29",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "748319",
+          "clubId": "29",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "696589",
+          "clubId": "29",
+          "shirtNumber": 42,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "127187",
+          "clubId": "29",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "584769",
+          "clubId": "29",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "417346",
+          "clubId": "29",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "623570",
+          "clubId": "29",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "513245",
+          "clubId": "29",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "595809",
+          "clubId": "29",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "306024",
+          "clubId": "29",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "571743",
+          "clubId": "29",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "670688",
+          "clubId": "29",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "west ham",
+      "team_id": 379,
+      "squad_count": 27,
+      "squad": [
+        {
+          "playerId": "120629",
+          "clubId": "379",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "61697",
+          "clubId": "379",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "29692",
+          "clubId": "379",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "605184",
+          "clubId": "379",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "525247",
+          "clubId": "379",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "415912",
+          "clubId": "379",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "845321",
+          "clubId": "379",
+          "shirtNumber": 42,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "181778",
+          "clubId": "379",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "922563",
+          "clubId": "379",
+          "shirtNumber": 57,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "92571",
+          "clubId": "379",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "477758",
+          "clubId": "379",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "157672",
+          "clubId": "379",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "401356",
+          "clubId": "379",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "283628",
+          "clubId": "379",
+          "shirtNumber": 28,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "342385",
+          "clubId": "379",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "372246",
+          "clubId": "379",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "181579",
+          "clubId": "379",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "430310",
+          "clubId": "379",
+          "shirtNumber": 39,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "444523",
+          "clubId": "379",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "474701",
+          "clubId": "379",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "543499",
+          "clubId": "379",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "314875",
+          "clubId": "379",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "991800",
+          "clubId": "379",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "648046",
+          "clubId": "379",
+          "shirtNumber": 34,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "75489",
+          "clubId": "379",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "134294",
+          "clubId": "379",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "104124",
+          "clubId": "379",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "brentford",
+      "team_id": 1148,
+      "squad_count": 30,
+      "squad": [
+        {
+          "playerId": "125714",
+          "clubId": "1148",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "488935",
+          "clubId": "1148",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "741236",
+          "clubId": "1148",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "505046",
+          "clubId": "1148",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "469050",
+          "clubId": "1148",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "541231",
+          "clubId": "1148",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "328658",
+          "clubId": "1148",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "442248",
+          "clubId": "1148",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "74810",
+          "clubId": "1148",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "709767",
+          "clubId": "1148",
+          "shirtNumber": 36,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "339556",
+          "clubId": "1148",
+          "shirtNumber": 3,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "823486",
+          "clubId": "1148",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "591949",
+          "clubId": "1148",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "270171",
+          "clubId": "1148",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "148367",
+          "clubId": "1148",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1141628",
+          "clubId": "1148",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "717411",
+          "clubId": "1148",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "319859",
+          "clubId": "1148",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "340321",
+          "clubId": "1148",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "470596",
+          "clubId": "1148",
+          "shirtNumber": 32,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "874538",
+          "clubId": "1148",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "540941",
+          "clubId": "1148",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "559263",
+          "clubId": "1148",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "587002",
+          "clubId": "1148",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "473050",
+          "clubId": "1148",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "644401",
+          "clubId": "1148",
+          "shirtNumber": 23,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1086375",
+          "clubId": "1148",
+          "shirtNumber": 39,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "413039",
+          "clubId": "1148",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "388165",
+          "clubId": "1148",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "739443",
+          "clubId": "1148",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "wolves",
+      "team_id": 543,
+      "squad_count": 33,
+      "squad": [
+        {
+          "playerId": "249994",
+          "clubId": "543",
+          "shirtNumber": 1,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "110864",
+          "clubId": "543",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "136401",
+          "clubId": "543",
+          "shirtNumber": 25,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "215810",
+          "clubId": "543",
+          "shirtNumber": 40,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "606718",
+          "clubId": "543",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "683895",
+          "clubId": "543",
+          "shirtNumber": 12,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "438001",
+          "clubId": "543",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "862297",
+          "clubId": "543",
+          "shirtNumber": 34,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "716276",
+          "clubId": "543",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "955253",
+          "clubId": "543",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "121477",
+          "clubId": "543",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "667121",
+          "clubId": "543",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "231572",
+          "clubId": "543",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1193867",
+          "clubId": "543",
+          "shirtNumber": 37,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "171679",
+          "clubId": "543",
+          "shirtNumber": 2,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "800176",
+          "clubId": "543",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "649020",
+          "clubId": "543",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503975",
+          "clubId": "543",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "735570",
+          "clubId": "543",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "450050",
+          "clubId": "543",
+          "shirtNumber": 27,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "414908",
+          "clubId": "543",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "433183",
+          "clubId": "543",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "614603",
+          "clubId": "543",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "724783",
+          "clubId": "543",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "225122",
+          "clubId": "543",
+          "shirtNumber": 29,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "742451",
+          "clubId": "543",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1060740",
+          "clubId": "543",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "74230",
+          "clubId": "543",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "517894",
+          "clubId": "543",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "429983",
+          "clubId": "543",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "292246",
+          "clubId": "543",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "369567",
+          "clubId": "543",
+          "shirtNumber": 18,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "863741",
+          "clubId": "543",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    },
+    {
+      "team_name": "nottingham",
+      "team_id": 703,
+      "squad_count": 28,
+      "squad": [
+        {
+          "playerId": "127202",
+          "clubId": "703",
+          "shirtNumber": 26,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "641458",
+          "clubId": "703",
+          "shirtNumber": 33,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "45494",
+          "clubId": "703",
+          "shirtNumber": 13,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1005649",
+          "clubId": "703",
+          "shirtNumber": 5,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "413507",
+          "clubId": "703",
+          "shirtNumber": 31,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "673492",
+          "clubId": "703",
+          "shirtNumber": 4,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "142310",
+          "clubId": "703",
+          "shirtNumber": 30,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "1007720",
+          "clubId": "703",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "503680",
+          "clubId": "703",
+          "shirtNumber": 7,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "193098",
+          "clubId": "703",
+          "shirtNumber": 19,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "198516",
+          "clubId": "703",
+          "shirtNumber": 15,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "236490",
+          "clubId": "703",
+          "shirtNumber": 34,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "897481",
+          "clubId": "703",
+          "shirtNumber": 17,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "808509",
+          "clubId": "703",
+          "shirtNumber": 28,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "375885",
+          "clubId": "703",
+          "shirtNumber": 6,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "567576",
+          "clubId": "703",
+          "shirtNumber": 8,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "497291",
+          "clubId": "703",
+          "shirtNumber": 16,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "425902",
+          "clubId": "703",
+          "shirtNumber": 22,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "560694",
+          "clubId": "703",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "429014",
+          "clubId": "703",
+          "shirtNumber": 10,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "392768",
+          "clubId": "703",
+          "shirtNumber": 14,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "745191",
+          "clubId": "703",
+          "shirtNumber": 24,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "583189",
+          "clubId": "703",
+          "shirtNumber": 21,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "663244",
+          "clubId": "703",
+          "shirtNumber": 20,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "506470",
+          "clubId": "703",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "295313",
+          "clubId": "703",
+          "shirtNumber": 9,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "108725",
+          "clubId": "703",
+          "shirtNumber": 11,
+          "isCaptain": false,
+          "type": "historical"
+        },
+        {
+          "playerId": "448854",
+          "clubId": "703",
+          "shirtNumber": null,
+          "isCaptain": false,
+          "type": "historical"
+        }
+      ]
+    }
+  ],
+  "successful_fetches": 20,
+  "failed_fetches": 0
+}
