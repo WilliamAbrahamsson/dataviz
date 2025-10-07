@@ -24,7 +24,6 @@ Unnamed: 0_level_0 Rk,Unnamed: 1_level_0 Player,Unnamed: 2_level_0 Nation,Unname
 23,Christian Atsu,gh GHA,"FW,MF",Newcastle Utd,25,1992,28,19,1784,19.8,2,2,4,2,0,0,1,0,4.0,4.0,2.6,6.7,70,47,125,0.10,0.10,0.20,0.10,0.20,0.20,0.13,0.34,0.20,0.34,Matches
 24,Pierre-Emerick Aubameyang,ga GAB,FW,Arsenal,28,1989,13,12,1057,11.7,10,4,14,9,1,2,0,0,8.4,6.8,1.1,8.0,31,9,85,0.85,0.34,1.19,0.77,1.11,0.71,0.10,0.81,0.58,0.68,Matches
 25,Serge Aurier,ci CIV,DF,Tottenham,24,1992,17,16,1429,15.9,2,2,4,2,0,0,3,1,0.8,0.8,2.6,3.4,32,67,152,0.13,0.13,0.25,0.13,0.25,0.05,0.16,0.21,0.05,0.21,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 26,Charlie Austin,eng ENG,FW,Southampton,28,1989,24,10,1037,11.5,7,0,7,6,1,1,2,0,7.1,6.3,0.8,7.1,5,18,67,0.61,0.00,0.61,0.52,0.52,0.62,0.07,0.68,0.55,0.61,Matches
 27,André Ayew,gh GHA,"MF,FW",West Ham,27,1989,18,9,895,9.9,3,2,5,3,0,1,2,0,3.3,2.5,0.3,2.9,18,18,43,0.30,0.20,0.50,0.30,0.50,0.33,0.03,0.37,0.25,0.29,Matches
 28,André Ayew,gh GHA,"MF,FW",Swansea City,27,1989,12,10,950,10.6,0,2,2,0,0,0,3,0,1.9,1.9,1.3,3.2,16,24,53,0.00,0.19,0.19,0.00,0.19,0.18,0.13,0.30,0.18,0.30,Matches
@@ -50,7 +49,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 48,Christian Benteke,be BEL,FW,Crystal Palace,26,1990,31,24,2240,24.9,3,5,8,2,1,2,6,0,10.2,8.6,2.9,11.5,18,42,133,0.12,0.20,0.32,0.08,0.28,0.41,0.12,0.53,0.34,0.46,Matches
 49,Saido Berahino,bi BDI,FW,Stoke City,23,1993,15,3,494,5.5,0,1,1,0,0,1,0,0,2.0,1.2,0.6,1.8,6,9,30,0.00,0.18,0.18,0.00,0.18,0.37,0.11,0.47,0.22,0.33,Matches
 50,Jóhann Berg Guðmundsson,is ISL,MF,Burnley,26,1990,35,32,2833,31.5,2,8,10,2,0,0,2,0,3.5,3.5,4.7,8.2,83,75,192,0.06,0.25,0.32,0.06,0.32,0.11,0.15,0.26,0.11,0.26,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 51,Ryan Bertrand,eng ENG,DF,Southampton,27,1989,35,35,3135,34.8,0,4,4,0,0,0,2,0,1.7,1.7,3.1,4.8,89,174,213,0.00,0.11,0.11,0.00,0.11,0.05,0.09,0.14,0.05,0.14,Matches
 52,Muhamed Bešić,ba BIH,MF,Everton,24,1992,2,0,46,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0,2,0,0.00,0.00,0.00,0.00,0.00,0.00,0.09,0.09,0.00,0.09,Matches
 53,Philip Billing,dk DEN,MF,Huddersfield,21,1996,16,8,764,8.5,0,0,0,0,0,0,3,0,0.2,0.2,0.5,0.7,12,26,13,0.00,0.00,0.00,0.00,0.00,0.02,0.05,0.08,0.02,0.08,Matches
@@ -76,7 +74,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 73,Gary Cahill,eng ENG,DF,Chelsea,31,1985,27,24,2086,23.2,0,0,0,0,0,0,1,1,0.5,0.5,0.1,0.6,17,69,8,0.00,0.00,0.00,0.00,0.00,0.02,0.00,0.02,0.02,0.02,Matches
 74,Dominic Calvert-Lewin,eng ENG,FW,Everton,20,1997,32,18,1882,20.9,4,6,10,4,0,0,4,0,4.9,4.8,2.6,7.4,42,27,125,0.19,0.29,0.48,0.19,0.48,0.23,0.12,0.36,0.23,0.36,Matches
 75,Geoff Cameron,us USA,"DF,MF",Stoke City,32,1985,20,17,1525,16.9,0,0,0,0,0,0,2,0,0.3,0.3,0.1,0.5,9,48,15,0.00,0.00,0.00,0.00,0.00,0.02,0.01,0.03,0.02,0.03,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 76,Tyrese Campbell,eng ENG,FW,Stoke City,17,1999,4,0,79,0.9,0,0,0,0,0,0,0,0,0.2,0.2,0.0,0.2,1,4,4,0.00,0.00,0.00,0.00,0.00,0.24,0.00,0.24,0.24,0.24,Matches
 77,Emre Can,de GER,MF,Liverpool,23,1994,26,24,2091,23.2,3,4,7,3,0,0,8,0,1.8,1.8,3.0,4.8,84,137,48,0.13,0.17,0.30,0.13,0.30,0.08,0.13,0.21,0.08,0.21,Matches
 78,Étienne Capoue,fr FRA,MF,Watford,29,1988,23,18,1542,17.1,1,0,1,1,0,0,3,0,0.8,0.8,0.6,1.4,8,74,22,0.06,0.00,0.06,0.06,0.06,0.05,0.03,0.08,0.05,0.08,Matches
@@ -102,7 +99,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 98,James Collins,wls WAL,DF,West Ham,33,1983,13,12,1050,11.7,1,0,1,1,0,0,3,0,0.3,0.3,0.2,0.5,5,24,1,0.09,0.00,0.09,0.09,0.09,0.03,0.02,0.05,0.03,0.05,Matches
 99,Lewis Cook,eng ENG,MF,Bournemouth,20,1997,29,25,2237,24.9,0,2,2,0,0,0,5,0,0.5,0.5,1.6,2.0,52,173,30,0.00,0.08,0.08,0.00,0.08,0.02,0.06,0.08,0.02,0.08,Matches
 100,Steve Cook,eng ENG,DF,Bournemouth,26,1991,34,31,2767,30.7,2,1,3,2,0,0,5,0,1.6,1.6,1.0,2.6,15,83,9,0.07,0.03,0.10,0.07,0.10,0.05,0.03,0.08,0.05,0.08,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 101,Francis Coquelin,fr FRA,"MF,DF",Arsenal,26,1991,7,1,169,1.9,0,0,0,0,0,0,0,0,0.1,0.1,0.6,0.7,1,11,1,0.00,0.00,0.00,0.00,0.00,0.03,0.35,0.38,0.03,0.38,Matches
 102,Jack Cork,eng ENG,MF,Burnley,28,1989,38,38,3420,38.0,2,1,3,2,0,0,7,0,2.2,2.2,1.1,3.3,39,165,41,0.05,0.03,0.08,0.05,0.08,0.06,0.03,0.09,0.06,0.09,Matches
 103,Thibaut Courtois,be BEL,GK,Chelsea,25,1992,35,35,3150,35.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
@@ -128,7 +124,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 123,Fabian Delph,eng ENG,DF,Manchester City,27,1989,22,21,1741,19.3,1,2,3,1,0,0,2,0,0.3,0.3,1.2,1.5,53,132,63,0.05,0.10,0.16,0.05,0.16,0.01,0.06,0.08,0.01,0.08,Matches
 124,Mousa Dembélé,be BEL,MF,Tottenham,30,1987,28,21,1879,20.9,0,0,0,0,0,0,6,0,0.4,0.4,0.7,1.1,66,211,26,0.00,0.00,0.00,0.00,0.00,0.02,0.03,0.05,0.02,0.05,Matches
 125,Laurent Depoitre,be BEL,FW,Huddersfield,28,1988,33,18,1820,20.2,6,1,7,6,0,0,1,0,3.7,3.7,1.4,5.1,11,21,89,0.30,0.05,0.35,0.30,0.35,0.18,0.07,0.25,0.18,0.25,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 126,Mike van der Hoorn,nl NED,DF,Swansea City,24,1992,24,24,1944,21.6,1,0,1,1,0,0,4,0,1.0,1.0,0.6,1.6,8,41,5,0.05,0.00,0.05,0.05,0.05,0.05,0.03,0.07,0.05,0.07,Matches
 127,Gerard Deulofeu,es ESP,"FW,MF",Watford,23,1994,7,5,435,4.8,1,0,1,1,0,0,0,0,0.5,0.5,0.6,1.1,23,13,32,0.21,0.00,0.21,0.21,0.21,0.11,0.13,0.24,0.11,0.24,Matches
 128,Fousseni Diabaté,ml MLI,"MF,FW",Leicester City,21,1995,14,5,587,6.5,0,1,1,0,0,0,1,0,0.5,0.5,0.3,0.9,26,18,56,0.00,0.15,0.15,0.00,0.15,0.08,0.05,0.13,0.08,0.13,Matches
@@ -154,7 +149,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 148,Cesc Fàbregas,es ESP,MF,Chelsea,30,1987,32,25,2306,25.6,2,4,6,2,0,0,6,2,2.4,2.4,6.8,9.2,55,348,135,0.08,0.16,0.23,0.08,0.23,0.09,0.26,0.36,0.09,0.36,Matches
 149,Marouane Fellaini,be BEL,MF,Manchester Utd,29,1987,16,5,621,6.9,4,0,4,4,0,0,1,0,3.5,3.5,0.2,3.7,5,19,11,0.58,0.00,0.58,0.58,0.58,0.51,0.03,0.54,0.51,0.54,Matches
 150,Kiko Femenía,es ESP,"DF,FW",Watford,26,1991,23,19,1713,19.0,1,1,2,1,0,0,2,0,0.4,0.4,1.8,2.1,54,72,103,0.05,0.05,0.11,0.05,0.11,0.02,0.09,0.11,0.02,0.11,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 151,Leroy Fer,nl NED,MF,Swansea City,27,1990,20,15,1397,15.5,1,1,2,1,0,0,5,0,1.6,1.6,1.0,2.7,22,66,23,0.06,0.06,0.13,0.06,0.13,0.11,0.07,0.17,0.11,0.17,Matches
 152,Edimilson Fernandes,ch SUI,"MF,DF",West Ham,21,1996,14,9,845,9.4,0,1,1,0,0,0,1,0,0.3,0.3,0.3,0.6,12,20,28,0.00,0.11,0.11,0.00,0.11,0.03,0.03,0.07,0.03,0.07,Matches
 153,Federico Fernández,ar ARG,DF,Swansea City,28,1989,30,30,2676,29.7,1,1,2,1,0,0,5,0,0.7,0.7,0.7,1.4,5,72,8,0.03,0.03,0.07,0.03,0.07,0.02,0.02,0.05,0.02,0.05,Matches
@@ -180,7 +174,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 173,David de Gea,es ESP,GK,Manchester Utd,26,1990,37,37,3330,37.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
 174,Kieran Gibbs,eng ENG,DF,West Brom,27,1989,33,32,2827,31.4,0,1,1,0,0,0,3,0,0.4,0.4,1.8,2.2,59,97,89,0.00,0.03,0.03,0.00,0.03,0.01,0.06,0.07,0.01,0.07,Matches
 175,Olivier Giroud,fr FRA,FW,Arsenal,30,1986,16,1,388,4.3,4,1,5,4,0,0,0,0,3.3,3.3,0.9,4.2,3,5,39,0.93,0.23,1.16,0.93,1.16,0.76,0.22,0.98,0.76,0.98,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 176,Olivier Giroud,fr FRA,FW,Chelsea,30,1986,13,6,613,6.8,3,1,4,3,0,0,0,0,3.6,3.6,2.0,5.6,7,21,61,0.44,0.15,0.59,0.44,0.59,0.53,0.30,0.83,0.53,0.83,Matches
 177,Connor Goldson,eng ENG,DF,Brighton,24,1992,3,2,200,2.2,0,0,0,0,0,0,1,0,0.2,0.2,0.0,0.2,1,3,0,0.00,0.00,0.00,0.00,0.00,0.10,0.00,0.10,0.10,0.10,Matches
 178,Heurelho Gomes,br BRA,GK,Watford,36,1981,24,24,2128,23.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
@@ -206,7 +199,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 198,Jordan Henderson,eng ENG,MF,Liverpool,27,1990,27,25,2171,24.1,1,1,2,1,0,0,1,0,1.2,1.2,1.8,3.0,32,249,37,0.04,0.04,0.08,0.04,0.08,0.05,0.08,0.13,0.05,0.12,Matches
 199,Jeff Hendrick,ie IRL,"FW,MF",Burnley,25,1992,34,29,2331,25.9,2,2,4,2,0,0,1,0,2.0,2.0,2.7,4.7,37,80,114,0.08,0.08,0.15,0.08,0.15,0.08,0.10,0.18,0.08,0.18,Matches
 200,Wayne Hennessey,wls WAL,GK,Crystal Palace,30,1987,27,27,2430,27.0,0,0,0,0,0,0,1,0,0.0,0.0,0.5,0.5,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.02,0.02,0.00,0.02,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 201,Javier Hernández,mx MEX,FW,West Ham,29,1988,28,16,1548,17.2,8,0,8,8,0,0,3,0,5.0,5.0,1.3,6.3,10,31,103,0.47,0.00,0.47,0.47,0.47,0.29,0.08,0.37,0.29,0.37,Matches
 202,Ander Herrera,es ESP,MF,Manchester Utd,27,1989,26,13,1268,14.1,0,2,2,0,0,0,5,0,0.4,0.4,1.6,1.9,12,81,19,0.00,0.14,0.14,0.00,0.14,0.03,0.11,0.14,0.03,0.14,Matches
 203,Son Heung-min,kr KOR,FW,Tottenham,25,1992,37,27,2301,25.6,12,6,18,12,0,0,0,0,10.2,10.2,6.2,16.4,111,92,339,0.47,0.23,0.70,0.47,0.70,0.40,0.24,0.64,0.40,0.64,Matches
@@ -232,7 +224,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 223,José Izquierdo,co COL,"MF,FW",Brighton,25,1992,32,23,1984,22.0,5,3,8,5,0,0,2,0,3.8,3.8,2.2,5.9,67,36,161,0.23,0.14,0.36,0.23,0.36,0.17,0.10,0.27,0.17,0.27,Matches
 224,Phil Jagielka,eng ENG,DF,Everton,34,1982,25,23,2065,22.9,0,0,0,0,0,0,2,0,0.5,0.5,0.0,0.5,4,53,3,0.00,0.00,0.00,0.00,0.00,0.02,0.00,0.02,0.02,0.02,Matches
 225,Eldin Jakupović,ch SUI,GK,Leicester City,32,1984,2,2,180,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 226,Matty James,eng ENG,MF,Leicester City,26,1991,13,11,993,11.0,0,0,0,0,0,0,2,0,1.3,1.3,0.1,1.5,7,28,14,0.00,0.00,0.00,0.00,0.00,0.12,0.01,0.13,0.12,0.13,Matches
 227,Daryl Janmaat,nl NED,DF,Watford,28,1989,23,21,1820,20.2,3,0,3,3,0,0,3,0,1.8,1.8,1.0,2.8,29,107,55,0.15,0.00,0.15,0.15,0.15,0.09,0.05,0.14,0.09,0.14,Matches
 228,Vincent Janssen,nl NED,DF,Tottenham,23,1994,1,0,1,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
@@ -258,7 +249,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 248,Andy King,wls WAL,MF,Leicester City,28,1988,11,5,537,6.0,1,0,1,1,0,0,1,0,0.5,0.5,0.1,0.6,3,13,6,0.17,0.00,0.17,0.17,0.17,0.09,0.02,0.10,0.09,0.10,Matches
 249,Andy King,wls WAL,MF,Swansea City,28,1988,11,9,715,7.9,2,1,3,2,0,0,1,0,1.0,1.0,0.2,1.2,5,38,5,0.25,0.13,0.38,0.25,0.38,0.12,0.03,0.15,0.12,0.15,Matches
 250,Joshua King,no NOR,"FW,MF",Bournemouth,25,1992,33,27,2453,27.3,8,3,11,6,2,2,3,0,6.5,4.9,4.9,9.8,84,83,215,0.29,0.11,0.40,0.22,0.33,0.24,0.18,0.42,0.18,0.36,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 251,Davy Klaassen,nl NED,"MF,FW",Everton,24,1993,7,3,251,2.8,0,0,0,0,0,0,0,0,0.1,0.1,0.1,0.2,1,11,4,0.00,0.00,0.00,0.00,0.00,0.03,0.04,0.07,0.03,0.07,Matches
 252,Ragnar Klavan,ee EST,DF,Liverpool,31,1985,19,16,1451,16.1,1,0,1,1,0,0,0,0,0.9,0.9,0.2,1.0,15,73,5,0.06,0.00,0.06,0.06,0.06,0.05,0.01,0.06,0.05,0.06,Matches
 253,Anthony Knockaert,fr FRA,"MF,FW",Brighton,25,1991,33,27,2421,26.9,3,1,4,3,0,0,4,1,4.1,4.1,3.2,7.3,92,124,153,0.11,0.04,0.15,0.11,0.15,0.15,0.12,0.27,0.15,0.27,Matches
@@ -284,7 +274,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 273,Victor Lindelöf,se SWE,DF,Manchester Utd,23,1994,17,13,1285,14.3,0,0,0,0,0,0,1,0,0.0,0.0,0.3,0.3,11,42,6,0.00,0.00,0.00,0.00,0.00,0.00,0.02,0.02,0.00,0.02,Matches
 274,Jesse Lingard,eng ENG,"MF,FW",Manchester Utd,24,1992,33,20,1817,20.2,8,5,13,8,0,0,2,0,7.1,7.1,2.8,9.9,78,75,143,0.40,0.25,0.64,0.40,0.64,0.35,0.14,0.49,0.35,0.49,Matches
 275,Jake Livermore,eng ENG,MF,West Brom,27,1989,34,30,2674,29.7,2,2,4,2,0,0,5,0,2.3,2.3,1.9,4.2,26,133,55,0.07,0.07,0.13,0.07,0.13,0.08,0.06,0.14,0.08,0.14,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 276,Fernando Llorente,es ESP,"FW,MF",Tottenham,32,1985,16,1,238,2.6,1,0,1,1,0,0,1,0,1.0,1.0,0.2,1.2,3,4,32,0.38,0.00,0.38,0.38,0.38,0.38,0.06,0.44,0.38,0.44,Matches
 277,Hugo Lloris,fr FRA,GK,Tottenham,30,1986,36,36,3240,36.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
 278,Jürgen Locadia,cw CUW,"FW,MF",Brighton,23,1993,6,3,224,2.5,1,1,2,1,0,0,0,0,1.1,1.1,0.1,1.2,2,4,11,0.40,0.40,0.80,0.40,0.80,0.44,0.04,0.48,0.44,0.48,Matches
@@ -310,7 +299,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 298,Eliaquim Mangala,fr FRA,DF,Everton,26,1991,2,2,134,1.5,0,0,0,0,0,0,0,0,0.1,0.1,0.0,0.1,3,7,0,0.00,0.00,0.00,0.00,0.00,0.05,0.00,0.05,0.05,0.05,Matches
 299,Javier Manquillo,es ESP,DF,Newcastle Utd,23,1994,21,20,1758,19.5,0,1,1,0,0,0,2,0,0.1,0.1,1.3,1.4,29,55,33,0.00,0.05,0.05,0.00,0.05,0.00,0.07,0.07,0.00,0.07,Matches
 300,Solly March,eng ENG,"MF,FW",Brighton,23,1994,36,18,1851,20.6,1,1,2,1,0,0,3,0,1.5,1.5,1.4,2.9,59,60,141,0.05,0.05,0.10,0.05,0.10,0.07,0.07,0.14,0.07,0.14,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 301,Adrian Mariappa,jm JAM,DF,Watford,30,1986,28,24,2210,24.6,0,0,0,0,0,0,4,0,0.7,0.7,0.2,0.8,8,60,6,0.00,0.00,0.00,0.00,0.00,0.03,0.01,0.03,0.03,0.03,Matches
 302,João Mário,pt POR,MF,West Ham,24,1993,13,12,1022,11.4,2,1,3,2,0,0,0,0,1.7,1.7,1.4,3.1,34,43,74,0.18,0.09,0.26,0.18,0.26,0.15,0.12,0.27,0.15,0.27,Matches
 303,Anthony Martial,fr FRA,FW,Manchester Utd,21,1995,30,18,1582,17.6,9,5,14,8,1,1,1,0,6.3,5.5,5.1,10.6,107,52,182,0.51,0.28,0.80,0.46,0.74,0.36,0.29,0.65,0.31,0.60,Matches
@@ -336,7 +324,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 323,Benjamin Mendy,fr FRA,"DF,FW",Manchester City,23,1994,7,4,363,4.0,0,1,1,0,0,0,2,0,0.1,0.1,0.8,0.9,21,27,62,0.00,0.25,0.25,0.00,0.25,0.03,0.19,0.23,0.03,0.23,Matches
 324,Mikel Merino,es ESP,MF,Newcastle Utd,21,1996,24,14,1347,15.0,1,1,2,1,0,0,4,0,0.6,0.6,0.9,1.5,25,108,15,0.07,0.07,0.13,0.07,0.13,0.04,0.06,0.10,0.04,0.10,Matches
 325,Per Mertesacker,de GER,DF,Arsenal,32,1984,6,4,366,4.1,1,0,1,1,0,0,0,0,0.2,0.2,0.0,0.2,0,6,1,0.25,0.00,0.25,0.25,0.25,0.05,0.00,0.05,0.05,0.05,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 326,Roque Mesa,es ESP,MF,Swansea City,28,1989,11,9,754,8.4,0,0,0,0,0,0,3,0,0.2,0.2,0.2,0.4,12,36,1,0.00,0.00,0.00,0.00,0.00,0.02,0.02,0.04,0.02,0.04,Matches
 327,Simon Mignolet,be BEL,GK,Liverpool,29,1988,19,19,1710,19.0,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
 328,Luka Milivojević,rs SRB,MF,Crystal Palace,26,1991,36,35,3080,34.2,10,1,11,3,7,8,8,0,8.2,1.8,1.0,2.9,24,180,18,0.29,0.03,0.32,0.09,0.12,0.24,0.03,0.27,0.05,0.08,Matches
@@ -362,7 +349,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 348,Charly Musonda Jr.,be BEL,FW,Chelsea,20,1996,3,0,37,0.4,0,0,0,0,0,0,0,0,0.2,0.2,0.5,0.7,1,1,4,0.00,0.00,0.00,0.00,0.00,0.40,1.27,1.67,0.40,1.67,Matches
 349,Shkodran Mustafi,de GER,DF,Arsenal,25,1992,27,25,2273,25.3,3,1,4,3,0,0,6,0,0.8,0.8,1.3,2.1,12,92,9,0.12,0.04,0.16,0.12,0.16,0.03,0.05,0.08,0.03,0.08,Matches
 350,Boaz Myhill,wls WAL,GK,West Brom,34,1982,1,1,90,1.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 351,Georges-Kévin N'Koudou,cm CMR,MF,Tottenham,22,1995,1,0,1,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,,,,,,Matches
 352,Georges-Kévin N'Koudou,cm CMR,"MF,FW",Burnley,22,1995,8,2,228,2.5,0,0,0,0,0,0,1,0,0.1,0.1,0.0,0.2,13,5,15,0.00,0.00,0.00,0.00,0.00,0.06,0.02,0.08,0.06,0.08,Matches
 353,Luciano Narsingh,nl NED,"FW,MF",Swansea City,26,1990,18,5,625,6.9,1,0,1,1,0,0,0,0,0.8,0.8,1.1,2.0,30,15,73,0.14,0.00,0.14,0.14,0.14,0.12,0.16,0.28,0.12,0.28,Matches
@@ -388,7 +374,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 373,Nicolás Otamendi,ar ARG,DF,Manchester City,29,1988,34,33,2967,33.0,4,0,4,4,0,0,9,0,2.7,2.7,0.9,3.6,92,212,8,0.12,0.00,0.12,0.12,0.12,0.08,0.03,0.11,0.08,0.11,Matches
 374,Reece Oxford,eng ENG,MF,West Ham,18,1998,1,0,5,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,Matches
 375,Alex Oxlade-Chamberlain,eng ENG,DF,Arsenal,23,1993,3,3,241,2.7,0,0,0,0,0,0,0,0,0.3,0.3,0.5,0.8,19,16,21,0.00,0.00,0.00,0.00,0.00,0.09,0.19,0.29,0.09,0.29,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 376,Alex Oxlade-Chamberlain,eng ENG,"MF,FW",Liverpool,23,1993,32,14,1493,16.6,3,7,10,3,0,0,3,0,2.2,2.2,3.8,5.9,76,120,122,0.18,0.42,0.60,0.18,0.60,0.13,0.23,0.36,0.13,0.36,Matches
 377,Mesut Özil,de GER,"MF,FW",Arsenal,28,1988,26,24,2163,24.0,4,8,12,4,0,0,4,0,4.4,4.4,8.7,13.1,136,277,267,0.17,0.33,0.50,0.17,0.50,0.18,0.36,0.55,0.18,0.55,Matches
 378,Kasey Palmer,jm JAM,"MF,FW",Huddersfield,20,1996,4,1,170,1.9,0,0,0,0,0,0,2,0,0.1,0.1,0.1,0.2,4,6,5,0.00,0.00,0.00,0.00,0.00,0.05,0.04,0.09,0.05,0.09,Matches
@@ -414,7 +399,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 398,Marcus Rashford,eng ENG,"FW,MF",Manchester Utd,19,1997,35,17,1813,20.1,7,5,12,7,0,0,3,0,5.2,5.2,3.8,9.0,82,46,160,0.35,0.25,0.60,0.35,0.60,0.26,0.19,0.45,0.26,0.45,Matches
 399,Nathan Redmond,eng ENG,"FW,MF",Southampton,23,1994,31,22,1945,21.6,1,3,4,1,0,0,3,0,2.2,2.2,3.6,5.8,84,94,182,0.05,0.14,0.19,0.05,0.19,0.10,0.17,0.27,0.10,0.27,Matches
 400,Winston Reid,nz NZL,DF,West Ham,29,1988,17,17,1452,16.1,0,0,0,0,0,0,5,0,0.3,0.3,0.3,0.5,3,39,6,0.00,0.00,0.00,0.00,0.00,0.02,0.02,0.03,0.02,0.03,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 401,Declan Rice,eng ENG,"DF,MF",West Ham,18,1999,26,15,1430,15.9,0,0,0,0,0,0,1,0,0.2,0.2,0.1,0.3,18,36,6,0.00,0.00,0.00,0.00,0.00,0.01,0.01,0.02,0.01,0.02,Matches
 402,Richarlison,br BRA,"FW,MF",Watford,20,1997,38,32,2823,31.4,5,4,9,5,0,0,4,0,10.3,10.3,3.4,13.7,126,73,306,0.16,0.13,0.29,0.16,0.29,0.33,0.11,0.44,0.33,0.44,Matches
 403,Jaïro Riedewald,nl NED,"MF,DF",Crystal Palace,20,1996,12,4,442,4.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,2,16,7,0.00,0.00,0.00,0.00,0.00,0.01,0.00,0.01,0.01,0.01,Matches
@@ -440,7 +424,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 423,Bakary Sako,ml MLI,"FW,MF",Crystal Palace,29,1988,16,4,478,5.3,3,0,3,3,0,0,0,0,1.9,1.9,1.1,3.0,20,8,43,0.56,0.00,0.56,0.56,0.56,0.36,0.20,0.56,0.36,0.56,Matches
 424,Mohamed Salah,eg EGY,FW,Liverpool,25,1992,36,34,2907,32.3,32,10,42,31,1,2,1,0,24.1,22.6,7.5,30.1,95,97,393,0.99,0.31,1.30,0.96,1.27,0.75,0.23,0.98,0.70,0.93,Matches
 425,Renato Sanches,pt POR,MF,Swansea City,19,1997,12,9,702,7.8,0,0,0,0,0,0,1,0,0.5,0.5,0.3,0.8,32,45,33,0.00,0.00,0.00,0.00,0.00,0.06,0.04,0.10,0.06,0.10,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 426,Alexis Sánchez,cl CHI,"MF,FW",Arsenal,28,1988,19,17,1503,16.7,7,3,10,6,1,1,4,0,8.1,7.3,4.9,12.2,50,149,218,0.42,0.18,0.60,0.36,0.54,0.49,0.29,0.78,0.44,0.73,Matches
 427,Alexis Sánchez,cl CHI,"FW,MF",Manchester Utd,28,1988,12,12,1043,11.6,2,3,5,2,0,1,1,0,2.7,1.8,2.4,4.3,29,70,102,0.17,0.26,0.43,0.17,0.43,0.23,0.21,0.44,0.16,0.37,Matches
 428,Davinson Sánchez,co COL,DF,Tottenham,21,1996,31,29,2534,28.2,0,0,0,0,0,0,1,1,0.5,0.5,0.1,0.7,8,82,2,0.00,0.00,0.00,0.00,0.00,0.02,0.00,0.02,0.02,0.02,Matches
@@ -466,7 +449,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 448,Islam Slimani,dz ALG,FW,Leicester City,29,1988,12,2,249,2.8,1,1,2,1,0,0,0,0,1.5,1.5,0.2,1.7,5,7,25,0.36,0.36,0.72,0.36,0.72,0.55,0.07,0.63,0.55,0.63,Matches
 449,Islam Slimani,dz ALG,FW,Newcastle Utd,29,1988,4,1,132,1.5,0,0,0,0,0,0,1,0,0.0,0.0,0.4,0.4,3,2,19,0.00,0.00,0.00,0.00,0.00,0.00,0.28,0.28,0.00,0.28,Matches
 450,Chris Smalling,eng ENG,DF,Manchester Utd,27,1989,29,28,2536,28.2,4,0,4,4,0,0,4,0,1.7,1.7,0.2,2.0,5,37,8,0.14,0.00,0.14,0.14,0.14,0.06,0.01,0.07,0.06,0.07,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 451,Adam Smith,eng ENG,"DF,MF",Bournemouth,26,1991,27,22,2071,23.0,1,3,4,1,0,0,6,0,0.5,0.5,1.6,2.1,56,90,99,0.04,0.13,0.17,0.04,0.17,0.02,0.07,0.09,0.02,0.09,Matches
 452,Tommy Smith,eng ENG,DF,Huddersfield,25,1992,24,21,1904,21.2,0,1,1,0,0,0,7,0,0.2,0.2,1.8,2.0,36,56,86,0.00,0.05,0.05,0.00,0.05,0.01,0.09,0.09,0.01,0.09,Matches
 453,Cédric Soares,pt POR,DF,Southampton,25,1991,32,32,2794,31.0,0,3,3,0,0,0,3,0,0.7,0.7,3.1,3.9,52,139,151,0.00,0.10,0.10,0.00,0.10,0.02,0.10,0.12,0.02,0.12,Matches
@@ -492,7 +474,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 473,James Tarkowski,eng ENG,DF,Burnley,24,1992,31,31,2790,31.0,0,0,0,0,0,0,5,0,1.4,1.4,0.8,2.2,5,59,8,0.00,0.00,0.00,0.00,0.00,0.05,0.03,0.07,0.05,0.07,Matches
 474,Charlie Taylor,eng ENG,DF,Burnley,23,1993,11,10,950,10.6,0,0,0,0,0,0,3,0,0.0,0.0,0.2,0.2,19,23,21,0.00,0.00,0.00,0.00,0.00,0.00,0.02,0.02,0.00,0.02,Matches
 475,James Tomkins,eng ENG,DF,Crystal Palace,28,1989,28,27,2387,26.5,3,0,3,3,0,0,8,0,2.2,2.2,0.1,2.3,6,45,3,0.11,0.00,0.11,0.11,0.11,0.08,0.00,0.09,0.08,0.09,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 476,Cenk Tosun,tr TUR,FW,Everton,26,1991,14,12,986,11.0,5,0,5,5,0,0,0,0,2.8,2.8,1.4,4.2,9,9,69,0.46,0.00,0.46,0.46,0.46,0.25,0.13,0.38,0.25,0.38,Matches
 477,Yaya Touré,ci CIV,MF,Manchester City,34,1983,10,1,236,2.6,0,2,2,0,0,0,1,0,0.4,0.4,0.9,1.3,20,50,4,0.00,0.76,0.76,0.00,0.76,0.14,0.35,0.49,0.14,0.49,Matches
 478,Andros Townsend,eng ENG,"FW,MF",Crystal Palace,26,1991,36,35,3120,34.7,2,7,9,2,0,0,3,0,3.0,3.0,7.2,10.2,161,104,249,0.06,0.20,0.26,0.06,0.26,0.09,0.21,0.30,0.09,0.30,Matches
@@ -518,7 +499,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 498,Aaron Wan-Bissaka,cd COD,DF,Crystal Palace,19,1997,7,7,627,7.0,0,0,0,0,0,0,1,0,0.0,0.0,0.2,0.2,22,23,14,0.00,0.00,0.00,0.00,0.00,0.00,0.03,0.03,0.00,0.03,Matches
 499,Victor Wanyama,ke KEN,MF,Tottenham,26,1991,18,8,846,9.4,1,0,1,1,0,0,2,0,0.5,0.5,0.2,0.7,23,65,14,0.11,0.00,0.11,0.11,0.11,0.05,0.02,0.07,0.05,0.07,Matches
 500,Joel Ward,eng ENG,DF,Crystal Palace,27,1989,19,19,1613,17.9,0,1,1,0,0,0,4,0,0.2,0.2,0.9,1.1,15,79,50,0.00,0.06,0.06,0.00,0.06,0.01,0.05,0.06,0.01,0.06,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 501,Stephen Ward,ie IRL,DF,Burnley,31,1985,28,28,2460,27.3,1,1,2,1,0,0,1,0,0.3,0.3,1.4,1.8,47,87,91,0.04,0.04,0.07,0.04,0.07,0.01,0.05,0.07,0.01,0.07,Matches
 502,James Ward-Prowse,eng ENG,"FW,MF",Southampton,22,1994,30,20,1716,19.1,3,3,6,3,0,0,3,0,2.2,2.2,2.8,5.0,9,66,102,0.16,0.16,0.31,0.16,0.31,0.11,0.15,0.26,0.11,0.26,Matches
 503,Ben Watson,eng ENG,MF,Watford,32,1985,8,6,456,5.1,0,0,0,0,0,0,1,0,0.1,0.1,0.2,0.2,1,24,5,0.00,0.00,0.00,0.00,0.00,0.01,0.04,0.05,0.01,0.05,Matches
@@ -544,7 +524,6 @@ Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,
 523,Ashley Young,eng ENG,DF,Manchester Utd,32,1985,30,28,2442,27.1,2,4,6,2,0,0,7,0,0.8,0.8,3.6,4.4,90,103,113,0.07,0.15,0.22,0.07,0.22,0.03,0.13,0.16,0.03,0.16,Matches
 524,Pablo Zabaleta,ar ARG,"DF,MF",West Ham,32,1985,37,37,3289,36.5,0,1,1,0,0,0,9,0,0.4,0.4,0.9,1.3,26,145,95,0.00,0.03,0.03,0.00,0.03,0.01,0.03,0.04,0.01,0.04,Matches
 525,Wilfried Zaha,ci CIV,"FW,MF",Crystal Palace,24,1992,29,28,2549,28.3,9,3,12,9,0,0,5,0,9.2,9.2,4.7,13.9,173,96,283,0.32,0.11,0.42,0.32,0.42,0.33,0.17,0.49,0.33,0.49,Matches
-Rk,Player,Nation,Pos,Squad,Age,Born,MP,Starts,Min,90s,Gls,Ast,G+A,G-PK,PK,PKatt,CrdY,CrdR,xG,npxG,xAG,npxG+xAG,PrgC,PrgP,PrgR,Gls,Ast,G+A,G-PK,G+A-PK,xG,xAG,xG+xAG,npxG,npxG+xAG,Matches
 526,Davide Zappacosta,it ITA,"DF,MF",Chelsea,25,1992,22,12,1098,12.2,1,1,2,1,0,0,0,0,1.4,1.4,1.3,2.7,64,22,124,0.08,0.08,0.16,0.08,0.16,0.11,0.11,0.22,0.11,0.22,Matches
 527,Marvin Zeegelaar,nl NED,DF,Watford,26,1990,12,12,994,11.0,0,1,1,0,0,0,4,1,0.0,0.0,1.0,1.0,30,54,44,0.00,0.09,0.09,0.00,0.09,0.00,0.09,0.09,0.00,0.09,Matches
 528,Oleksandr Zinchenko,ua UKR,DF,Manchester City,20,1996,8,6,532,5.9,0,0,0,0,0,0,1,0,0.1,0.1,0.4,0.5,9,57,49,0.00,0.00,0.00,0.00,0.00,0.02,0.07,0.09,0.02,0.09,Matches
