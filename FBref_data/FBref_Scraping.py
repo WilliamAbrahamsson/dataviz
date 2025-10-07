@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup, Comment
 
-URL = "https://fbref.com/en/comps/9/2017-2018/stats/2017-2018-Premier-League-Stats"
+URL = "https://fbref.com/en/comps/9/2017-2018/passing/2017-2018-Premier-League-Stats"
 OUTDIR = "fbref_csv"
 YEAR = "2018"
 
