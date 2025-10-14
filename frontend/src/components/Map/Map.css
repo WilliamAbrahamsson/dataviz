@@ -1,33 +1,50 @@
+/* theme vars inherited */
+
 .map-container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 92%;                /* fills most of left side */
+  height: 80%;               /* fills vertically but leaves top/bottom breathing room */
+  margin: 2% auto;           /* even margin all around */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
   overflow: hidden;
-  box-sizing: border-box;
-  padding: 1rem;
+  border-radius: 12px;
+}
+
+/* Wrapper ensures scaling remains proportional */
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 86%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
 }
 
 .map-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 12px;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-/* 🏟️ Team logo markers */
+/* responsive team markers */
 .team-logo {
   position: absolute;
-  width: 40px;           /* size of team logos */
-  height: 40px;
-  object-fit: contain;   /* ensures full logo visible */
-  border-radius: 6px;    /* optional: slightly rounded */
+  width: 3.2%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 6px;
+  transition: transform 0.2s ease, filter 0.2s ease;
   cursor: pointer;
+  z-index: 5;
+  filter: drop-shadow(0 2px 4px var(--card-shadow));
 }
 
 .team-logo:hover {
@@ -35,61 +52,48 @@
   z-index: 10;
 }
 
-/* 🧱 Prevent dragging or selecting images */
-.map-image,
-.team-logo {
-  user-drag: none;
-  -webkit-user-drag: none; /* Safari */
-  user-select: none;
-  -webkit-user-select: none;
-  pointer-events: auto; /* still clickable */
-}
-
-
-/* 🔽 Season selector overlay (enhanced) */
+/* season selector */
 .season-selector {
   position: absolute;
-  top: 2.5rem;
-  right: 2rem; /* ⬅️ moved slightly left */
-  background: rgba(255, 255, 255, 0.95); /* brighter background */
-  backdrop-filter: blur(6px);
+  top: 1rem;
+  right: 1rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--bg-hover);
   border-radius: 10px;
-  padding: 0.7rem 1.3rem; /* ⬆️ increased size */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  padding: 0.55rem 0.9rem;
+  box-shadow: 0 6px 16px var(--card-shadow);
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.6rem;
   z-index: 20;
-  font-family: 'Inter', system-ui, sans-serif;
-  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .season-selector label {
-  font-size: 1rem;         /* ⬆️ slightly larger text */
+  color: var(--text-primary);
   font-weight: 600;
-  color: #222;             /* ⬛ darker label */
 }
 
 .season-selector select {
-  border: 1px solid #ccc;  /* subtle border */
-  background: #f9fafc;     /* light background */
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--bg-hover);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
   border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  color: #111;             /* darker text */
-  transition: all 0.15s ease;
-}
-
-.season-selector select:hover {
-  background: #fff;
-  border-color: #999;
-}
-
-.season-selector select:focus {
   outline: none;
-  border-color: #457b9d;  /* blue highlight */
-  box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .map-container {
+    width: 96%;
+    height: auto;
+    margin: 1rem auto;
+    max-height: 70vh;
+  }
+
+  .map-image {
+    width: 100%;
+    height: auto;
+  }
 }

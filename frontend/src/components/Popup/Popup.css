@@ -1,111 +1,112 @@
-/* === Overlay === */
+/* theme vars inherited */
+
 .player-drawer-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 45%;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(5px);
   z-index: 3000;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  transition: width 0.4s ease, background 0.3s ease;
 }
 
 .player-drawer-overlay.expanded {
   width: 100%;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.08);
 }
 
-/* === Drawer === */
 .player-drawer {
-  background: #ffffff;
+  background: var(--bg-primary);
   width: 100%;
   height: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding: 1.8rem 2rem;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 1.6rem 1.8rem;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  box-shadow: 6px 0 20px rgba(0, 0, 0, 0.15);
-  animation: slideIn 0.3s ease;
-  color: #111;
+  box-shadow: 6px 0 24px var(--card-shadow);
+  animation: slideIn .25s ease;
+  color: var(--text-primary);
 }
 
-/* === Header === */
 .drawer-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--bg-hover);
 }
 
 .header-icon {
-  background: #ffcc33;
+  background: #d9dde3;
+  /* darker gray for light mode */
+  color: #000;
+  /* dark text/icon color for visibility */
   border: none;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all .2s ease;
+  box-shadow: 0 3px 10px var(--card-shadow);
 }
 
+/* Hover effect (accent works for both light/dark modes) */
 .header-icon:hover {
-  background: #f4b53f;
-  transform: scale(1.1);
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.06);
 }
 
-.header-icon svg {
-  stroke: #111;
+/* Keep dark mode consistent and not too bright */
+body.dark-mode .header-icon {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .player-name {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #111;
+  font-size: 1.4rem;
+  font-weight: 800;
   margin: 0;
+  color: var(--text-primary);
 }
 
-/* === Drawer Body === */
 .drawer-body {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
-  gap: 2rem;
-  transition: all 0.3s ease;
+  margin-top: 1.4rem;
+  gap: 1.6rem;
 }
 
 .drawer-body.expanded {
   flex-direction: row;
-  gap: 2.2rem;
+  gap: 2rem;
 }
 
-/* === Left Panel === */
 .left-panel {
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1.4rem;
 }
 
 .player-info {
-  background: #fff;
+  background: var(--bg-primary);
   border-radius: 12px;
-  padding: 1.6rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .player-info:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .player-photo {
@@ -113,204 +114,138 @@
   height: 100px;
   border-radius: 50%;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
+  filter: drop-shadow(0 2px 8px var(--card-shadow));
   user-select: none;
   -webkit-user-drag: none;
 }
 
 .player-info h3 {
-  margin: 0.3rem 0 0.5rem;
-  font-size: 1.3rem;
-  color: #222;
+  margin: 0.2rem 0 .4rem;
+  font-size: 1.2rem;
+  color: var(--text-primary);
 }
 
 .player-info p {
-  margin: 0.25rem 0;
-  color: #333;
-  font-size: 0.95rem;
+  margin: .2rem 0;
+  color: var(--text-muted);
 }
 
 .chart-section h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #222;
+  font-size: 1.05rem;
+  margin: .2rem 0 .4rem;
+  color: var(--text-primary);
 }
 
 .chart-card {
-  background: #fff;
+  background: var(--bg-primary);
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  padding: 0.8rem 1rem 1rem;
+  box-shadow: 0 8px 24px var(--card-shadow);
+  padding: .6rem .8rem .9rem;
   width: 100%;
-  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* === Right Panel === */
 .right-panel {
   flex: 1.3;
-  background: #fff;
+  background: var(--bg-primary);
   border-radius: 12px;
-  padding: 1.6rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 8px 24px var(--card-shadow);
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1rem;
 }
 
 .right-panel h3 {
   margin: 0;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #222;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-align: center;
 }
 
-/* === 3x3 Form Grid (Aligned Vertically) === */
 .form-grid-3x3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem 1.2rem;
-  margin-top: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: .4rem;
 }
 
-.form-grid-3x3 .form-field {
+.form-field {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: .35rem;
 }
 
-/* Label Styling */
 .form-grid-3x3 label {
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: #333;
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
-/* Input Styling (Light Mode) */
 .form-grid-3x3 input {
-  width: 100%;
-  padding: 0.55rem 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #fff;
-  color: #111;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
+  padding: .5rem .65rem;
+  border: 1px solid var(--bg-hover);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all .2s ease;
 }
 
 .form-grid-3x3 input:focus {
-  border-color: #28a745;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-transparent);
 }
 
-/* === Green Estimate Button === */
 .estimate-btn-green {
-  background: #28a745;
-  color: #fff;
+  background: var(--accent);
+  color: #0b0f17;
   border: none;
   border-radius: 8px;
-  padding: 1rem 1.8rem;
-  font-weight: 600;
-  font-size: 1rem;
+  padding: .85rem 1.2rem;
+  font-weight: 800;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all .22s ease;
   text-align: center;
-  margin-top: 1rem;
 }
 
 .estimate-btn-green:hover {
-  background: #218838;
+  filter: brightness(1.05);
   transform: translateY(-1px);
 }
 
-/* === Save Button === */
 .customize-btn {
-  background: #007bff;
-  color: #fff;
+  background: var(--accent);
+  color: #0b0f17;
   border: none;
   border-radius: 8px;
-  padding: 0.9rem 1.6rem;
-  font-weight: 600;
+  padding: .85rem 1.2rem;
+  font-weight: 800;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all .22s ease;
   text-align: center;
 }
 
 .customize-btn:hover {
-  background: #005fcc;
+  filter: brightness(1.05);
   transform: translateY(-1px);
 }
 
-/* === Result Text === */
 .estimate-result {
-  color: #1b6f50;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-top: 0.4rem;
+  color: var(--accent);
+  font-weight: 800;
   text-align: center;
 }
 
-/* === Animations === */
-@keyframes slideIn {
-  from {
-    transform: translateX(-40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
-/* === Scrollbar Styling === */
+
 .player-drawer::-webkit-scrollbar {
   width: 8px;
 }
 
-.player-drawer::-webkit-scrollbar-track {
-  background: transparent;
-}
-
 .player-drawer::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--bg-hover);
   border-radius: 4px;
-}
-
-/* === Responsive === */
-@media (max-width: 900px) {
-  .drawer-body.expanded {
-    flex-direction: column;
-  }
-
-  .right-panel {
-    order: 2;
-  }
-
-  .form-grid-3x3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .player-drawer-overlay {
-    width: 100%;
-  }
-
-  .form-grid-3x3 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* === Global Light Mode Background === */
-body {
-  background: #f9fafc;
-  color: #111;
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-}
-
-
-.left-panel .customize-btn {
-  align-self: center;
-  margin-top: 1.2rem;
 }

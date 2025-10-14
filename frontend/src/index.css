@@ -1,82 +1,90 @@
-/* Global design tokens */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #222;
-  background-color: #f6f7fb;
+  color: var(--text-primary, #111);
+  background-color: var(--bg-primary, #f6f7fb);
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-/* Global resets */
+}
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+  background: var(--bg-primary, #f6f7fb);
+  color: var(--text-primary, #111);
 }
 
 body {
-  margin: 0;
-  padding: 0;
   min-width: 320px;
-  min-height: 100vh;
-  display: block; /* 🧹 remove Vite’s flex centering */
-  background-color: #f6f7fb;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Links */
-a {
-  font-weight: 500;
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-/* Headings */
-h1 {
-  font-size: 2.2rem;
-  line-height: 1.3;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0.5rem 0;
 }
 
 p {
   margin: 0.5rem 0;
+  color: var(--text-muted, #444);
 }
 
-/* Buttons (keep simple global style) */
+a {
+  font-weight: 500;
+  color: var(--accent, #007bff);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-glow, #0056b3);
+  text-decoration: underline;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--accent, #007bff);
+  color: #fff;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: all 0.25s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  filter: brightness(1.05);
+  transform: translateY(-1px);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px solid var(--accent-transparent, rgba(0, 123, 255, 0.25));
 }
 
-/* Light mode override */
+body.dark-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #111;
     background-color: #ffffff;
   }
 }

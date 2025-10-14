@@ -1,13 +1,20 @@
-/* Split layout */
+.app-root {
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(0,123,255,0.08), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(0,255,200,0.06), transparent 60%),
+    var(--bg-primary);
+  transition: background .3s ease;
+}
+
 .split-page {
   display: flex;
-  height: 90vh;
+  height: calc(100vh - 64px);
   width: 100%;
   overflow: hidden;
   font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* Left: Map side */
 .left-side {
   flex: 1;
   display: flex;
@@ -15,59 +22,35 @@
   align-items: center;
 }
 
-/* Right: Vertical stacked layout */
 .right-side {
   flex: 1;
   display: flex;
   flex-direction: column;
   height: 100%;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem .5rem;
 }
 
-/* Top 40% */
 .right-top {
-  flex: 0 0 30%;
-  background-color: #fff; /* red */
+  flex: 0 0 27%;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* ⬅️ align content left */
-  color: white;
-  padding-left: 3rem; /* add space from left edge */
+  justify-content: flex-start;
+  padding-left: 2rem;
 }
 
-
-/* Bottom 60% */
 .right-bottom {
   flex: 1;
-  background-color: #fff;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* or center, depending on layout */
-  padding: 0; /* remove extra space */
-  overflow-y: auto;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
-
-/* Responsive: stack vertically on small screens */
-@media (max-width: 800px) {
-  .split-page {
-    flex-direction: column;
-  }
-
-  .left-side,
-  .right-side {
-    width: 100%;
-    height: 50vh;
-  }
-
-  .right-side {
-    flex-direction: column;
-  }
-
-  .right-top {
-    flex: 0 0 40%;
-  }
-
-  .right-bottom {
-    flex: 1;
-  }
+@media (max-width: 900px) {
+  .split-page { flex-direction: column; height: auto; }
+  .right-side { padding: 1rem; }
+  .right-top { flex: 0 0 auto; padding: 1rem; }
 }

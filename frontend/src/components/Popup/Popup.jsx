@@ -1,42 +1,70 @@
 import { useState, useEffect } from 'react'
 import { X, ArrowLeft, ArrowRight } from 'lucide-react'
 import ValuationChart from '../ValuationChart/ValuationChart.jsx'
+import mapPositions from '../Map/mapd.json'
 import './Popup.css'
 
-function Popup({ player, isOpen, onClose }) {
+function Popup({ player, season, isOpen, onClose }) {
   const [expanded, setExpanded] = useState(false)
-  const [age, setAge] = useState(31)
-  const [goals, setGoals] = useState(4)
-  const [assists, setAssists] = useState(12)
-  const [passes, setPasses] = useState(7)
-  const [shots, setShots] = useState(20)
-  const [tackles, setTackles] = useState(18)
-  const [minutes, setMinutes] = useState(1700)
-  const [dribbles, setDribbles] = useState(35)
-  const [interceptions, setInterceptions] = useState(15)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+  const [playerData, setPlayerData] = useState(null)
+  const [seasonData, setSeasonData] = useState(null)
   const [estimatedValue, setEstimatedValue] = useState(null)
 
-  const valuationData = [
-    { date: '2023-08-01', value: 40.0 },
-    { date: '2023-12-01', value: 48.2 },
-    { date: '2024-04-01', value: 56.1 },
-    { date: '2024-08-01', value: 62.4 },
-    { date: '2025-02-01', value: 70.8 },
-  ]
+  const [age, setAge] = useState(0)
+  const [goals, setGoals] = useState(0)
+  const [assists, setAssists] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [clubLogo, setClubLogo] = useState('/static/images/teams/default_logo.png')
+
+  const normalize = (name) =>
+    name?.toLowerCase().replace(/football club|fc|afc|city|united|\.|-/g, '').trim()
+
+  const findTeamLogo = (clubName) => {
+    if (!clubName) return '/static/images/teams/default_logo.png'
+    const n = normalize(clubName)
+    for (const key of Object.keys(mapPositions)) {
+      const nk = normalize(key)
+      if (n.includes(nk) || nk.includes(n)) return mapPositions[key].logo
+    }
+    return '/static/images/teams/default_logo.png'
+  }
+
+  useEffect(() => {
+    if (!isOpen || !player) return
+    setLoading(true)
+    setError(null)
+
+    const url = `http://127.0.0.1:5000/api/players/${player.id}?year_code=${encodeURIComponent(season)}`
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch player data')
+        return res.json()
+      })
+      .then((data) => {
+        setPlayerData(data)
+        const s = data.seasons?.find((x) => x.year_code === season) || player.seasonData || {}
+        setSeasonData(s)
+        setAge(s.age || 0)
+        setGoals(s.goals_scored || 0)
+        setAssists(s.assists_made || 0)
+        setMinutes(s.minutes_played || 0)
+        setClubLogo(findTeamLogo(s.club))
+        setLoading(false)
+      })
+      .catch((err) => {
+        setError(err.message)
+        setLoading(false)
+      })
+  }, [player, season, isOpen])
 
   useEffect(() => {
     if (!isOpen) {
       setExpanded(false)
       setEstimatedValue(null)
-      setAge(31)
-      setGoals(4)
-      setAssists(12)
-      setPasses(7)
-      setShots(20)
-      setTackles(18)
-      setMinutes(1700)
-      setDribbles(35)
-      setInterceptions(15)
+      setPlayerData(null)
+      setSeasonData(null)
     }
   }, [isOpen])
 
@@ -46,19 +74,16 @@ function Popup({ player, isOpen, onClose }) {
     if (e.target === e.currentTarget) onClose()
   }
 
-  const handleEstimate = () => {
-    const baseValue = player.value || 100
-    const performanceScore =
-      goals * 2.5 +
-      assists * 1.8 +
-      passes * 0.2 +
-      shots * 0.4 +
-      tackles * 0.5 +
-      dribbles * 0.6 +
-      interceptions * 0.5 +
-      minutes / 500
+  const valuations = playerData?.valuations || []
+  const valuationData = valuations.map((v) => ({
+    date: v.date,
+    value: v.amount ? v.amount / 1_000_000 : 0,
+  }))
 
-    const newVal = (baseValue + (performanceScore * 1.2) / (age / 25)).toFixed(1)
+  const handleEstimate = () => {
+    const baseValue = playerData?.valuations?.[0]?.amount / 1_000_000 || 5
+    const perf = goals * 2 + assists * 1.5 + minutes / 400
+    const newVal = (baseValue + perf / ((age || 25) / 25)).toFixed(1)
     setEstimatedValue(newVal)
   }
 
@@ -68,125 +93,84 @@ function Popup({ player, isOpen, onClose }) {
       onClick={handleOverlayClick}
     >
       <div className={`player-drawer ${expanded ? 'expanded-layout' : ''}`}>
-        {/* === HEADER === */}
         <div className="drawer-header">
-          <button
-            className="header-icon left"
-            onClick={() => {
-              if (expanded) setExpanded(false)
-              else onClose()
-            }}
-            title={expanded ? 'Collapse' : 'Close'}
-          >
+          <button className="header-icon left" onClick={() => (expanded ? setExpanded(false) : onClose())}>
             {expanded ? <ArrowLeft size={28} /> : <X size={28} />}
           </button>
 
-          <h2 className="player-name">{player.name}</h2>
+          <h2 className="player-name">{playerData?.name || player.name}</h2>
 
-          <button
-            className="header-icon right"
-            onClick={() => {
-              if (expanded) onClose()
-              else setExpanded(true)
-            }}
-            title={expanded ? 'Close' : 'Expand'}
-          >
+          <button className="header-icon right" onClick={() => setExpanded((e) => !e)}>
             {expanded ? <X size={28} /> : <ArrowRight size={28} />}
           </button>
         </div>
 
-        {/* === BODY === */}
         <div className={`drawer-body ${expanded ? 'expanded' : ''}`}>
-          {/* LEFT PANEL */}
-          <div className="left-panel">
-            <div className="player-info">
-              <img
-                src="/static/images/teams/chelsea.webp"
-                alt="Chelsea FC Logo"
-                className="player-photo"
-                draggable="false"
-              />
-              <h3>{player.name}</h3>
-              <p><strong>Age:</strong> {age}</p>
-              <p><strong>Position:</strong> {player.position}</p>
-              <p><strong>Nationality:</strong> Great Britain</p>
-              <p>
-                <strong>Market Value:</strong> €
-                {estimatedValue ?? player.value}M
-              </p>
-            </div>
+          {error ? (
+            <p className="error-text">Error: {error}</p>
+          ) : loading ? (
+            <p className="loading-text">Loading player...</p>
+          ) : (
+            <>
+              <div className="left-panel">
+                <div className="player-info">
+                  <img src={clubLogo} alt={seasonData?.club || 'Club'} className="player-photo" />
+                  <h3>{playerData?.name}</h3>
+                  <p><strong>Club:</strong> {seasonData?.club || '—'}</p>
+                  <p><strong>Season:</strong> {season}</p>
+                  <p><strong>Age:</strong> {age}</p>
+                  <p><strong>Position:</strong> {seasonData?.position || '—'}</p>
+                  <p><strong>Goals:</strong> {goals}</p>
+                  <p><strong>Assists:</strong> {assists}</p>
+                  <p><strong>Minutes:</strong> {minutes}</p>
+                </div>
 
-            <div className="chart-section">
-              <h4>Valuation Progression</h4>
-              <div className="chart-card">
-                <ValuationChart data={valuationData} height={250} />
-              </div>
-            </div>
+                <div className="chart-section">
+                  <h4>Valuation History</h4>
+                  <div className="chart-card">
+                    <ValuationChart data={valuationData} height={250} />
+                  </div>
+                </div>
 
-            {/* 👇 Add Customize Button here when not expanded */}
-            {!expanded && (
-              <button
-                className="customize-btn"
-                onClick={() => setExpanded(true)}
-              >
-                Customize Player
-              </button>
-            )}
-          </div>
-
-          {/* RIGHT PANEL (Only when expanded) */}
-          {expanded && (
-            <div className="right-panel">
-              <h3>Customize Player Stats</h3>
-              <div className="form-grid-3x3">
-                <div className="form-field">
-                  <label>Age</label>
-                  <input type="number" value={age} onChange={e => setAge(+e.target.value)} />
-                </div>
-                <div className="form-field">
-                  <label>Goals</label>
-                  <input type="number" value={goals} onChange={e => setGoals(+e.target.value)} />
-                </div>
-                <div className="form-field">
-                  <label>Assists</label>
-                  <input type="number" value={assists} onChange={e => setAssists(+e.target.value)} />
-                </div>
-                <div className="form-field">
-                  <label>Passes</label>
-                  <input type="number" value={passes} onChange={e => setPasses(+e.target.value)} />
-                </div>
-                <div className="form-field">
-                  <label>Shots</label>
-                  <input type="number" value={shots} onChange={e => setShots(+e.target.value)} />
-                </div>
-                <div className="form-field">
-                  <label>Tackles</label>
-                  <input type="number" value={tackles} onChange={e => setTackles(+e.target.value)} />
-                </div>
-                <div className="form-field">
-                  <label>Minutes</label>
-                  <input type="number" value={minutes} onChange={e => setMinutes(+e.target.value)} />
-                </div>
-                <div className="form-field">
-                  <label>Dribbles</label>
-                  <input type="number" value={dribbles} onChange={e => setDribbles(+e.target.value)} />
-                </div>
-                <div className="form-field">
-                  <label>Interceptions</label>
-                  <input type="number" value={interceptions} onChange={e => setInterceptions(+e.target.value)} />
-                </div>
+                {!expanded && (
+                  <button className="customize-btn" onClick={() => setExpanded(true)}>
+                    Customize Player
+                  </button>
+                )}
               </div>
 
-              <button className="estimate-btn-green" onClick={handleEstimate}>
-                Estimate New Valuation
-              </button>
+              {expanded && (
+                <div className="right-panel">
+                  <h3>Customize Stats</h3>
+                  <div className="form-grid-3x3">
+                    <div className="form-field">
+                      <label>Age</label>
+                      <input type="number" value={age} onChange={(e) => setAge(+e.target.value)} />
+                    </div>
+                    <div className="form-field">
+                      <label>Goals</label>
+                      <input type="number" value={goals} onChange={(e) => setGoals(+e.target.value)} />
+                    </div>
+                    <div className="form-field">
+                      <label>Assists</label>
+                      <input type="number" value={assists} onChange={(e) => setAssists(+e.target.value)} />
+                    </div>
+                    <div className="form-field">
+                      <label>Minutes</label>
+                      <input type="number" value={minutes} onChange={(e) => setMinutes(+e.target.value)} />
+                    </div>
+                  </div>
 
-              {estimatedValue && (
-                <p className="estimate-result">
-                  💰 New Estimated Value: <strong>€{estimatedValue}M</strong>
-                </p>
+                  <button className="estimate-btn-green" onClick={handleEstimate}>
+                    Estimate New Value
+                  </button>
+
+                  {estimatedValue && (
+                    <p className="estimate-result">💰 Estimated Value: €{estimatedValue}M</p>
+                  )}
+                </div>
               )}
-            </div>
+            </>
           )}
         </div>
       </div>

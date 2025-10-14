@@ -1,3 +1,5 @@
+/* theme vars inherited */
+
 .valuation-chart {
   width: 100%;
   height: auto;
@@ -5,39 +7,35 @@
 }
 
 .valuation-chart .axis text {
-  fill: #333;
+  fill: var(--text-primary);
   font-size: 12px;
 }
 
 .valuation-chart .axis path,
 .valuation-chart .axis line {
-  stroke: #bbb;
+  stroke: var(--bg-hover);
 }
 
 .valuation-chart .grid line {
-  stroke: #aaa;
+  stroke: var(--bg-hover);
 }
 
 .vc-tooltip {
   position: absolute;
   pointer-events: none;
-  background: #fff;
-  color: #111;
-  border: 1px solid #ddd;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-hover);
   border-radius: 6px;
   padding: 6px 10px;
   font-size: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 8px var(--card-shadow);
   transform: translate(-50%, -100%);
   white-space: nowrap;
 }
 
-
-
-
 .chart-card {
   width: 100%;
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;

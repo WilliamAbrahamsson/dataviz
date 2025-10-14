@@ -1,14 +1,41 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import mapPositions from './mapd.json'
+import seasonTeams from './teamsd.json'
 import './Map.css'
 
-function Map() {
-  const [season, setSeason] = useState('2024/25')
+function Map({ onTeamSelect, onSeasonChange }) {
+  const allSeasons = Object.keys(seasonTeams)
+  const [season, setSeason] = useState(allSeasons[0])
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
-  const seasons = ['2024/25', '2023/24', '2022/23', '2021/22', '2020/21']
+  // Sync with dark mode
+  useEffect(() => {
+    const updateMode = () =>
+      setIsDarkMode(document.body.classList.contains('dark-mode'))
+    updateMode()
+
+    const observer = new MutationObserver(updateMode)
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
+    return () => observer.disconnect()
+  }, [])
+
+  // Notify parent and select a random team
+  useEffect(() => {
+    onSeasonChange?.(season)
+    const teams = seasonTeams[season] || []
+    if (teams.length && onTeamSelect) {
+      const randomTeam = teams[Math.floor(Math.random() * teams.length)]
+      onTeamSelect(randomTeam)
+    }
+  }, [season, onSeasonChange, onTeamSelect])
+
+  const teamsInSeason = seasonTeams[season] || []
+  const mapImage = isDarkMode
+    ? '/static/images/uk_map_dm.png'
+    : '/static/images/uk_map_lm.png'
 
   return (
     <div className="map-container">
-      {/* 🔽 Season selector */}
       <div className="season-selector">
         <label htmlFor="season">Season:</label>
         <select
@@ -16,7 +43,7 @@ function Map() {
           value={season}
           onChange={(e) => setSeason(e.target.value)}
         >
-          {seasons.map((s) => (
+          {allSeasons.map((s) => (
             <option key={s} value={s}>
               {s}
             </option>
@@ -24,54 +51,31 @@ function Map() {
         </select>
       </div>
 
-      {/* 🗺️ UK Map */}
-      <img
-        src="/static/images/uk_map.png"
-        alt="UK Map"
-        className="map-image"
-        draggable="false"
-      />
+      <div className="map-wrapper">
+        <img
+          src={mapImage}
+          alt="UK Map"
+          className="map-image"
+          draggable="false"
+        />
 
-      {/* ⚽ Example team logos */}
-      <img
-        src="/static/images/teams/newcastle.webp"
-        alt="Newcastle"
-        className="team-logo"
-        draggable="false"
-        style={{ top: '25%', left: '60%' }}
-      />
-
-      <img
-        src="/static/images/teams/liverpool.png"
-        alt="Liverpool"
-        className="team-logo"
-        draggable="false"
-        style={{ top: '35%', left: '35%' }}
-      />
-
-      <img
-        src="/static/images/teams/mancity.png"
-        alt="Manchester City"
-        className="team-logo"
-        draggable="false"
-        style={{ top: '42%', left: '47%' }}
-      />
-
-      <img
-        src="/static/images/teams/arsenal.webp"
-        alt="Arsenal"
-        className="team-logo"
-        draggable="false"
-        style={{ top: '62%', left: '53%' }}
-      />
-
-      <img
-        src="/static/images/teams/chelsea.webp"
-        alt="Chelsea"
-        className="team-logo"
-        draggable="false"
-        style={{ top: '60%', left: '55%' }}
-      />
+        {teamsInSeason.map((teamName) => {
+          const teamInfo = mapPositions[teamName]
+          if (!teamInfo) return null
+          return (
+            <img
+              key={teamName}
+              src={teamInfo.logo}
+              alt={teamName}
+              className="team-logo"
+              draggable="false"
+              style={{ top: teamInfo.top, left: teamInfo.left }}
+              title={teamName}
+              onClick={() => onTeamSelect?.(teamName)}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }
