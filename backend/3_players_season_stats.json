@@ -1,0 +1,1900 @@
+[
+  {
+    "name": "Aaron Connolly",
+    "short_name": "Aaron Connolly",
+    "season_stats": {
+      "2017/18": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2018/19": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2019/20": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "91",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "19",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Unnamed: 7_level_0 90s": "14.0",
+          "Total Cmp": "113",
+          "Total Att": "155",
+          "Total Cmp%": "72.9",
+          "Total TotDist": "1387",
+          "Total PrgDist": "183",
+          "Short Cmp": "66",
+          "Short Att": "83",
+          "Short Cmp%": "79.5",
+          "Medium Cmp": "30",
+          "Medium Att": "40",
+          "Medium Cmp%": "75.0",
+          "Long Cmp": "2",
+          "Long Att": "2",
+          "Long Cmp%": "100.0",
+          "Unnamed: 22_level_0 Ast": "1",
+          "Unnamed: 23_level_0 xAG": "0.5",
+          "Expected xA": "0.4",
+          "Expected A-xAG": "+0.5",
+          "Unnamed: 26_level_0 KP": "6",
+          "Unnamed: 27_level_0 1/3": "9",
+          "Unnamed: 28_level_0 PPA": "2",
+          "Unnamed: 29_level_0 CrsPA": "0",
+          "Unnamed: 30_level_0 PrgP": "10",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "91",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "19",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Unnamed: 7_level_0 90s": "14.0",
+          "Tackles Tkl": "7",
+          "Tackles TklW": "6",
+          "Tackles Def 3rd": "1",
+          "Tackles Mid 3rd": "4",
+          "Tackles Att 3rd": "2",
+          "Challenges Tkl": "3",
+          "Challenges Att": "10",
+          "Challenges Tkl%": "30.0",
+          "Challenges Lost": "7",
+          "Blocks Blocks": "11",
+          "Blocks Sh": "0",
+          "Blocks Pass": "11",
+          "Unnamed: 20_level_0 Int": "0",
+          "Unnamed: 21_level_0 Tkl+Int": "7",
+          "Unnamed: 22_level_0 Clr": "3",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "91",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "19",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Playing Time MP": "24",
+          "Playing Time Starts": "14",
+          "Playing Time Min": "1258",
+          "Playing Time 90s": "14.0",
+          "Performance Gls": "3",
+          "Performance Ast": "1",
+          "Performance G+A": "4",
+          "Performance G-PK": "3",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "0",
+          "Performance CrdR": "0",
+          "Expected xG": "4.0",
+          "Expected npxG": "4.0",
+          "Expected xAG": "0.5",
+          "Expected npxG+xAG": "4.5",
+          "Progression PrgC": "21",
+          "Progression PrgP": "10",
+          "Progression PrgR": "86",
+          "Per 90 Minutes Gls": "0.21",
+          "Per 90 Minutes Ast": "0.07",
+          "Per 90 Minutes G+A": "0.29",
+          "Per 90 Minutes G-PK": "0.21",
+          "Per 90 Minutes G+A-PK": "0.29",
+          "Per 90 Minutes xG": "0.28",
+          "Per 90 Minutes xAG": "0.04",
+          "Per 90 Minutes xG+xAG": "0.32",
+          "Per 90 Minutes npxG": "0.28",
+          "Per 90 Minutes npxG+xAG": "0.32",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2020/21": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "103",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "20",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Unnamed: 7_level_0 90s": "8.8",
+          "Total Cmp": "72",
+          "Total Att": "94",
+          "Total Cmp%": "76.6",
+          "Total TotDist": "844",
+          "Total PrgDist": "176",
+          "Short Cmp": "51",
+          "Short Att": "65",
+          "Short Cmp%": "78.5",
+          "Medium Cmp": "14",
+          "Medium Att": "16",
+          "Medium Cmp%": "87.5",
+          "Long Cmp": "0",
+          "Long Att": "1",
+          "Long Cmp%": "0.0",
+          "Unnamed: 22_level_0 Ast": "1",
+          "Unnamed: 23_level_0 xAG": "0.2",
+          "Expected xA": "0.1",
+          "Expected A-xAG": "+0.8",
+          "Unnamed: 26_level_0 KP": "6",
+          "Unnamed: 27_level_0 1/3": "3",
+          "Unnamed: 28_level_0 PPA": "1",
+          "Unnamed: 29_level_0 CrsPA": "0",
+          "Unnamed: 30_level_0 PrgP": "4",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "103",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "20",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Unnamed: 7_level_0 90s": "8.8",
+          "Tackles Tkl": "6",
+          "Tackles TklW": "3",
+          "Tackles Def 3rd": "1",
+          "Tackles Mid 3rd": "3",
+          "Tackles Att 3rd": "2",
+          "Challenges Tkl": "0",
+          "Challenges Att": "2",
+          "Challenges Tkl%": "0.0",
+          "Challenges Lost": "2",
+          "Blocks Blocks": "4",
+          "Blocks Sh": "0",
+          "Blocks Pass": "4",
+          "Unnamed: 20_level_0 Int": "0",
+          "Unnamed: 21_level_0 Tkl+Int": "6",
+          "Unnamed: 22_level_0 Clr": "2",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "103",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "20",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Playing Time MP": "17",
+          "Playing Time Starts": "9",
+          "Playing Time Min": "791",
+          "Playing Time 90s": "8.8",
+          "Performance Gls": "2",
+          "Performance Ast": "1",
+          "Performance G+A": "3",
+          "Performance G-PK": "2",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "0",
+          "Performance CrdR": "0",
+          "Expected xG": "4.0",
+          "Expected npxG": "4.0",
+          "Expected xAG": "0.2",
+          "Expected npxG+xAG": "4.2",
+          "Progression PrgC": "12",
+          "Progression PrgP": "4",
+          "Progression PrgR": "58",
+          "Per 90 Minutes Gls": "0.23",
+          "Per 90 Minutes Ast": "0.11",
+          "Per 90 Minutes G+A": "0.34",
+          "Per 90 Minutes G-PK": "0.23",
+          "Per 90 Minutes G+A-PK": "0.34",
+          "Per 90 Minutes xG": "0.45",
+          "Per 90 Minutes xAG": "0.02",
+          "Per 90 Minutes xG+xAG": "0.48",
+          "Per 90 Minutes npxG": "0.45",
+          "Per 90 Minutes npxG+xAG": "0.48",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2021/22": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "91",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW,MF",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "21",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Unnamed: 7_level_0 90s": "1.7",
+          "Total Cmp": "14",
+          "Total Att": "19",
+          "Total Cmp%": "73.7",
+          "Total TotDist": "172",
+          "Total PrgDist": "16",
+          "Short Cmp": "8",
+          "Short Att": "8",
+          "Short Cmp%": "100.0",
+          "Medium Cmp": "5",
+          "Medium Att": "5",
+          "Medium Cmp%": "100.0",
+          "Long Cmp": "0",
+          "Long Att": "1",
+          "Long Cmp%": "0.0",
+          "Unnamed: 22_level_0 Ast": "0",
+          "Unnamed: 23_level_0 xAG": "0.1",
+          "Expected xA": "0.1",
+          "Expected A-xAG": "-0.1",
+          "Unnamed: 26_level_0 KP": "1",
+          "Unnamed: 27_level_0 1/3": "0",
+          "Unnamed: 28_level_0 PPA": "0",
+          "Unnamed: 29_level_0 CrsPA": "0",
+          "Unnamed: 30_level_0 PrgP": "1",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "91",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW,MF",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "21",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Unnamed: 7_level_0 90s": "1.7",
+          "Tackles Tkl": "0",
+          "Tackles TklW": "0",
+          "Tackles Def 3rd": "0",
+          "Tackles Mid 3rd": "0",
+          "Tackles Att 3rd": "0",
+          "Challenges Tkl": "0",
+          "Challenges Att": "1",
+          "Challenges Tkl%": "0.0",
+          "Challenges Lost": "1",
+          "Blocks Blocks": "2",
+          "Blocks Sh": "0",
+          "Blocks Pass": "2",
+          "Unnamed: 20_level_0 Int": "0",
+          "Unnamed: 21_level_0 Tkl+Int": "0",
+          "Unnamed: 22_level_0 Clr": "0",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "91",
+          "Unnamed: 2_level_0 Nation": "ie IRL",
+          "Unnamed: 3_level_0 Pos": "FW,MF",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "21",
+          "Unnamed: 6_level_0 Born": "2000",
+          "Playing Time MP": "4",
+          "Playing Time Starts": "1",
+          "Playing Time Min": "156",
+          "Playing Time 90s": "1.7",
+          "Performance Gls": "0",
+          "Performance Ast": "0",
+          "Performance G+A": "0",
+          "Performance G-PK": "0",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "0",
+          "Performance CrdR": "0",
+          "Expected xG": "0.4",
+          "Expected npxG": "0.4",
+          "Expected xAG": "0.1",
+          "Expected npxG+xAG": "0.5",
+          "Progression PrgC": "3",
+          "Progression PrgP": "1",
+          "Progression PrgR": "7",
+          "Per 90 Minutes Gls": "0.00",
+          "Per 90 Minutes Ast": "0.00",
+          "Per 90 Minutes G+A": "0.00",
+          "Per 90 Minutes G-PK": "0.00",
+          "Per 90 Minutes G+A-PK": "0.00",
+          "Per 90 Minutes xG": "0.21",
+          "Per 90 Minutes xAG": "0.06",
+          "Per 90 Minutes xG+xAG": "0.26",
+          "Per 90 Minutes npxG": "0.21",
+          "Per 90 Minutes npxG+xAG": "0.26",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2022/23": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2023/24": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2024/25": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      }
+    },
+    "evaluation_history": [
+      {
+        "date": "2019-09-25",
+        "value": 2500000
+      },
+      {
+        "date": "2019-12-10",
+        "value": 4500000
+      },
+      {
+        "date": "2020-04-08",
+        "value": 4000000
+      },
+      {
+        "date": "2020-10-13",
+        "value": 7000000
+      },
+      {
+        "date": "2021-03-18",
+        "value": 7000000
+      },
+      {
+        "date": "2021-06-08",
+        "value": 7000000
+      },
+      {
+        "date": "2021-12-23",
+        "value": 7000000
+      },
+      {
+        "date": "2022-05-13",
+        "value": 6000000
+      },
+      {
+        "date": "2022-12-22",
+        "value": 5000000
+      },
+      {
+        "date": "2023-06-01",
+        "value": 4000000
+      },
+      {
+        "date": "2023-10-27",
+        "value": 3500000
+      },
+      {
+        "date": "2023-12-21",
+        "value": 3000000
+      },
+      {
+        "date": "2024-03-07",
+        "value": 2500000
+      },
+      {
+        "date": "2024-05-24",
+        "value": 2500000
+      },
+      {
+        "date": "2024-12-30",
+        "value": 2500000
+      },
+      {
+        "date": "2025-05-27",
+        "value": 2200000
+      }
+    ]
+  },
+  {
+    "name": "Aaron Lennon",
+    "short_name": "Aaron Lennon",
+    "season_stats": {
+      "2017/18": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "272",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "FW,MF",
+          "Unnamed: 4_level_0 Squad": "Everton",
+          "Unnamed: 5_level_0 Age": "30",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Unnamed: 7_level_0 90s": "8.8",
+          "Total Cmp": "146",
+          "Total Att": "219",
+          "Total Cmp%": "66.7",
+          "Total TotDist": "2086",
+          "Total PrgDist": "558",
+          "Short Cmp": "92",
+          "Short Att": "122",
+          "Short Cmp%": "75.4",
+          "Medium Cmp": "45",
+          "Medium Att": "60",
+          "Medium Cmp%": "75.0",
+          "Long Cmp": "6",
+          "Long Att": "11",
+          "Long Cmp%": "54.5",
+          "Unnamed: 22_level_0 Ast": "0",
+          "Unnamed: 23_level_0 xAG": "0.2",
+          "Expected xA": "0.3",
+          "Expected A-xAG": "-0.2",
+          "Unnamed: 26_level_0 KP": "4",
+          "Unnamed: 27_level_0 1/3": "6",
+          "Unnamed: 28_level_0 PPA": "3",
+          "Unnamed: 29_level_0 CrsPA": "0",
+          "Unnamed: 30_level_0 PrgP": "19",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "272",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "FW,MF",
+          "Unnamed: 4_level_0 Squad": "Everton",
+          "Unnamed: 5_level_0 Age": "30",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Unnamed: 7_level_0 90s": "8.8",
+          "Tackles Tkl": "17",
+          "Tackles TklW": "10",
+          "Tackles Def 3rd": "10",
+          "Tackles Mid 3rd": "5",
+          "Tackles Att 3rd": "2",
+          "Challenges Tkl": "5",
+          "Challenges Att": "21",
+          "Challenges Tkl%": "23.8",
+          "Challenges Lost": "16",
+          "Blocks Blocks": "13",
+          "Blocks Sh": "1",
+          "Blocks Pass": "12",
+          "Unnamed: 20_level_0 Int": "11",
+          "Unnamed: 21_level_0 Tkl+Int": "28",
+          "Unnamed: 22_level_0 Clr": "9",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "272",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "FW,MF",
+          "Unnamed: 4_level_0 Squad": "Everton",
+          "Unnamed: 5_level_0 Age": "30",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Playing Time MP": "15",
+          "Playing Time Starts": "9",
+          "Playing Time Min": "793",
+          "Playing Time 90s": "8.8",
+          "Performance Gls": "0",
+          "Performance Ast": "0",
+          "Performance G+A": "0",
+          "Performance G-PK": "0",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "0",
+          "Performance CrdR": "0",
+          "Expected xG": "0.2",
+          "Expected npxG": "0.2",
+          "Expected xAG": "0.2",
+          "Expected npxG+xAG": "0.5",
+          "Progression PrgC": "17",
+          "Progression PrgP": "19",
+          "Progression PrgR": "33",
+          "Per 90 Minutes Gls": "0.00",
+          "Per 90 Minutes Ast": "0.00",
+          "Per 90 Minutes G+A": "0.00",
+          "Per 90 Minutes G-PK": "0.00",
+          "Per 90 Minutes G+A-PK": "0.00",
+          "Per 90 Minutes xG": "0.03",
+          "Per 90 Minutes xAG": "0.03",
+          "Per 90 Minutes xG+xAG": "0.05",
+          "Per 90 Minutes npxG": "0.03",
+          "Per 90 Minutes npxG+xAG": "0.05",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2018/19": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "263",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "31",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Unnamed: 7_level_0 90s": "13.5",
+          "Total Cmp": "227",
+          "Total Att": "307",
+          "Total Cmp%": "73.9",
+          "Total TotDist": "3224",
+          "Total PrgDist": "613",
+          "Short Cmp": "136",
+          "Short Att": "167",
+          "Short Cmp%": "81.4",
+          "Medium Cmp": "75",
+          "Medium Att": "92",
+          "Medium Cmp%": "81.5",
+          "Long Cmp": "9",
+          "Long Att": "16",
+          "Long Cmp%": "56.3",
+          "Unnamed: 22_level_0 Ast": "1",
+          "Unnamed: 23_level_0 xAG": "0.7",
+          "Expected xA": "0.8",
+          "Expected A-xAG": "+0.3",
+          "Unnamed: 26_level_0 KP": "7",
+          "Unnamed: 27_level_0 1/3": "10",
+          "Unnamed: 28_level_0 PPA": "6",
+          "Unnamed: 29_level_0 CrsPA": "3",
+          "Unnamed: 30_level_0 PrgP": "18",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "263",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "31",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Unnamed: 7_level_0 90s": "13.5",
+          "Tackles Tkl": "26",
+          "Tackles TklW": "16",
+          "Tackles Def 3rd": "11",
+          "Tackles Mid 3rd": "12",
+          "Tackles Att 3rd": "3",
+          "Challenges Tkl": "6",
+          "Challenges Att": "14",
+          "Challenges Tkl%": "42.9",
+          "Challenges Lost": "8",
+          "Blocks Blocks": "24",
+          "Blocks Sh": "0",
+          "Blocks Pass": "24",
+          "Unnamed: 20_level_0 Int": "10",
+          "Unnamed: 21_level_0 Tkl+Int": "36",
+          "Unnamed: 22_level_0 Clr": "18",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "263",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "31",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Playing Time MP": "16",
+          "Playing Time Starts": "14",
+          "Playing Time Min": "1215",
+          "Playing Time 90s": "13.5",
+          "Performance Gls": "1",
+          "Performance Ast": "1",
+          "Performance G+A": "2",
+          "Performance G-PK": "1",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "1",
+          "Performance CrdR": "0",
+          "Expected xG": "0.8",
+          "Expected npxG": "0.8",
+          "Expected xAG": "0.7",
+          "Expected npxG+xAG": "1.5",
+          "Progression PrgC": "21",
+          "Progression PrgP": "18",
+          "Progression PrgR": "55",
+          "Per 90 Minutes Gls": "0.07",
+          "Per 90 Minutes Ast": "0.07",
+          "Per 90 Minutes G+A": "0.15",
+          "Per 90 Minutes G-PK": "0.07",
+          "Per 90 Minutes G+A-PK": "0.15",
+          "Per 90 Minutes xG": "0.06",
+          "Per 90 Minutes xAG": "0.05",
+          "Per 90 Minutes xG+xAG": "0.11",
+          "Per 90 Minutes npxG": "0.06",
+          "Per 90 Minutes npxG+xAG": "0.11",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2019/20": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "258",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "32",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Unnamed: 7_level_0 90s": "5.5",
+          "Total Cmp": "84",
+          "Total Att": "127",
+          "Total Cmp%": "66.1",
+          "Total TotDist": "1046",
+          "Total PrgDist": "270",
+          "Short Cmp": "55",
+          "Short Att": "66",
+          "Short Cmp%": "83.3",
+          "Medium Cmp": "23",
+          "Medium Att": "30",
+          "Medium Cmp%": "76.7",
+          "Long Cmp": "2",
+          "Long Att": "11",
+          "Long Cmp%": "18.2",
+          "Unnamed: 22_level_0 Ast": "0",
+          "Unnamed: 23_level_0 xAG": "0.1",
+          "Expected xA": "0.2",
+          "Expected A-xAG": "-0.1",
+          "Unnamed: 26_level_0 KP": "2",
+          "Unnamed: 27_level_0 1/3": "5",
+          "Unnamed: 28_level_0 PPA": "2",
+          "Unnamed: 29_level_0 CrsPA": "1",
+          "Unnamed: 30_level_0 PrgP": "7",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "258",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "32",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Unnamed: 7_level_0 90s": "5.5",
+          "Tackles Tkl": "14",
+          "Tackles TklW": "8",
+          "Tackles Def 3rd": "7",
+          "Tackles Mid 3rd": "4",
+          "Tackles Att 3rd": "3",
+          "Challenges Tkl": "7",
+          "Challenges Att": "10",
+          "Challenges Tkl%": "70.0",
+          "Challenges Lost": "3",
+          "Blocks Blocks": "6",
+          "Blocks Sh": "1",
+          "Blocks Pass": "5",
+          "Unnamed: 20_level_0 Int": "8",
+          "Unnamed: 21_level_0 Tkl+Int": "22",
+          "Unnamed: 22_level_0 Clr": "3",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "258",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "32",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Playing Time MP": "16",
+          "Playing Time Starts": "4",
+          "Playing Time Min": "496",
+          "Playing Time 90s": "5.5",
+          "Performance Gls": "0",
+          "Performance Ast": "0",
+          "Performance G+A": "0",
+          "Performance G-PK": "0",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "4",
+          "Performance CrdR": "0",
+          "Expected xG": "0.0",
+          "Expected npxG": "0.0",
+          "Expected xAG": "0.1",
+          "Expected npxG+xAG": "0.2",
+          "Progression PrgC": "11",
+          "Progression PrgP": "7",
+          "Progression PrgR": "18",
+          "Per 90 Minutes Gls": "0.00",
+          "Per 90 Minutes Ast": "0.00",
+          "Per 90 Minutes G+A": "0.00",
+          "Per 90 Minutes G-PK": "0.00",
+          "Per 90 Minutes G+A-PK": "0.00",
+          "Per 90 Minutes xG": "0.01",
+          "Per 90 Minutes xAG": "0.03",
+          "Per 90 Minutes xG+xAG": "0.03",
+          "Per 90 Minutes npxG": "0.01",
+          "Per 90 Minutes npxG+xAG": "0.03",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2020/21": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2021/22": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "278",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "34",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Unnamed: 7_level_0 90s": "17.2",
+          "Total Cmp": "252",
+          "Total Att": "382",
+          "Total Cmp%": "66.0",
+          "Total TotDist": "3280",
+          "Total PrgDist": "783",
+          "Short Cmp": "156",
+          "Short Att": "197",
+          "Short Cmp%": "79.2",
+          "Medium Cmp": "65",
+          "Medium Att": "102",
+          "Medium Cmp%": "63.7",
+          "Long Cmp": "10",
+          "Long Att": "28",
+          "Long Cmp%": "35.7",
+          "Unnamed: 22_level_0 Ast": "0",
+          "Unnamed: 23_level_0 xAG": "0.5",
+          "Expected xA": "0.5",
+          "Expected A-xAG": "-0.5",
+          "Unnamed: 26_level_0 KP": "9",
+          "Unnamed: 27_level_0 1/3": "14",
+          "Unnamed: 28_level_0 PPA": "4",
+          "Unnamed: 29_level_0 CrsPA": "2",
+          "Unnamed: 30_level_0 PrgP": "19",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "278",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "34",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Unnamed: 7_level_0 90s": "17.2",
+          "Tackles Tkl": "33",
+          "Tackles TklW": "17",
+          "Tackles Def 3rd": "10",
+          "Tackles Mid 3rd": "13",
+          "Tackles Att 3rd": "10",
+          "Challenges Tkl": "10",
+          "Challenges Att": "34",
+          "Challenges Tkl%": "29.4",
+          "Challenges Lost": "24",
+          "Blocks Blocks": "26",
+          "Blocks Sh": "4",
+          "Blocks Pass": "22",
+          "Unnamed: 20_level_0 Int": "9",
+          "Unnamed: 21_level_0 Tkl+Int": "42",
+          "Unnamed: 22_level_0 Clr": "14",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "278",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "34",
+          "Unnamed: 6_level_0 Born": "1987",
+          "Playing Time MP": "28",
+          "Playing Time Starts": "17",
+          "Playing Time Min": "1551",
+          "Playing Time 90s": "17.2",
+          "Performance Gls": "2",
+          "Performance Ast": "0",
+          "Performance G+A": "2",
+          "Performance G-PK": "2",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "2",
+          "Performance CrdR": "0",
+          "Expected xG": "1.1",
+          "Expected npxG": "1.1",
+          "Expected xAG": "0.5",
+          "Expected npxG+xAG": "1.6",
+          "Progression PrgC": "38",
+          "Progression PrgP": "19",
+          "Progression PrgR": "77",
+          "Per 90 Minutes Gls": "0.12",
+          "Per 90 Minutes Ast": "0.00",
+          "Per 90 Minutes G+A": "0.12",
+          "Per 90 Minutes G-PK": "0.12",
+          "Per 90 Minutes G+A-PK": "0.12",
+          "Per 90 Minutes xG": "0.06",
+          "Per 90 Minutes xAG": "0.03",
+          "Per 90 Minutes xG+xAG": "0.09",
+          "Per 90 Minutes npxG": "0.06",
+          "Per 90 Minutes npxG+xAG": "0.09",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2022/23": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2023/24": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2024/25": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      }
+    },
+    "evaluation_history": [
+      {
+        "date": "2004-10-04",
+        "value": 300000
+      },
+      {
+        "date": "2005-08-22",
+        "value": 1250000
+      },
+      {
+        "date": "2006-06-14",
+        "value": 3500000
+      },
+      {
+        "date": "2007-04-27",
+        "value": 10300000
+      },
+      {
+        "date": "2007-09-01",
+        "value": 10500000
+      },
+      {
+        "date": "2008-02-04",
+        "value": 12500000
+      },
+      {
+        "date": "2008-07-04",
+        "value": 12000000
+      },
+      {
+        "date": "2009-02-23",
+        "value": 13000000
+      },
+      {
+        "date": "2009-06-26",
+        "value": 15000000
+      },
+      {
+        "date": "2010-01-24",
+        "value": 21000000
+      },
+      {
+        "date": "2010-08-13",
+        "value": 21000000
+      },
+      {
+        "date": "2011-02-01",
+        "value": 21000000
+      },
+      {
+        "date": "2011-08-08",
+        "value": 21000000
+      },
+      {
+        "date": "2012-02-06",
+        "value": 17000000
+      },
+      {
+        "date": "2012-06-24",
+        "value": 16000000
+      },
+      {
+        "date": "2013-01-28",
+        "value": 16000000
+      },
+      {
+        "date": "2013-07-02",
+        "value": 17000000
+      },
+      {
+        "date": "2014-01-15",
+        "value": 15000000
+      },
+      {
+        "date": "2014-08-12",
+        "value": 12000000
+      },
+      {
+        "date": "2015-02-12",
+        "value": 9000000
+      },
+      {
+        "date": "2015-07-01",
+        "value": 8500000
+      },
+      {
+        "date": "2015-10-14",
+        "value": 6000000
+      },
+      {
+        "date": "2016-02-09",
+        "value": 6000000
+      },
+      {
+        "date": "2016-08-01",
+        "value": 6000000
+      },
+      {
+        "date": "2017-02-20",
+        "value": 6000000
+      },
+      {
+        "date": "2017-06-28",
+        "value": 5000000
+      },
+      {
+        "date": "2018-01-02",
+        "value": 5000000
+      },
+      {
+        "date": "2018-05-28",
+        "value": 5000000
+      },
+      {
+        "date": "2018-12-19",
+        "value": 5000000
+      },
+      {
+        "date": "2019-06-13",
+        "value": 5000000
+      },
+      {
+        "date": "2019-12-10",
+        "value": 3000000
+      },
+      {
+        "date": "2020-04-08",
+        "value": 2400000
+      },
+      {
+        "date": "2020-10-12",
+        "value": 1800000
+      },
+      {
+        "date": "2020-12-23",
+        "value": 1400000
+      },
+      {
+        "date": "2021-03-16",
+        "value": 1100000
+      },
+      {
+        "date": "2021-05-21",
+        "value": 1100000
+      },
+      {
+        "date": "2021-12-23",
+        "value": 1000000
+      },
+      {
+        "date": "2022-06-15",
+        "value": 1000000
+      },
+      {
+        "date": "2022-10-07",
+        "value": 600000
+      },
+      {
+        "date": "2022-11-15",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "name": "Aaron Mooy",
+    "short_name": "Aaron Mooy",
+    "season_stats": {
+      "2017/18": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "336",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Huddersfield",
+          "Unnamed: 5_level_0 Age": "26",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "34.1",
+          "Total Cmp": "1553",
+          "Total Att": "2098",
+          "Total Cmp%": "74.0",
+          "Total TotDist": "25274",
+          "Total PrgDist": "7426",
+          "Short Cmp": "788",
+          "Short Att": "921",
+          "Short Cmp%": "85.6",
+          "Medium Cmp": "509",
+          "Medium Att": "657",
+          "Medium Cmp%": "77.5",
+          "Long Cmp": "162",
+          "Long Att": "337",
+          "Long Cmp%": "48.1",
+          "Unnamed: 22_level_0 Ast": "3",
+          "Unnamed: 23_level_0 xAG": "4.0",
+          "Expected xA": "4.0",
+          "Expected A-xAG": "-1.0",
+          "Unnamed: 26_level_0 KP": "50",
+          "Unnamed: 27_level_0 1/3": "203",
+          "Unnamed: 28_level_0 PPA": "28",
+          "Unnamed: 29_level_0 CrsPA": "9",
+          "Unnamed: 30_level_0 PrgP": "239",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "336",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Huddersfield",
+          "Unnamed: 5_level_0 Age": "26",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "34.1",
+          "Tackles Tkl": "102",
+          "Tackles TklW": "60",
+          "Tackles Def 3rd": "39",
+          "Tackles Mid 3rd": "51",
+          "Tackles Att 3rd": "12",
+          "Challenges Tkl": "23",
+          "Challenges Att": "55",
+          "Challenges Tkl%": "41.8",
+          "Challenges Lost": "32",
+          "Blocks Blocks": "39",
+          "Blocks Sh": "5",
+          "Blocks Pass": "34",
+          "Unnamed: 20_level_0 Int": "38",
+          "Unnamed: 21_level_0 Tkl+Int": "140",
+          "Unnamed: 22_level_0 Clr": "52",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "336",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Huddersfield",
+          "Unnamed: 5_level_0 Age": "26",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Playing Time MP": "36",
+          "Playing Time Starts": "34",
+          "Playing Time Min": "3067",
+          "Playing Time 90s": "34.1",
+          "Performance Gls": "4",
+          "Performance Ast": "3",
+          "Performance G+A": "7",
+          "Performance G-PK": "3",
+          "Performance PK": "1",
+          "Performance PKatt": "1",
+          "Performance CrdY": "4",
+          "Performance CrdR": "0",
+          "Expected xG": "3.0",
+          "Expected npxG": "2.2",
+          "Expected xAG": "4.0",
+          "Expected npxG+xAG": "6.2",
+          "Progression PrgC": "55",
+          "Progression PrgP": "239",
+          "Progression PrgR": "77",
+          "Per 90 Minutes Gls": "0.12",
+          "Per 90 Minutes Ast": "0.09",
+          "Per 90 Minutes G+A": "0.21",
+          "Per 90 Minutes G-PK": "0.09",
+          "Per 90 Minutes G+A-PK": "0.18",
+          "Per 90 Minutes xG": "0.09",
+          "Per 90 Minutes xAG": "0.12",
+          "Per 90 Minutes xG+xAG": "0.20",
+          "Per 90 Minutes npxG": "0.06",
+          "Per 90 Minutes npxG+xAG": "0.18",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2018/19": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "322",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Huddersfield",
+          "Unnamed: 5_level_0 Age": "27",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "25.9",
+          "Total Cmp": "1073",
+          "Total Att": "1435",
+          "Total Cmp%": "74.8",
+          "Total TotDist": "16856",
+          "Total PrgDist": "5417",
+          "Short Cmp": "606",
+          "Short Att": "693",
+          "Short Cmp%": "87.4",
+          "Medium Cmp": "287",
+          "Medium Att": "370",
+          "Medium Cmp%": "77.6",
+          "Long Cmp": "123",
+          "Long Att": "238",
+          "Long Cmp%": "51.7",
+          "Unnamed: 22_level_0 Ast": "1",
+          "Unnamed: 23_level_0 xAG": "2.6",
+          "Expected xA": "2.7",
+          "Expected A-xAG": "-1.6",
+          "Unnamed: 26_level_0 KP": "43",
+          "Unnamed: 27_level_0 1/3": "143",
+          "Unnamed: 28_level_0 PPA": "24",
+          "Unnamed: 29_level_0 CrsPA": "8",
+          "Unnamed: 30_level_0 PrgP": "154",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "322",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Huddersfield",
+          "Unnamed: 5_level_0 Age": "27",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "25.9",
+          "Tackles Tkl": "62",
+          "Tackles TklW": "42",
+          "Tackles Def 3rd": "19",
+          "Tackles Mid 3rd": "27",
+          "Tackles Att 3rd": "16",
+          "Challenges Tkl": "21",
+          "Challenges Att": "52",
+          "Challenges Tkl%": "40.4",
+          "Challenges Lost": "31",
+          "Blocks Blocks": "43",
+          "Blocks Sh": "7",
+          "Blocks Pass": "36",
+          "Unnamed: 20_level_0 Int": "14",
+          "Unnamed: 21_level_0 Tkl+Int": "76",
+          "Unnamed: 22_level_0 Clr": "22",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "322",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Huddersfield",
+          "Unnamed: 5_level_0 Age": "27",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Playing Time MP": "29",
+          "Playing Time Starts": "25",
+          "Playing Time Min": "2330",
+          "Playing Time 90s": "25.9",
+          "Performance Gls": "3",
+          "Performance Ast": "1",
+          "Performance G+A": "4",
+          "Performance G-PK": "2",
+          "Performance PK": "1",
+          "Performance PKatt": "1",
+          "Performance CrdY": "4",
+          "Performance CrdR": "0",
+          "Expected xG": "2.8",
+          "Expected npxG": "2.1",
+          "Expected xAG": "2.6",
+          "Expected npxG+xAG": "4.6",
+          "Progression PrgC": "61",
+          "Progression PrgP": "154",
+          "Progression PrgR": "94",
+          "Per 90 Minutes Gls": "0.12",
+          "Per 90 Minutes Ast": "0.04",
+          "Per 90 Minutes G+A": "0.15",
+          "Per 90 Minutes G-PK": "0.08",
+          "Per 90 Minutes G+A-PK": "0.12",
+          "Per 90 Minutes xG": "0.11",
+          "Per 90 Minutes xAG": "0.10",
+          "Per 90 Minutes xG+xAG": "0.21",
+          "Per 90 Minutes npxG": "0.08",
+          "Per 90 Minutes npxG+xAG": "0.18",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2019/20": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "323",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "28",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "23.2",
+          "Total Cmp": "818",
+          "Total Att": "1092",
+          "Total Cmp%": "74.9",
+          "Total TotDist": "12922",
+          "Total PrgDist": "3701",
+          "Short Cmp": "459",
+          "Short Att": "513",
+          "Short Cmp%": "89.5",
+          "Medium Cmp": "245",
+          "Medium Att": "311",
+          "Medium Cmp%": "78.8",
+          "Long Cmp": "81",
+          "Long Att": "169",
+          "Long Cmp%": "47.9",
+          "Unnamed: 22_level_0 Ast": "2",
+          "Unnamed: 23_level_0 xAG": "4.5",
+          "Expected xA": "3.2",
+          "Expected A-xAG": "-2.5",
+          "Unnamed: 26_level_0 KP": "39",
+          "Unnamed: 27_level_0 1/3": "87",
+          "Unnamed: 28_level_0 PPA": "26",
+          "Unnamed: 29_level_0 CrsPA": "5",
+          "Unnamed: 30_level_0 PrgP": "158",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "323",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "28",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "23.2",
+          "Tackles Tkl": "37",
+          "Tackles TklW": "24",
+          "Tackles Def 3rd": "9",
+          "Tackles Mid 3rd": "18",
+          "Tackles Att 3rd": "10",
+          "Challenges Tkl": "6",
+          "Challenges Att": "40",
+          "Challenges Tkl%": "15.0",
+          "Challenges Lost": "34",
+          "Blocks Blocks": "36",
+          "Blocks Sh": "7",
+          "Blocks Pass": "29",
+          "Unnamed: 20_level_0 Int": "23",
+          "Unnamed: 21_level_0 Tkl+Int": "60",
+          "Unnamed: 22_level_0 Clr": "32",
+          "Unnamed: 23_level_0 Err": "1",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "323",
+          "Unnamed: 2_level_0 Nation": "au AUS",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Brighton",
+          "Unnamed: 5_level_0 Age": "28",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Playing Time MP": "31",
+          "Playing Time Starts": "25",
+          "Playing Time Min": "2085",
+          "Playing Time 90s": "23.2",
+          "Performance Gls": "2",
+          "Performance Ast": "2",
+          "Performance G+A": "4",
+          "Performance G-PK": "2",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "3",
+          "Performance CrdR": "1",
+          "Expected xG": "2.3",
+          "Expected npxG": "2.3",
+          "Expected xAG": "4.5",
+          "Expected npxG+xAG": "6.8",
+          "Progression PrgC": "71",
+          "Progression PrgP": "158",
+          "Progression PrgR": "135",
+          "Per 90 Minutes Gls": "0.09",
+          "Per 90 Minutes Ast": "0.09",
+          "Per 90 Minutes G+A": "0.17",
+          "Per 90 Minutes G-PK": "0.09",
+          "Per 90 Minutes G+A-PK": "0.17",
+          "Per 90 Minutes xG": "0.10",
+          "Per 90 Minutes xAG": "0.19",
+          "Per 90 Minutes xG+xAG": "0.29",
+          "Per 90 Minutes npxG": "0.10",
+          "Per 90 Minutes npxG+xAG": "0.29",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2020/21": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2021/22": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2022/23": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2023/24": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2024/25": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      }
+    },
+    "evaluation_history": [
+      {
+        "date": "2009-08-18",
+        "value": 50000
+      },
+      {
+        "date": "2010-01-24",
+        "value": 50000
+      },
+      {
+        "date": "2010-09-25",
+        "value": 0
+      },
+      {
+        "date": "2010-11-10",
+        "value": 50000
+      },
+      {
+        "date": "2011-07-03",
+        "value": 100000
+      },
+      {
+        "date": "2012-02-02",
+        "value": 150000
+      },
+      {
+        "date": "2012-07-22",
+        "value": 150000
+      },
+      {
+        "date": "2013-01-12",
+        "value": 400000
+      },
+      {
+        "date": "2013-04-12",
+        "value": 600000
+      },
+      {
+        "date": "2013-07-11",
+        "value": 750000
+      },
+      {
+        "date": "2016-09-01",
+        "value": 750000
+      },
+      {
+        "date": "2017-02-27",
+        "value": 1000000
+      },
+      {
+        "date": "2017-06-28",
+        "value": 5000000
+      },
+      {
+        "date": "2017-08-16",
+        "value": 7000000
+      },
+      {
+        "date": "2018-01-02",
+        "value": 9000000
+      },
+      {
+        "date": "2018-05-28",
+        "value": 10000000
+      },
+      {
+        "date": "2018-12-19",
+        "value": 14000000
+      },
+      {
+        "date": "2019-06-13",
+        "value": 14000000
+      },
+      {
+        "date": "2019-12-10",
+        "value": 12000000
+      },
+      {
+        "date": "2020-04-08",
+        "value": 9500000
+      },
+      {
+        "date": "2020-12-26",
+        "value": 8500000
+      },
+      {
+        "date": "2021-08-23",
+        "value": 7500000
+      },
+      {
+        "date": "2022-01-17",
+        "value": 5000000
+      },
+      {
+        "date": "2022-11-14",
+        "value": 4000000
+      },
+      {
+        "date": "2023-06-26",
+        "value": 3500000
+      },
+      {
+        "date": "2023-07-01",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "name": "Aaron Ramsey",
+    "short_name": "Aaron Ramsey",
+    "season_stats": {
+      "2017/18": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "396",
+          "Unnamed: 2_level_0 Nation": "wls WAL",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Arsenal",
+          "Unnamed: 5_level_0 Age": "26",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "20.5",
+          "Total Cmp": "1065",
+          "Total Att": "1277",
+          "Total Cmp%": "83.4",
+          "Total TotDist": "16341",
+          "Total PrgDist": "4329",
+          "Short Cmp": "556",
+          "Short Att": "627",
+          "Short Cmp%": "88.7",
+          "Medium Cmp": "390",
+          "Medium Att": "457",
+          "Medium Cmp%": "85.3",
+          "Long Cmp": "69",
+          "Long Att": "97",
+          "Long Cmp%": "71.1",
+          "Unnamed: 22_level_0 Ast": "8",
+          "Unnamed: 23_level_0 xAG": "5.4",
+          "Expected xA": "5.3",
+          "Expected A-xAG": "+2.6",
+          "Unnamed: 26_level_0 KP": "28",
+          "Unnamed: 27_level_0 1/3": "102",
+          "Unnamed: 28_level_0 PPA": "36",
+          "Unnamed: 29_level_0 CrsPA": "3",
+          "Unnamed: 30_level_0 PrgP": "134",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "396",
+          "Unnamed: 2_level_0 Nation": "wls WAL",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Arsenal",
+          "Unnamed: 5_level_0 Age": "26",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "20.5",
+          "Tackles Tkl": "35",
+          "Tackles TklW": "27",
+          "Tackles Def 3rd": "18",
+          "Tackles Mid 3rd": "17",
+          "Tackles Att 3rd": "0",
+          "Challenges Tkl": "8",
+          "Challenges Att": "44",
+          "Challenges Tkl%": "18.2",
+          "Challenges Lost": "36",
+          "Blocks Blocks": "14",
+          "Blocks Sh": "3",
+          "Blocks Pass": "11",
+          "Unnamed: 20_level_0 Int": "24",
+          "Unnamed: 21_level_0 Tkl+Int": "59",
+          "Unnamed: 22_level_0 Clr": "6",
+          "Unnamed: 23_level_0 Err": "1",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "396",
+          "Unnamed: 2_level_0 Nation": "wls WAL",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Arsenal",
+          "Unnamed: 5_level_0 Age": "26",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Playing Time MP": "24",
+          "Playing Time Starts": "21",
+          "Playing Time Min": "1846",
+          "Playing Time 90s": "20.5",
+          "Performance Gls": "7",
+          "Performance Ast": "8",
+          "Performance G+A": "15",
+          "Performance G-PK": "7",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "0",
+          "Performance CrdR": "0",
+          "Expected xG": "6.1",
+          "Expected npxG": "6.1",
+          "Expected xAG": "5.4",
+          "Expected npxG+xAG": "11.5",
+          "Progression PrgC": "61",
+          "Progression PrgP": "134",
+          "Progression PrgR": "161",
+          "Per 90 Minutes Gls": "0.34",
+          "Per 90 Minutes Ast": "0.39",
+          "Per 90 Minutes G+A": "0.73",
+          "Per 90 Minutes G-PK": "0.34",
+          "Per 90 Minutes G+A-PK": "0.73",
+          "Per 90 Minutes xG": "0.30",
+          "Per 90 Minutes xAG": "0.26",
+          "Per 90 Minutes xG+xAG": "0.56",
+          "Per 90 Minutes npxG": "0.30",
+          "Per 90 Minutes npxG+xAG": "0.56",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2018/19": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "379",
+          "Unnamed: 2_level_0 Nation": "wls WAL",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Arsenal",
+          "Unnamed: 5_level_0 Age": "27",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "14.8",
+          "Total Cmp": "652",
+          "Total Att": "807",
+          "Total Cmp%": "80.8",
+          "Total TotDist": "9568",
+          "Total PrgDist": "2275",
+          "Short Cmp": "368",
+          "Short Att": "419",
+          "Short Cmp%": "87.8",
+          "Medium Cmp": "192",
+          "Medium Att": "226",
+          "Medium Cmp%": "85.0",
+          "Long Cmp": "43",
+          "Long Att": "59",
+          "Long Cmp%": "72.9",
+          "Unnamed: 22_level_0 Ast": "6",
+          "Unnamed: 23_level_0 xAG": "2.0",
+          "Expected xA": "2.3",
+          "Expected A-xAG": "+4.0",
+          "Unnamed: 26_level_0 KP": "25",
+          "Unnamed: 27_level_0 1/3": "51",
+          "Unnamed: 28_level_0 PPA": "16",
+          "Unnamed: 29_level_0 CrsPA": "4",
+          "Unnamed: 30_level_0 PrgP": "88",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "379",
+          "Unnamed: 2_level_0 Nation": "wls WAL",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Arsenal",
+          "Unnamed: 5_level_0 Age": "27",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Unnamed: 7_level_0 90s": "14.8",
+          "Tackles Tkl": "34",
+          "Tackles TklW": "18",
+          "Tackles Def 3rd": "11",
+          "Tackles Mid 3rd": "15",
+          "Tackles Att 3rd": "8",
+          "Challenges Tkl": "7",
+          "Challenges Att": "25",
+          "Challenges Tkl%": "28.0",
+          "Challenges Lost": "18",
+          "Blocks Blocks": "7",
+          "Blocks Sh": "1",
+          "Blocks Pass": "6",
+          "Unnamed: 20_level_0 Int": "9",
+          "Unnamed: 21_level_0 Tkl+Int": "43",
+          "Unnamed: 22_level_0 Clr": "3",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "379",
+          "Unnamed: 2_level_0 Nation": "wls WAL",
+          "Unnamed: 3_level_0 Pos": "MF",
+          "Unnamed: 4_level_0 Squad": "Arsenal",
+          "Unnamed: 5_level_0 Age": "27",
+          "Unnamed: 6_level_0 Born": "1990",
+          "Playing Time MP": "28",
+          "Playing Time Starts": "14",
+          "Playing Time Min": "1331",
+          "Playing Time 90s": "14.8",
+          "Performance Gls": "4",
+          "Performance Ast": "6",
+          "Performance G+A": "10",
+          "Performance G-PK": "4",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "0",
+          "Performance CrdR": "0",
+          "Expected xG": "3.4",
+          "Expected npxG": "3.4",
+          "Expected xAG": "2.0",
+          "Expected npxG+xAG": "5.4",
+          "Progression PrgC": "47",
+          "Progression PrgP": "88",
+          "Progression PrgR": "133",
+          "Per 90 Minutes Gls": "0.27",
+          "Per 90 Minutes Ast": "0.41",
+          "Per 90 Minutes G+A": "0.68",
+          "Per 90 Minutes G-PK": "0.27",
+          "Per 90 Minutes G+A-PK": "0.68",
+          "Per 90 Minutes xG": "0.23",
+          "Per 90 Minutes xAG": "0.14",
+          "Per 90 Minutes xG+xAG": "0.37",
+          "Per 90 Minutes npxG": "0.23",
+          "Per 90 Minutes npxG+xAG": "0.37",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2019/20": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2020/21": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2021/22": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2022/23": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      },
+      "2023/24": {
+        "offensive": {
+          "Unnamed: 0_level_0 Rk": "439",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "20",
+          "Unnamed: 6_level_0 Born": "2003",
+          "Unnamed: 7_level_0 90s": "5.9",
+          "Total Cmp": "118",
+          "Total Att": "151",
+          "Total Cmp%": "78.1",
+          "Total TotDist": "1856",
+          "Total PrgDist": "224",
+          "Short Cmp": "71",
+          "Short Att": "84",
+          "Short Cmp%": "84.5",
+          "Medium Cmp": "37",
+          "Medium Att": "46",
+          "Medium Cmp%": "80.4",
+          "Long Cmp": "9",
+          "Long Att": "10",
+          "Long Cmp%": "90.0",
+          "Unnamed: 22_level_0 Ast": "0",
+          "Unnamed: 23_level_0 xAG": "0.4",
+          "Expected xA": "0.5",
+          "Expected A-xAG": "-0.4",
+          "Unnamed: 26_level_0 KP": "1",
+          "Unnamed: 27_level_0 1/3": "7",
+          "Unnamed: 28_level_0 PPA": "2",
+          "Unnamed: 29_level_0 CrsPA": "0",
+          "Unnamed: 30_level_0 PrgP": "8",
+          "Unnamed: 31_level_0 Matches": "Matches"
+        },
+        "defensive": {
+          "Unnamed: 0_level_0 Rk": "439",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "20",
+          "Unnamed: 6_level_0 Born": "2003",
+          "Unnamed: 7_level_0 90s": "5.9",
+          "Tackles Tkl": "17",
+          "Tackles TklW": "14",
+          "Tackles Def 3rd": "7",
+          "Tackles Mid 3rd": "5",
+          "Tackles Att 3rd": "5",
+          "Challenges Tkl": "8",
+          "Challenges Att": "16",
+          "Challenges Tkl%": "50.0",
+          "Challenges Lost": "8",
+          "Blocks Blocks": "11",
+          "Blocks Sh": "2",
+          "Blocks Pass": "9",
+          "Unnamed: 20_level_0 Int": "1",
+          "Unnamed: 21_level_0 Tkl+Int": "18",
+          "Unnamed: 22_level_0 Clr": "10",
+          "Unnamed: 23_level_0 Err": "0",
+          "Unnamed: 24_level_0 Matches": "Matches"
+        },
+        "standard": {
+          "Unnamed: 0_level_0 Rk": "439",
+          "Unnamed: 2_level_0 Nation": "eng ENG",
+          "Unnamed: 3_level_0 Pos": "MF,FW",
+          "Unnamed: 4_level_0 Squad": "Burnley",
+          "Unnamed: 5_level_0 Age": "20",
+          "Unnamed: 6_level_0 Born": "2003",
+          "Playing Time MP": "14",
+          "Playing Time Starts": "5",
+          "Playing Time Min": "527",
+          "Playing Time 90s": "5.9",
+          "Performance Gls": "0",
+          "Performance Ast": "0",
+          "Performance G+A": "0",
+          "Performance G-PK": "0",
+          "Performance PK": "0",
+          "Performance PKatt": "0",
+          "Performance CrdY": "1",
+          "Performance CrdR": "0",
+          "Expected xG": "0.3",
+          "Expected npxG": "0.3",
+          "Expected xAG": "0.4",
+          "Expected npxG+xAG": "0.7",
+          "Progression PrgC": "8",
+          "Progression PrgP": "8",
+          "Progression PrgR": "17",
+          "Per 90 Minutes Gls": "0.00",
+          "Per 90 Minutes Ast": "0.00",
+          "Per 90 Minutes G+A": "0.00",
+          "Per 90 Minutes G-PK": "0.00",
+          "Per 90 Minutes G+A-PK": "0.00",
+          "Per 90 Minutes xG": "0.06",
+          "Per 90 Minutes xAG": "0.07",
+          "Per 90 Minutes xG+xAG": "0.13",
+          "Per 90 Minutes npxG": "0.06",
+          "Per 90 Minutes npxG+xAG": "0.13",
+          "Unnamed: 36_level_0 Matches": "Matches"
+        }
+      },
+      "2024/25": {
+        "offensive": {},
+        "defensive": {},
+        "standard": {}
+      }
+    },
+    "evaluation_history": [
+      {
+        "date": "2007-07-29",
+        "value": 50000
+      },
+      {
+        "date": "2008-06-09",
+        "value": 1500000
+      },
+      {
+        "date": "2008-06-15",
+        "value": 5000000
+      },
+      {
+        "date": "2010-01-25",
+        "value": 6000000
+      },
+      {
+        "date": "2010-08-13",
+        "value": 6000000
+      },
+      {
+        "date": "2011-08-08",
+        "value": 7000000
+      },
+      {
+        "date": "2012-02-06",
+        "value": 11000000
+      },
+      {
+        "date": "2012-06-24",
+        "value": 11500000
+      },
+      {
+        "date": "2013-01-28",
+        "value": 10000000
+      },
+      {
+        "date": "2013-07-02",
+        "value": 13000000
+      },
+      {
+        "date": "2014-01-15",
+        "value": 20000000
+      },
+      {
+        "date": "2014-08-12",
+        "value": 24000000
+      },
+      {
+        "date": "2015-02-12",
+        "value": 25000000
+      },
+      {
+        "date": "2015-07-01",
+        "value": 28000000
+      },
+      {
+        "date": "2016-02-09",
+        "value": 30000000
+      },
+      {
+        "date": "2016-06-01",
+        "value": 30000000
+      },
+      {
+        "date": "2016-08-01",
+        "value": 35000000
+      },
+      {
+        "date": "2017-02-20",
+        "value": 35000000
+      },
+      {
+        "date": "2017-06-28",
+        "value": 35000000
+      },
+      {
+        "date": "2018-01-02",
+        "value": 40000000
+      },
+      {
+        "date": "2018-05-28",
+        "value": 45000000
+      },
+      {
+        "date": "2018-12-19",
+        "value": 40000000
+      },
+      {
+        "date": "2019-06-13",
+        "value": 40000000
+      },
+      {
+        "date": "2019-12-12",
+        "value": 40000000
+      },
+      {
+        "date": "2020-03-03",
+        "value": 35000000
+      },
+      {
+        "date": "2020-04-08",
+        "value": 28000000
+      },
+      {
+        "date": "2020-08-25",
+        "value": 22000000
+      },
+      {
+        "date": "2020-12-29",
+        "value": 20000000
+      },
+      {
+        "date": "2021-05-25",
+        "value": 14000000
+      },
+      {
+        "date": "2021-10-14",
+        "value": 10000000
+      },
+      {
+        "date": "2021-12-28",
+        "value": 5000000
+      },
+      {
+        "date": "2022-06-07",
+        "value": 3000000
+      },
+      {
+        "date": "2022-11-02",
+        "value": 3000000
+      },
+      {
+        "date": "2023-06-27",
+        "value": 2500000
+      },
+      {
+        "date": "2023-12-21",
+        "value": 1500000
+      },
+      {
+        "date": "2024-03-07",
+        "value": 1200000
+      },
+      {
+        "date": "2024-05-24",
+        "value": 1000000
+      },
+      {
+        "date": "2024-12-30",
+        "value": 800000
+      },
+      {
+        "date": "2025-05-27",
+        "value": 600000
+      }
+    ]
+  }
+]
