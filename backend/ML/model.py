@@ -3,6 +3,8 @@ import tensorflow as tf
 import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.inspection import permutation_importance
+from sklearn.metrics import make_scorer, mean_absolute_error
 
 file_path = "../FBref_data/stats_standard_2025.csv"
 df = pd.read_csv(file_path)
@@ -18,10 +20,10 @@ df = df.dropna()
 
 X = df.drop("Per 90 Minutes npxG+xAG", axis=1).values
 y = df["Per 90 Minutes npxG+xAG"].values
-
+print(df.columns)
 print(X[0])
 print(y[0])
-
+exit(0)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=69)
 
 scaler = StandardScaler()
