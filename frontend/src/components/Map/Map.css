@@ -1,0 +1,95 @@
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* 🏟️ Team logo markers */
+.team-logo {
+  position: absolute;
+  width: 40px;           /* size of team logos */
+  height: 40px;
+  object-fit: contain;   /* ensures full logo visible */
+  border-radius: 6px;    /* optional: slightly rounded */
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.team-logo:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  z-index: 10;
+}
+
+/* 🧱 Prevent dragging or selecting images */
+.map-image,
+.team-logo {
+  user-drag: none;
+  -webkit-user-drag: none; /* Safari */
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: auto; /* still clickable */
+}
+
+
+/* 🔽 Season selector overlay (enhanced) */
+.season-selector {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem; /* ⬅️ moved slightly left */
+  background: rgba(255, 255, 255, 0.95); /* brighter background */
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 0.7rem 1.3rem; /* ⬆️ increased size */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  z-index: 20;
+  font-family: 'Inter', system-ui, sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.season-selector label {
+  font-size: 1rem;         /* ⬆️ slightly larger text */
+  font-weight: 600;
+  color: #222;             /* ⬛ darker label */
+}
+
+.season-selector select {
+  border: 1px solid #ccc;  /* subtle border */
+  background: #f9fafc;     /* light background */
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  color: #111;             /* darker text */
+  transition: all 0.15s ease;
+}
+
+.season-selector select:hover {
+  background: #fff;
+  border-color: #999;
+}
+
+.season-selector select:focus {
+  outline: none;
+  border-color: #457b9d;  /* blue highlight */
+  box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.25);
+}

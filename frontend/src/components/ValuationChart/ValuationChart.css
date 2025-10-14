@@ -1,0 +1,44 @@
+.valuation-chart {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.valuation-chart .axis text {
+  fill: #333;
+  font-size: 12px;
+}
+
+.valuation-chart .axis path,
+.valuation-chart .axis line {
+  stroke: #bbb;
+}
+
+.valuation-chart .grid line {
+  stroke: #aaa;
+}
+
+.vc-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+}
+
+
+
+
+.chart-card {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

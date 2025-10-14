@@ -1,0 +1,316 @@
+/* === Overlay === */
+.player-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  z-index: 3000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  transition: width 0.4s ease, background 0.3s ease;
+}
+
+.player-drawer-overlay.expanded {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* === Drawer === */
+.player-drawer {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 1.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: 6px 0 20px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease;
+  color: #111;
+}
+
+/* === Header === */
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-icon {
+  background: #ffcc33;
+  border: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-icon:hover {
+  background: #f4b53f;
+  transform: scale(1.1);
+}
+
+.header-icon svg {
+  stroke: #111;
+}
+
+.player-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+/* === Drawer Body === */
+.drawer-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.drawer-body.expanded {
+  flex-direction: row;
+  gap: 2.2rem;
+}
+
+/* === Left Panel === */
+.left-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.player-info {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.6rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.player-info:hover {
+  transform: translateY(-2px);
+}
+
+.player-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.player-info h3 {
+  margin: 0.3rem 0 0.5rem;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.player-info p {
+  margin: 0.25rem 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.chart-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.chart-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem 1rem 1rem;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* === Right Panel === */
+.right-panel {
+  flex: 1.3;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.6rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.right-panel h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+/* === 3x3 Form Grid (Aligned Vertically) === */
+.form-grid-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.form-grid-3x3 .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Label Styling */
+.form-grid-3x3 label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Input Styling (Light Mode) */
+.form-grid-3x3 input {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.form-grid-3x3 input:focus {
+  border-color: #28a745;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25);
+}
+
+/* === Green Estimate Button === */
+.estimate-btn-green {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.estimate-btn-green:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+/* === Save Button === */
+.customize-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.customize-btn:hover {
+  background: #005fcc;
+  transform: translateY(-1px);
+}
+
+/* === Result Text === */
+.estimate-result {
+  color: #1b6f50;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* === Animations === */
+@keyframes slideIn {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* === Scrollbar Styling === */
+.player-drawer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.player-drawer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.player-drawer::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .drawer-body.expanded {
+    flex-direction: column;
+  }
+
+  .right-panel {
+    order: 2;
+  }
+
+  .form-grid-3x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .player-drawer-overlay {
+    width: 100%;
+  }
+
+  .form-grid-3x3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Global Light Mode Background === */
+body {
+  background: #f9fafc;
+  color: #111;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+
+.left-panel .customize-btn {
+  align-self: center;
+  margin-top: 1.2rem;
+}

@@ -1,0 +1,52 @@
+.team-info {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  min-width: 600px;
+  color: #222;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Logo */
+.team-logo-card {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 1.5rem;
+}
+
+/* Text area */
+.team-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #111;
+}
+
+.team-details p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Responsive: stack vertically on mobile */
+@media (max-width: 600px) {
+  .team-info {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .team-logo {
+    margin: 0 0 1rem 0;
+  }
+}
