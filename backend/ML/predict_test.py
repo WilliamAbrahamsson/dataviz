@@ -6,7 +6,7 @@ import shap
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-file_path = "../FBref_data/stats_standard_2025.csv"
+file_path = "../old/FBref_data/stats_standard_2025.csv"
 df = pd.read_csv(file_path)
 
 # only include numerical features
@@ -28,6 +28,7 @@ x = scaler.transform(x)
 pred = model.predict(x)
 print("Single prediction:", float(pred[0, 0]))
 
+"""
 # Build a background set (needed by SHAP for reference baseline)
 rng = np.random.default_rng(42)
 bg_idx = rng.choice(X.shape[0], size=200, replace=False)
@@ -44,5 +45,5 @@ local_df = pd.DataFrame({
     "shap_value": sv.values.flatten()
 }).sort_values("shap_value", key=np.abs, ascending=False)
 
-print("\n🔍 Top contributing features for THIS prediction:")
-print(local_df.head(10))
+print("Top contributing features for THIS prediction:")
+print(local_df.head(10)) """
