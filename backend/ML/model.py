@@ -52,9 +52,9 @@ print(f"Test MAE: {mae:.3f}")
 #joblib.dump(scaler, "models/scaler.pkl")
 
 
-## -------- FEATURE IMPORTANCE -------
+# Feature Importance
 
-## ---- Permutation importance -----
+# Permutation importance
 scorer = make_scorer(mean_absolute_error, greater_is_better=False)
 
 pi = permutation_importance(
@@ -75,7 +75,7 @@ importance_df = pd.DataFrame({
 print("Permutation Importance")
 print(importance_df.head(4))
 
-## ----- SHAP values -------
+# Shap values
 
 # get a random sample
 rng = np.random.default_rng(42)
@@ -96,13 +96,13 @@ print("{\nSHAP importance")
 print(shap_global_df.head(4))
 
 
-## --------- PLOTS -------------
+# plots
 
 top_perm = importance_df.sort_values("importance", ascending=False).head(6)
 top_shap = shap_global_df.sort_values("mean_abs_shap", ascending=False).head(6)
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
-#Permutation Importance
+# Permutation Importance
 axes[0].bar(top_perm["feature"], top_perm["importance"])
 axes[0].set_title("Permutation Importance")
 axes[0].set_xticklabels(top_perm["feature"], rotation=45, ha='right')

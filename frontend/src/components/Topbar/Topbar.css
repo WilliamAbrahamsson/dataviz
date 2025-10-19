@@ -57,7 +57,6 @@ body.dark-mode {
   text-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* Right side */
 .topbar-right {
   display: flex;
   align-items: center;
@@ -84,7 +83,6 @@ body.dark-mode {
   box-shadow: 0 0 0 3px var(--accent-transparent);
 }
 
-/* ===== Theme Toggle (no hover) ===== */
 .theme-toggle-btn {
   border: none;
   background: transparent;
@@ -107,7 +105,6 @@ body.dark-mode {
   align-items: center;
 }
 
-/* Removed hover effects */
 .toggle-track:hover {
   background: var(--bg-secondary);
   border-color: var(--accent-transparent);
@@ -133,14 +130,11 @@ body.dark-mode {
 .theme-toggle-btn.dark .toggle-thumb {
   left: calc(100% - 32px);
 }
-
-/* ===== Remove Text Selection Highlight ===== */
 *::selection {
   background: transparent;
   color: inherit;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .topbar-content { padding: .8rem 1rem; }
   .search-input { width: 170px; }

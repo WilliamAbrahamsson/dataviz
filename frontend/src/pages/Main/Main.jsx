@@ -23,7 +23,6 @@ function Main() {
 
   return (
     <div className="app-root">
-      {/* 👇 pass current season */}
       <Topbar
         onPlayerSelect={handlePlayerSelect}
         selectedSeason={selectedSeason}

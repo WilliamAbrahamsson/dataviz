@@ -14,7 +14,6 @@ function Table({ teamName, season, externalPlayer, onClosePlayer }) {
       ? mapPositions[teamName].logo
       : '/static/images/teams/default_logo.png'
 
-  // Fetch team players
   useEffect(() => {
     if (!teamName || !season) return
     setLoading(true)
@@ -36,7 +35,6 @@ function Table({ teamName, season, externalPlayer, onClosePlayer }) {
       })
   }, [teamName, season])
 
-  // If external player passed in (from search)
   useEffect(() => {
     if (externalPlayer) {
       setSelectedPlayer(externalPlayer)

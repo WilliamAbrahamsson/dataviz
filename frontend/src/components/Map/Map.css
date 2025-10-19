@@ -1,10 +1,8 @@
-/* theme vars inherited */
-
 .map-container {
   position: relative;
-  width: 92%;                /* fills most of left side */
-  height: 80%;               /* fills vertically but leaves top/bottom breathing room */
-  margin: 2% auto;           /* even margin all around */
+  width: 92%;
+  height: 80%;
+  margin: 2% auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +81,6 @@
   outline: none;
 }
 
-/* Responsive adjustments */
 @media (max-width: 900px) {
   .map-container {
     width: 96%;

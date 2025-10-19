@@ -64,10 +64,6 @@ class PlayerSeason(db.Model):
     progressive_receptions = db.Column(db.Float, nullable=True)
 
 
-# ------------------------------
-# Create Tables
-# ------------------------------
-
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

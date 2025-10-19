@@ -7,7 +7,6 @@ function Search({ onSelect, currentSeason }) {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef(null)
 
-  // Fetch players from backend (filtered by season)
   useEffect(() => {
     const fetchPlayers = async () => {
       const trimmed = query.trim()
@@ -25,7 +24,6 @@ function Search({ onSelect, currentSeason }) {
         if (!res.ok) throw new Error('Failed to fetch players')
         const data = await res.json()
 
-        // ✅ Only include players who have a valid PlayerSeason for this season
         const filtered = data
           .filter((p) =>
             p.seasons?.some((s) => s.year_code === currentSeason && s.club)
@@ -44,11 +42,10 @@ function Search({ onSelect, currentSeason }) {
       }
     }
 
-    const timeout = setTimeout(fetchPlayers, 250) // debounce
+    const timeout = setTimeout(fetchPlayers, 250)
     return () => clearTimeout(timeout)
   }, [query, currentSeason])
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -87,7 +84,7 @@ function Search({ onSelect, currentSeason }) {
             const seasonData = player.seasons.find(
               (s) => s.year_code === currentSeason && s.club
             )
-            if (!seasonData) return null // 🚫 skip players without club/season data
+            if (!seasonData) return null
             return (
               <li key={player.id} onClick={() => handleSelect(player)}>
                 <div className="player-result">
