@@ -48,6 +48,7 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=50, batch_s
 loss, mae = model.evaluate(X_test, y_test)
 print(f"Test MAE: {mae:.3f}")
 
+# Remove comment to save the model
 #model.save("models/regression_model.keras")
 #joblib.dump(scaler, "models/scaler.pkl")
 

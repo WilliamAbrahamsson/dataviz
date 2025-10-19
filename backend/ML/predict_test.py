@@ -28,6 +28,8 @@ x = scaler.transform(x)
 pred = model.predict(x)
 print("Single prediction:", float(pred[0, 0]))
 
+
+# TO DO NEXT RELEASE (single prediction )
 """
 # Build a background set (needed by SHAP for reference baseline)
 rng = np.random.default_rng(42)
