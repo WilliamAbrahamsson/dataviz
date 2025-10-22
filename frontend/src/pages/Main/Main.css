@@ -2,14 +2,14 @@
   min-height: 100vh;
   background:
     radial-gradient(1200px 600px at 10% -10%, rgba(0,123,255,0.08), transparent 60%),
-    radial-gradient(900px 500px at 110% 10%, rgba(0,255,200,0.06), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(255,255,255,0.03), transparent 60%),
     var(--bg-primary);
   transition: background .3s ease;
 }
 
 .split-page {
   display: flex;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 44px - 44px); /* account for new topbar + footer heights */
   width: 100%;
   overflow: hidden;
   font-family: 'Inter', system-ui, sans-serif;

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Map from '../../components/Map/Map.jsx'
 import TeamInfo from '../../components/TeamInfo/TeamInfo.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 import Table from '../../components/Table/Table.jsx'
 import Topbar from '../../components/Topbar/Topbar.jsx'
 import './Main.css'
@@ -50,6 +51,7 @@ function Main() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

@@ -1,127 +1,127 @@
 {
   "Newcastle": {
     "logo": "/static/images/teams/newcastle.png",
-    "top": "32%",
-    "left": "58%"
+    "top": "38.5%",
+    "left": "59.1%"
   },
   "Leeds": {
     "logo": "/static/images/teams/leeds.png",
-    "top": "43%",
-    "left": "54%"
+    "top": "51.1%",
+    "left": "67.0%"
   },
   "Sheffield Utd": {
     "logo": "/static/images/teams/sheffield_utd.png",
-    "top": "46%",
-    "left": "50%"
+    "top": "56.9%",
+    "left": "71.2%"
   },
   "Burnley": {
     "logo": "/static/images/teams/burnley.png",
-    "top": "44%",
-    "left": "48%"
+    "top": "44.4%",
+    "left": "51.2%"
   },
   "Liverpool": {
     "logo": "/static/images/teams/liverpool.png",
-    "top": "48%",
-    "left": "41%"
+    "top": "55.4%",
+    "left": "54.1%"
   },
   "Everton": {
     "logo": "/static/images/teams/everton.png",
-    "top": "52%",
-    "left": "43%"
+    "top": "49.8%",
+    "left": "51.8%"
   },
   "Manchester United": {
     "logo": "/static/images/teams/manchester_united.png",
-    "top": "50%",
-    "left": "46%"
+    "top": "49.5%",
+    "left": "59.6%"
   },
   "Manchester City": {
     "logo": "/static/images/teams/manchester_city.png",
-    "top": "54%",
-    "left": "49%"
+    "top": "55.8%",
+    "left": "60.9%"
   },
   "Wolves": {
     "logo": "/static/images/teams/wolves.png",
-    "top": "61%",
-    "left": "46%"
+    "top": "64.1%",
+    "left": "54.3%"
   },
   "Aston Villa": {
     "logo": "/static/images/teams/aston_villa.png",
-    "top": "63%",
-    "left": "48.5%"
+    "top": "64.6%",
+    "left": "47.7%"
   },
   "Leicester": {
     "logo": "/static/images/teams/leicester.png",
-    "top": "59%",
-    "left": "52%"
+    "top": "63.9%",
+    "left": "64.6%"
   },
   "Nottingham Forest": {
     "logo": "/static/images/teams/nottingham_forest.png",
-    "top": "56%",
-    "left": "55%"
+    "top": "59.5%",
+    "left": "71.8%"
   },
   "Arsenal": {
     "logo": "/static/images/teams/arsenal.png",
-    "top": "66%",
-    "left": "60%"
+    "top": "73.9%",
+    "left": "82.3%"
   },
   "Chelsea": {
     "logo": "/static/images/teams/chelsea.png",
-    "top": "69%",
-    "left": "57.5%"
+    "top": "73.1%",
+    "left": "73.0%"
   },
   "Tottenham": {
     "logo": "/static/images/teams/tottenham.png",
-    "top": "64%",
-    "left": "62%"
+    "top": "68.3%",
+    "left": "83.6%"
   },
   "West Ham": {
     "logo": "/static/images/teams/west_ham.png",
-    "top": "71%",
-    "left": "64%"
+    "top": "80.0%",
+    "left": "68.2%"
   },
   "Fulham": {
     "logo": "/static/images/teams/fulham.png",
-    "top": "70%",
-    "left": "54%"
+    "top": "66.9%",
+    "left": "78.7%"
   },
   "Crystal Palace": {
     "logo": "/static/images/teams/crystal_palace.png",
-    "top": "73%",
-    "left": "56%"
+    "top": "73.1%",
+    "left": "64.1%"
   },
   "Brentford": {
     "logo": "/static/images/teams/brentford.png",
-    "top": "68%",
-    "left": "52%"
+    "top": "79.5%",
+    "left": "77.1%"
   },
   "Luton": {
     "logo": "/static/images/teams/luton.png",
-    "top": "62%",
-    "left": "57%"
+    "top": "66.5%",
+    "left": "68.4%"
   },
   "Watford": {
     "logo": "/static/images/teams/watford.png",
-    "top": "65%",
-    "left": "54%"
+    "top": "78.8%",
+    "left": "59.3%"
   },
   "Brighton": {
     "logo": "/static/images/teams/brighton.png",
-    "top": "79%",
-    "left": "59%"
+    "top": "87.3%",
+    "left": "73.2%"
   },
   "Southampton": {
     "logo": "/static/images/teams/southampton.png",
-    "top": "82%",
-    "left": "52%"
+    "top": "86.5%",
+    "left": "63.4%"
   },
   "Bournemouth": {
     "logo": "/static/images/teams/bournemouth.png",
-    "top": "86%",
-    "left": "51%"
+    "top": "84.6%",
+    "left": "56.2%"
   },
   "Norwich": {
     "logo": "/static/images/teams/norwich.png",
-    "top": "61%",
-    "left": "66%"
+    "top": "64.8%",
+    "left": "93.6%"
   }
 }

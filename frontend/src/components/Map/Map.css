@@ -1,12 +1,12 @@
 .map-container {
   position: relative;
-  width: 92%;
-  height: 80%;
-  margin: 2% auto;
+  width: clamp(300px, 70%, 560px);
+  height: auto; /* let aspect-ratio define height via wrapper */
+  margin: 1.2rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: visible; /* allow selector to extend beyond container */
   border-radius: 12px;
 }
 
@@ -14,7 +14,8 @@
 .map-wrapper {
   position: relative;
   width: 100%;
-  height: 86%;
+  height: auto;
+  aspect-ratio: 933 / 1411; /* match map image intrinsic ratio to avoid letterboxing */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -22,10 +23,14 @@
   border-radius: 12px;
 }
 
+.map-wrapper.editing {
+  cursor: crosshair;
+}
+
 .map-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* fills wrapper exactly due to matching aspect-ratio */
   border-radius: 12px;
   user-select: none;
   -webkit-user-drag: none;
@@ -34,7 +39,7 @@
 /* responsive team markers */
 .team-logo {
   position: absolute;
-  width: 3.2%;
+  width: 9.6%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   transform: translate(-50%, -50%);
@@ -54,43 +59,82 @@
 .season-selector {
   position: absolute;
   top: 1rem;
-  right: 1rem;
-  background: var(--bg-primary);
+  right: -8.0rem; /* push closer to edge */
+  background: var(--bg-secondary);
   border: 1px solid var(--bg-hover);
-  border-radius: 10px;
-  padding: 0.55rem 0.9rem;
+  border-radius: 5px;
+  padding: 0.35rem 0.6rem;
   box-shadow: 0 6px 16px var(--card-shadow);
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  z-index: 20;
+  gap: 0.7rem;
+  z-index: 2000; /* above map content */
+  backdrop-filter: blur(6px);
 }
 
-.season-selector label {
-  color: var(--text-primary);
-  font-weight: 600;
-}
+.season-label { color: var(--text-muted); font-weight: 700; letter-spacing: .2px; }
+.season-selector label { color: var(--text-primary); font-weight: 600; }
+.season-selector .divider { width: 1px; height: 20px; background: var(--bg-hover); display: inline-block; border-radius: 1px; }
+.edit-toggle { display: flex; align-items: center; gap: .4rem; margin-left: .2rem; }
 
-.season-selector select {
+.season-selector .season-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 1px solid var(--bg-hover);
   background: var(--bg-secondary);
   color: var(--text-primary);
-  font-weight: 600;
-  padding: 0.35rem 0.6rem;
-  border-radius: 6px;
+  font-weight: 700;
+  padding: 0.35rem 1.6rem 0.35rem 0.6rem; /* space for arrow */
+  border-radius: 999px;
   outline: none;
+  cursor: pointer;
+}
+
+.season-selector .season-select:focus {
+  box-shadow: 0 0 0 3px var(--accent-transparent);
+}
+
+.season-selector .season-select option {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* arrow using pseudo-element for theme-friendly coloring */
+.season-selector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--text-muted);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.season-selector input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
+.season-selector label {
+  font-size: 0.9rem;
 }
 
 @media (max-width: 900px) {
   .map-container {
-    width: 96%;
+    width: 92%;
     height: auto;
     margin: 1rem auto;
-    max-height: 70vh;
+    max-width: 520px;
   }
 
   .map-image {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }

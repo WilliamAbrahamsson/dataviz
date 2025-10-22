@@ -1,0 +1,30 @@
+.site-footer {
+  height: 44px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--bg-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -2px 12px var(--card-shadow);
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.footer-content .spacer {
+  flex: 1;
+}
+
+/* using topbar toggle styles here */
+
+@media (max-width: 700px) {
+  .footer-content { font-size: 0.9rem; }
+}
