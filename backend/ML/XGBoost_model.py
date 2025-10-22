@@ -45,7 +45,7 @@ model.fit(X_train, y_train)
 # remove comment to save model
 #model.save_model("models/XGBoost_model.json")
 
-# --------- FEATURE IMPORTANCE ------------
+# --------- FEATURE IMPORTANCE -----------
 
 # XGBoost built in feature importance
 gain = model.get_booster().get_score(importance_type="gain")  # gain: average improvement in model loss
