@@ -48,14 +48,13 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=50, batch_s
 loss, mae = model.evaluate(X_test, y_test)
 print(f"Test MAE: {mae:.3f}")
 
-# Remove comment to save the model
 #model.save("models/regression_model.keras")
 #joblib.dump(scaler, "models/scaler.pkl")
 
 
-# Feature Importance
+## -------- FEATURE IMPORTANCE -------
 
-# Permutation importance
+## ---- Permutation importance -----
 scorer = make_scorer(mean_absolute_error, greater_is_better=False)
 
 pi = permutation_importance(
@@ -76,7 +75,7 @@ importance_df = pd.DataFrame({
 print("Permutation Importance")
 print(importance_df.head(4))
 
-# Shap values
+## ----- SHAP values -------
 
 # get a random sample
 rng = np.random.default_rng(42)
@@ -97,19 +96,19 @@ print("{\nSHAP importance")
 print(shap_global_df.head(4))
 
 
-# plots
+## --------- PLOTS -------------
 
 top_perm = importance_df.sort_values("importance", ascending=False).head(6)
 top_shap = shap_global_df.sort_values("mean_abs_shap", ascending=False).head(6)
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
-# Permutation Importance
+#Permutation Importance
 axes[0].bar(top_perm["feature"], top_perm["importance"])
 axes[0].set_title("Permutation Importance")
 axes[0].set_xticklabels(top_perm["feature"], rotation=45, ha='right')
 axes[0].set_ylabel("Importance (MAE increase)")
 
-# SHAP Importance
+# SHAP Importance in |value|
 axes[1].bar(top_shap["feature"], top_shap["mean_abs_shap"])
 axes[1].set_title("SHAP")
 axes[1].set_xticklabels(top_shap["feature"], rotation=45, ha='right')
