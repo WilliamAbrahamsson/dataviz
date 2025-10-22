@@ -42,7 +42,8 @@ model = xgb.XGBRegressor(
 )
 model.fit(X_train, y_train)
 
-model.save_model("models/XGBoost_model.json")
+# remove comment to save model
+#model.save_model("models/XGBoost_model.json")
 
 # --------- FEATURE IMPORTANCE ------------
 
