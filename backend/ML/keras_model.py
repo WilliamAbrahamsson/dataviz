@@ -2,32 +2,28 @@ import pandas as pd
 import tensorflow as tf
 import joblib
 import shap
+import sqlite3
 import numpy as np
 import matplotlib.pyplot as plt
+import DB_queries as db
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import make_scorer, mean_absolute_error
 
-file_path = "../old/FBref_data/stats_standard_2025.csv"
-df = pd.read_csv(file_path)
+conn = db.get_conn()
+df = db.labeled_seasons()
 
-print(df.head())
+features = ["age", "minutes_played", "goals_scored", "assists_made", "goals_excluding_penalties", "progressive_carries", "progressive_passes", "passes_completed", "key_passes", "tackles", "blocks"]
+use_columns = features.copy()
+use_columns.append("valuation_amount")
 
-# only include numerical features
-df = df.select_dtypes(include=['number'])
-
-# drop row with a missing value or inf
+df = df[use_columns]
 df = df.replace([float("inf"), float("-inf")], pd.NA)
 df = df.dropna()
 
-features = df.drop("Per 90 Minutes npxG+xAG", axis=1).columns
-
-X = df.drop("Per 90 Minutes npxG+xAG", axis=1).values
-y = df["Per 90 Minutes npxG+xAG"].values
-
-print(X[0])
-print(y[0])
+y = df["valuation_amount"].values
+X = df.drop("valuation_amount", axis=1).values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=69)
 
@@ -66,7 +62,7 @@ pi = permutation_importance(
     random_state=42
 )
 
-importances = pi.importances_mean * -1  # Flip sign so higher = more important
+importances = np.abs(pi.importances_mean) # absolute value because it doesnt matter if it hurts or help the prediction
 importance_df = pd.DataFrame({
     "feature": features,
     "importance": importances
