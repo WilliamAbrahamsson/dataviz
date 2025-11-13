@@ -3,31 +3,26 @@ import tensorflow as tf
 import joblib
 import shap
 import numpy as np
+import DB_queries as db
 import matplotlib.pyplot as plt
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import root_mean_squared_error, r2_score
 import shap
 
-file_path = "../old/FBref_data/stats_standard_2025.csv"
-df = pd.read_csv(file_path)
+conn = db.get_conn()
+df = db.labeled_seasons()
 
-print(df.head())
+features = ["age", "minutes_played", "goals_scored", "assists_made", "goals_excluding_penalties", "progressive_carries", "progressive_passes", "passes_completed", "key_passes", "tackles", "blocks"]
+use_columns = features.copy()
+use_columns.append("valuation_amount")
 
-# only include numerical features
-df = df.select_dtypes(include=['number'])
-
-# drop row with a missing value or inf
+df = df[use_columns]
 df = df.replace([float("inf"), float("-inf")], pd.NA)
 df = df.dropna()
 
-features = df.drop("Per 90 Minutes npxG+xAG", axis=1).columns
-
-X = df.drop("Per 90 Minutes npxG+xAG", axis=1).values
-y = df["Per 90 Minutes npxG+xAG"].values
-
-print(X[0])
-print(y[0])
+y = df["valuation_amount"]
+X = df.drop("valuation_amount", axis=1)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=69)
 

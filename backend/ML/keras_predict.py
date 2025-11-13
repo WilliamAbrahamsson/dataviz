@@ -3,22 +3,23 @@ import tensorflow as tf
 import numpy as np
 import joblib
 import shap
+import DB_queries as db
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-file_path = "../old/FBref_data/stats_standard_2025.csv"
-df = pd.read_csv(file_path)
+conn = db.get_conn()
+df = db.labeled_seasons()
 
-# only include numerical features
-df = df.select_dtypes(include=['number'])
+features = ["age", "minutes_played", "goals_scored", "assists_made", "goals_excluding_penalties", "progressive_carries", "progressive_passes", "passes_completed", "key_passes", "tackles", "blocks"]
+use_columns = features.copy()
+use_columns.append("valuation_amount")
 
-# drop row with a missing value or inf
+df = df[use_columns]
 df = df.replace([float("inf"), float("-inf")], pd.NA)
 df = df.dropna()
 
-TARGET = "Per 90 Minutes npxG+xAG"
-features = df.drop(columns=[TARGET]).columns
-X = df.drop(TARGET, axis=1).values
+y = df["valuation_amount"].values
+X = df.drop("valuation_amount", axis=1).values
 
 scaler = joblib.load("models/scaler.pkl")
 model = tf.keras.models.load_model("models/regression_model.keras")
@@ -32,7 +33,7 @@ print("Single prediction:", float(pred[0, 0]))
 # -------- SHAP: Single prediction importance --------
 # background set
 rng = np.random.default_rng(42)
-bg_size = 200 #The higher the better
+bg_size = 300 #The higher the better
 bg_idx = rng.choice(X.shape[0], size=bg_size, replace=False)
 X_bg_scaled = scaler.transform(X[bg_idx])
 
