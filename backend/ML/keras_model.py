@@ -13,17 +13,14 @@ from sklearn.metrics import make_scorer, mean_absolute_error
 
 conn = db.get_conn()
 df = db.labeled_seasons()
+drop_cols = ["id", "player_id", "year_code", "nation", "position", "club"]
+target_col = "valuation_amount"
+features = [c for c in df.columns if c not in drop_cols + [target_col]]
 
-features = ["age", "minutes_played", "goals_scored", "assists_made", "goals_excluding_penalties", "progressive_carries", "progressive_passes", "passes_completed", "key_passes", "tackles", "blocks"]
-use_columns = features.copy()
-use_columns.append("valuation_amount")
+df = df.replace([np.inf, -np.inf], np.nan).dropna()
 
-df = df[use_columns]
-df = df.replace([float("inf"), float("-inf")], pd.NA)
-df = df.dropna()
-
-y = df["valuation_amount"].values
-X = df.drop("valuation_amount", axis=1).values
+y = df[target_col].values
+X = df.drop(columns=[target_col] + drop_cols).values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=69)
 
