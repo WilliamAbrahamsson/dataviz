@@ -52,11 +52,9 @@ class PlayerSeason(db.Model):
     matches_played = db.Column(db.REAL)            # REAL
     matches_started = db.Column(db.REAL)           # REAL
     minutes_played = db.Column(db.REAL)            # REAL
-    ninety_min_equivalents = db.Column(db.REAL)    # REAL
     goals_scored = db.Column(db.REAL)              # REAL
     assists_made = db.Column(db.REAL)              # REAL
     goals_plus_assists = db.Column(db.REAL)        # REAL
-    goals_excluding_penalties = db.Column(db.REAL) # REAL
     penalty_goals = db.Column(db.REAL)             # REAL
     penalty_attempts = db.Column(db.REAL)          # REAL
     yellow_cards = db.Column(db.REAL)              # REAL
@@ -75,13 +73,10 @@ class PlayerSeason(db.Model):
     pass_progressive_distance = db.Column(db.REAL) # REAL
     short_passes_completed = db.Column(db.REAL)    # REAL
     short_passes_attempted = db.Column(db.REAL)    # REAL
-    short_passes_completion_pct = db.Column(db.REAL) # REAL
     medium_passes_completed = db.Column(db.REAL)   # REAL
     medium_passes_attempted = db.Column(db.REAL)   # REAL
-    medium_passes_completion_pct = db.Column(db.REAL) # REAL
     long_passes_completed = db.Column(db.REAL)     # REAL
     long_passes_attempted = db.Column(db.REAL)     # REAL
-    long_passes_completion_pct = db.Column(db.REAL) # REAL
     key_passes = db.Column(db.REAL)                # REAL
     passes_into_final_third = db.Column(db.REAL)   # REAL
     passes_into_penalty_area = db.Column(db.REAL)  # REAL
