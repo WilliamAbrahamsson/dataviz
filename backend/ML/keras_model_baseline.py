@@ -29,23 +29,51 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-model = tf.keras.Sequential([
-    tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
-    tf.keras.layers.Dense(32, activation='relu'),
-    tf.keras.layers.Dense(1)
+model = tf.keras.Sequential([ 
+    tf.keras.layers.Dense(256, activation='relu', input_shape=(X_train.shape[1],)), 
+    tf.keras.layers.Dense(256, activation='relu'), 
+    tf.keras.layers.Dense(256, activation='relu'), 
+    tf.keras.layers.Dense(256, activation='relu'), 
+    tf.keras.layers.Dense(1) 
 ])
 
-model.compile(optimizer='adam', loss='mse', metrics=['mae'])
+model.compile(
+    optimizer=tf.keras.optimizers.Adam(learning_rate=0.01),
+    loss='mae',
+    metrics=[
+        tf.keras.metrics.MeanAbsoluteError(name='mae'),
+        tf.keras.metrics.RootMeanSquaredError(name='rmse')
+    ]
+)
 
-model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=50, batch_size=32)
+lr_scheduler = tf.keras.callbacks.ReduceLROnPlateau(
+    monitor='val_mae',     # what to watch (can also be 'val_mae')
+    factor=0.5,             # how much to reduce the LR (new_lr = lr * factor)
+    patience=5,             # epochs with no improvement before reducing
+    min_lr=1e-6,            # lower bound for learning rate
+    verbose=1               # print updates
+)
 
-loss, mae = model.evaluate(X_test, y_test)
-print(f"Test MAE: {mae:.3f}")
-exit(1)
+model.fit(
+    X_train, y_train,
+    validation_data=(X_test, y_test),
+    epochs=200,
+    batch_size=32,
+    callbacks=[lr_scheduler],
+    verbose=1
+)
+
+loss, mae, rmse = model.evaluate(X_test, y_test, verbose=0)
+
 #model.save("models/regression_model.keras")
 #joblib.dump(scaler, "models/scaler.pkl")
 
+print("median", np.median(y))
+print("mean", np.mean(y))
+print(df.shape)
+print(f"Test MAE: {mae:.3f}")
 
+exit(1)
 ## -------- FEATURE IMPORTANCE -------
 
 ## ---- Permutation importance -----
