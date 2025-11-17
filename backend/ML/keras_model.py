@@ -18,6 +18,7 @@ target_col = "valuation_amount"
 features = [c for c in df.columns if c not in drop_cols + [target_col]]
 
 df = df.replace([np.inf, -np.inf], np.nan).dropna()
+df = df[df[target_col] != 0]
 
 y = df[target_col].values
 X = df.drop(columns=[target_col] + drop_cols).values
@@ -40,7 +41,7 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=50, batch_s
 
 loss, mae = model.evaluate(X_test, y_test)
 print(f"Test MAE: {mae:.3f}")
-
+exit(1)
 #model.save("models/regression_model.keras")
 #joblib.dump(scaler, "models/scaler.pkl")
 
