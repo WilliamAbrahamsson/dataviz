@@ -14,7 +14,7 @@ from sklearn.metrics import make_scorer, mean_absolute_error
 
 conn = db.get_conn()
 df = db.labeled_seasons()
-attacker_positions = {"DF", "DF/MF"}
+attacker_positions = {"MF", "MF/DF", "MF/FW"}
 df = df[df["position"].isin(attacker_positions)].copy()
 drop_cols = ["id", "player_id", "year_code", "nation", "position", "club",
             "matches_played",
@@ -115,7 +115,7 @@ pi = permutation_importance(
     random_state=42
 )
 
-importances = np.abs(pi.importances_mean) # absolute value because it doesnt matter if it hurts or help the prediction
+importances = np.abs(pi.importances_mean)
 importance_df = pd.DataFrame({
     "feature": features,
     "importance": importances
@@ -126,7 +126,6 @@ print(importance_df.head(4))
 
 ## ----- SHAP values -------
 
-# get a random sample
 rng = np.random.default_rng(42)
 bg_size = 250
 bg_idx = rng.choice(X_train.shape[0], size=bg_size, replace=False)
@@ -151,13 +150,11 @@ top_perm = importance_df.sort_values("importance", ascending=False).head(6)
 top_shap = shap_global_df.sort_values("mean_abs_shap", ascending=False).head(6)
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
-#Permutation Importance
 axes[0].bar(top_perm["feature"], top_perm["importance"])
 axes[0].set_title("Permutation Importance")
 axes[0].set_xticklabels(top_perm["feature"], rotation=45, ha='right')
 axes[0].set_ylabel("Importance (MAE increase)")
 
-# SHAP Importance in |value|
 axes[1].bar(top_shap["feature"], top_shap["mean_abs_shap"])
 axes[1].set_title("SHAP")
 axes[1].set_xticklabels(top_shap["feature"], rotation=45, ha='right')

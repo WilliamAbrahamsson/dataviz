@@ -5,7 +5,7 @@ import shap
 import sqlite3
 import numpy as np
 import matplotlib.pyplot as plt
-from ML import DB_queries as db
+from .. import DB_queries as db
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.inspection import permutation_importance
@@ -14,30 +14,24 @@ from sklearn.metrics import make_scorer, mean_absolute_error
 
 conn = db.get_conn()
 df = db.labeled_seasons()
-attacker_positions = {"FW", "FW/MF"}
+attacker_positions = {"DF", "DF/MF"}
 df = df[df["position"].isin(attacker_positions)].copy()
 drop_cols = ["id", "player_id", "year_code", "nation", "position", "club",
             "matches_played",
             "matches_started",
             "minutes_played",
-            "tackles",
-            "tackles_won",
-            "tackles_def_3rd",
-            "tackles_mid_3rd", 
-            "challenges_tackles",
-            "challenges_attempted",
-            "challenges_tackle_pct",
-            "challenges_lost",
-            "blocks",
-            "blocks_shots",
-            "blocks_passes",
-            "interceptions",
-            "tackles_plus_interceptions",
-            "clearances",
-            "errors_leading_to_shot"]
+            "goals_scored",
+            "goal_plus_assists",
+            "penalty_goals",
+            "penalty_attempts",
+            "expected_goals",
+            "non_penalty_expected_goals",
+            "combined_non_penalty_expected_goal_contributions"]
 
 target_col = "valuation_amount"
 
+# Convert counting stats into per-minute rates so the attacker model trains
+# on comparable production regardless of total playing time.
 rate_exclusions = set(drop_cols + [
     target_col,
     "age",
@@ -121,7 +115,7 @@ pi = permutation_importance(
     random_state=42
 )
 
-importances = np.abs(pi.importances_mean) 
+importances = np.abs(pi.importances_mean)
 importance_df = pd.DataFrame({
     "feature": features,
     "importance": importances
@@ -156,13 +150,11 @@ top_perm = importance_df.sort_values("importance", ascending=False).head(6)
 top_shap = shap_global_df.sort_values("mean_abs_shap", ascending=False).head(6)
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
-#Permutation Importance
 axes[0].bar(top_perm["feature"], top_perm["importance"])
 axes[0].set_title("Permutation Importance")
 axes[0].set_xticklabels(top_perm["feature"], rotation=45, ha='right')
 axes[0].set_ylabel("Importance (MAE increase)")
 
-# SHAP Importance in |value|
 axes[1].bar(top_shap["feature"], top_shap["mean_abs_shap"])
 axes[1].set_title("SHAP")
 axes[1].set_xticklabels(top_shap["feature"], rotation=45, ha='right')

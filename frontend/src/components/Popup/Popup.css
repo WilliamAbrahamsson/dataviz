@@ -182,7 +182,9 @@ body.dark-mode .header-icon {
   font-weight: 600;
 }
 
-.form-grid-3x3 input {
+.form-grid-3x3 input,
+.form-grid-3x3 select,
+.form-field select {
   padding: .5rem .65rem;
   border: 1px solid var(--bg-hover);
   border-radius: 8px;
@@ -191,10 +193,64 @@ body.dark-mode .header-icon {
   transition: all .2s ease;
 }
 
-.form-grid-3x3 input:focus {
+.form-grid-3x3 input:focus,
+.form-grid-3x3 select:focus,
+.form-field select:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-transparent);
+}
+
+.feature-selector {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.feature-dropdown-toggle {
+  align-self: flex-start;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-hover);
+  border-radius: 8px;
+  padding: .5rem .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.feature-dropdown-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.feature-selector .feature-dropdown-list {
+  background: var(--bg-secondary);
+  border: 1px solid var(--bg-hover);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px var(--card-shadow);
+  max-height: 220px;
+  overflow-y: auto;
+  padding: .75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: .45rem .8rem;
+}
+
+.feature-option {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .9rem;
+  color: var(--text-primary);
+}
+
+.feature-option input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
 }
 
 .estimate-btn-green {
