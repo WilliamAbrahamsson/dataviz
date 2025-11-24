@@ -1,3 +1,4 @@
+from pathlib import Path
 import pandas as pd
 import tensorflow as tf
 import joblib
@@ -13,7 +14,26 @@ from sklearn.metrics import make_scorer, mean_absolute_error
 
 conn = db.get_conn()
 df = db.labeled_seasons()
-drop_cols = ["id", "player_id", "year_code", "nation", "position", "club", "born_year"]
+attacker_positions = {"FW", "FW/MF"}
+df = df[df["position"].isin(attacker_positions)].copy()
+drop_cols = ["id", "player_id", "year_code","born_year", "nation", "position", "club",
+            "matches_played",
+            "matches_started",
+            "tackles",
+            "tackles_won",
+            "tackles_def_3rd",
+            "tackles_mid_3rd", 
+            "challenges_tackles",
+            "challenges_attempted",
+            "challenges_tackle_pct",
+            "challenges_lost",
+            "blocks",
+            "blocks_shots",
+            "blocks_passes",
+            "interceptions",
+            "tackles_plus_interceptions",
+            "clearances",
+            "errors_leading_to_shot"]
 target_col = "valuation_amount"
 features = [c for c in df.columns if c not in drop_cols + [target_col]]
 
@@ -65,8 +85,11 @@ model.fit(
 
 loss, mae, rmse = model.evaluate(X_test, y_test, verbose=0)
 
-model.save("models/regression_model.keras")
-joblib.dump(scaler, "models/scaler.pkl")
+models_dir = Path(__file__).resolve().parents[1] / "models"
+models_dir.mkdir(parents=True, exist_ok=True)
+
+model.save(models_dir / "regression_model_attackers.keras")
+joblib.dump(scaler, models_dir / "scaler_attackers.pkl")
 
 print("median", np.median(y))
 print("mean", np.mean(y))

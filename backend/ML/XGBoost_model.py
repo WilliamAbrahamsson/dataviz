@@ -7,39 +7,47 @@ import DB_queries as db
 import matplotlib.pyplot as plt
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import root_mean_squared_error, r2_score
+from sklearn.metrics import mean_absolute_error
 import shap
 
 conn = db.get_conn()
 df = db.labeled_seasons()
+drop_cols = ["id", "player_id", "year_code", "nation", "position", "club", "born_year"]
+target_col = "valuation_amount"
+features = [c for c in df.columns if c not in drop_cols + [target_col]]
 
-features = ["age", "minutes_played", "goals_scored", "assists_made", "goals_excluding_penalties", "progressive_carries", "progressive_passes", "passes_completed", "key_passes", "tackles", "blocks"]
-use_columns = features.copy()
-use_columns.append("valuation_amount")
+df = df.replace([np.inf, -np.inf], np.nan).dropna()
+df = df[df[target_col] != 0]
 
-df = df[use_columns]
-df = df.replace([float("inf"), float("-inf")], pd.NA)
-df = df.dropna()
-
-y = df["valuation_amount"]
-X = df.drop("valuation_amount", axis=1)
+y = df[target_col].values
+X = df.drop(columns=[target_col] + drop_cols).values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=69)
 
 # Model
 model = xgb.XGBRegressor(
-    n_estimators=500,
-    learning_rate=0.05,
-    max_depth=6,
+    n_estimators=1000,
+    learning_rate=0.03,
+    max_depth=8,
     subsample=0.8,
     colsample_bytree=0.8,
-    random_state=42
+    min_child_weight=3,     
+    gamma=0.1,              
+    reg_lambda=1.0,         
+    reg_alpha=0.0,          
+    random_state=42,
+    tree_method="hist"      
 )
 model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+mae = mean_absolute_error(y_test, y_pred)
+print("MAE:", mae)
 
 # remove comment to save model
 #model.save_model("models/XGBoost_model.json")
 
+exit(1)
 # --------- FEATURE IMPORTANCE -----------
 
 # XGBoost built in feature importance

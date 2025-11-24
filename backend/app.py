@@ -48,6 +48,7 @@ def predict(payload):
     pos = str(pos[0])
 
     if pos in {"FW", "FW/MF"}:
+        print("attackers")
         drop_cols = ["position", "club",
                     "matches_played",
                     "matches_started",
