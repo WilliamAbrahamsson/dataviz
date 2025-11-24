@@ -2,7 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
 import './ValuationChart.css'
 
-export default function ValuationChart({ data = [], height = 260 }) {
+export default function ValuationChart({
+  data = [],
+  height = 260,
+  defaultPrediction,
+  customPrediction,
+}) {
   const ref = useRef(null)
   const [chartWidth, setChartWidth] = useState(null)
 
@@ -35,32 +40,34 @@ export default function ValuationChart({ data = [], height = 260 }) {
       return
     }
 
+    const parsedDefault = defaultPrediction == null ? NaN : Number(defaultPrediction)
+    const parsedCustom = customPrediction == null ? NaN : Number(customPrediction)
+    const hasDefault = Number.isFinite(parsedDefault)
+    const hasCustom = Number.isFinite(parsedCustom)
+
     const x = d3.scaleUtc()
       .domain(d3.extent(series, (d) => d.date))
       .range([0, innerW])
 
     const baseMin = d3.min(series, (d) => d.value)
     const baseMax = d3.max(series, (d) => d.value) || 1
-    let altPoint = null
-    let altPoint2 = null
-    let prevPoint = null
+    const last = series[series.length - 1]
+    const prevPoint = series.length >= 2 ? series[series.length - 2] : null
+
+    const customPoint = hasCustom && last ? { date: last.date, value: parsedCustom } : null
+    const defaultPoint = hasDefault && last ? { date: last.date, value: parsedDefault } : null
+
     let minVal = baseMin != null ? baseMin : 0
     let maxVal = baseMax
 
-    if (series.length >= 2) {
-      const last = series[series.length - 1]
-      const prev = series[series.length - 2]
-      prevPoint = prev
-      altPoint = {
-        date: last.date,
-        value: last.value * 1.1,
-      }
-      altPoint2 = {
-        date: last.date,
-        value: last.value * 0.9,
-      }
-      maxVal = Math.max(baseMax, altPoint.value, altPoint2.value)
-      minVal = Math.min(minVal, altPoint.value, altPoint2.value)
+    if (customPoint) {
+      minVal = Math.min(minVal, customPoint.value)
+      maxVal = Math.max(maxVal, customPoint.value)
+    }
+
+    if (defaultPoint) {
+      minVal = Math.min(minVal, defaultPoint.value)
+      maxVal = Math.max(maxVal, defaultPoint.value)
     }
 
     const padding = (maxVal - minVal) * 0.1 || maxVal * 0.1 || 1
@@ -103,107 +110,69 @@ export default function ValuationChart({ data = [], height = 260 }) {
       .attr('r', 3.5)
       .attr('fill', 'var(--accent)')
 
-    if (altPoint && prevPoint) {
-      const altLine = d3.line()
-        .x((d) => x(d.date))
-        .y((d) => y(d.value))
+    const addPrediction = (point, color, label, yOffset, classSuffix) => {
+      if (!point) return
 
-      const x1 = x(prevPoint.date)
-      const y1 = y(prevPoint.value)
-      const x2 = x(altPoint.date)
-      const y2 = y(altPoint.value)
-      const midX = (x1 + x2) / 2
-      const midY = (y1 + y2) / 2
-      const angle = (Math.atan2(y2 - y1, x2 - x1) * 180) / Math.PI
-      const labelX = midX
-      const labelY = midY - 16
+      if (prevPoint) {
+        const startPoint = prevPoint
+        const line = d3.line()
+          .x((d) => x(d.date))
+          .y((d) => y(d.value))
 
-      g.append('path')
-        .datum([prevPoint, altPoint])
-        .attr('fill', 'none')
-        .attr('stroke', '#2ecc71')
-        .attr('stroke-width', 2.5)
-        .attr('d', altLine)
+        const xTarget = x(point.date)
+        const yTarget = y(point.value)
+        const midX = (x(startPoint.date) + xTarget) / 2
+        const midY = (y(startPoint.value) + yTarget) / 2
+        const angle = (Math.atan2(yTarget - y(startPoint.value), xTarget - x(startPoint.date)) * 180) / Math.PI
+        const labelX = midX
+        const labelY = midY + yOffset
+
+        g.append('path')
+          .datum([startPoint, point])
+          .attr('fill', 'none')
+          .attr('stroke', color)
+          .attr('stroke-width', 2.5)
+          .attr('d', line)
+
+        g.append('text')
+          .attr('x', labelX)
+          .attr('y', labelY)
+          .attr('fill', color)
+          .attr('font-size', 11)
+          .attr('text-anchor', 'middle')
+          .attr('class', `alt-label alt-label-${classSuffix}`)
+          .attr('transform', `rotate(${angle}, ${midX}, ${midY})`)
+          .text(label)
+      }
+
+      const xTarget = x(point.date)
+      const yTarget = y(point.value)
 
       g.append('circle')
-        .attr('class', 'pt alt')
-        .attr('cx', x2)
-        .attr('cy', y2)
+        .attr('class', `pt alt alt-${classSuffix}`)
+        .attr('cx', xTarget)
+        .attr('cy', yTarget)
         .attr('r', 3.5)
-        .attr('fill', '#2ecc71')
+        .attr('fill', color)
 
       g.append('circle')
-        .attr('class', 'axis-marker axis-marker-default')
+        .attr('class', `axis-marker axis-marker-${classSuffix}`)
         .attr('cx', 0)
-        .attr('cy', y(altPoint.value))
+        .attr('cy', y(point.value))
         .attr('r', 3)
-        .attr('fill', '#2ecc71')
-
-      g.append('text')
-        .attr('x', labelX)
-        .attr('y', labelY)
-        .attr('fill', '#2ecc71')
-        .attr('font-size', 11)
-        .attr('text-anchor', 'middle')
-        .attr('class', 'alt-label alt-label-default')
-        .attr('transform', `rotate(${angle}, ${midX}, ${midY})`)
-        .text('Modified Prediction')
+        .attr('fill', color)
     }
 
-    if (altPoint2 && prevPoint) {
-      const altLine2 = d3.line()
-        .x((d) => x(d.date))
-        .y((d) => y(d.value))
-
-      const x1b = x(prevPoint.date)
-      const y1b = y(prevPoint.value)
-      const x2b = x(altPoint2.date)
-      const y2b = y(altPoint2.value)
-      const midX2 = (x1b + x2b) / 2
-      const midY2 = (y1b + y2b) / 2
-      const angle2 = (Math.atan2(y2b - y1b, x2b - x1b) * 180) / Math.PI
-      const labelX2 = midX2
-      const labelY2 = midY2 + 16
-
-      g.append('path')
-        .datum([prevPoint, altPoint2])
-        .attr('fill', 'none')
-        .attr('stroke', '#f39c12')
-        .attr('stroke-width', 2.5)
-        .attr('d', altLine2)
-
-      g.append('circle')
-        .attr('class', 'pt alt alt-2')
-        .attr('cx', x2b)
-        .attr('cy', y2b)
-        .attr('r', 3.5)
-        .attr('fill', '#f39c12')
-
-      g.append('circle')
-        .attr('class', 'axis-marker axis-marker-modified')
-        .attr('cx', 0)
-        .attr('cy', y(altPoint2.value))
-        .attr('r', 3)
-        .attr('fill', '#f39c12')
-
-      g.append('text')
-        .attr('x', labelX2)
-        .attr('y', labelY2)
-        .attr('fill', '#f39c12')
-        .attr('font-size', 11)
-        .attr('text-anchor', 'middle')
-        .attr('class', 'alt-label alt-label-modified')
-        .attr('transform', `rotate(${angle2}, ${midX2}, ${midY2})`)
-        .text('Default Prediction')
-    }
+    addPrediction(customPoint, '#2ecc71', 'Custom Prediction', -16, 'custom')
+    addPrediction(defaultPoint, '#f39c12', 'Default Prediction', 16, 'default')
 
     const tooltip = d3.select(el).append('div')
       .attr('class', 'vc-tooltip').style('opacity', 0)
 
     const hitSeries = [
       ...series,
-      ...(altPoint ? [altPoint] : []),
-      ...(altPoint2 ? [altPoint2] : []),
+      ...(customPoint ? [customPoint] : []),
+      ...(defaultPoint ? [defaultPoint] : []),
     ]
 
     if (series.length) {
@@ -231,7 +200,7 @@ export default function ValuationChart({ data = [], height = 260 }) {
         tooltip.style('left', `${e.offsetX + 16}px`).style('top', `${e.offsetY - 10}px`)
       })
       .on('mouseleave', () => tooltip.style('opacity', 0))
-  }, [data, height, chartWidth])
+  }, [data, height, chartWidth, defaultPrediction, customPrediction])
 
   return <div className="valuation-chart" ref={ref} />
 }

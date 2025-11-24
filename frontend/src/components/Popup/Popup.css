@@ -44,16 +44,18 @@
   /* darker gray for light mode */
   color: #000;
   /* dark text/icon color for visibility */
-  border: none;
-  width: 48px;
+  border: 1px solid var(--bg-hover);
+  min-width: 90px;
   height: 48px;
-  border-radius: 50%;
-  display: flex;
+  border-radius: 10px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.4rem;
+  font-weight: 700;
   cursor: pointer;
   transition: all .2s ease;
-  box-shadow: 0 3px 10px var(--card-shadow);
+  box-shadow: none;
 }
 
 /* Hover effect (accent works for both light/dark modes) */
@@ -63,10 +65,19 @@
   transform: scale(1.06);
 }
 
+.header-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* Keep dark mode consistent and not too bright */
 body.dark-mode .header-icon {
   background: var(--bg-secondary);
   color: var(--text-primary);
+}
+
+.header-label {
+  font-size: 0.9rem;
 }
 
 .player-name {
@@ -99,7 +110,8 @@ body.dark-mode .header-icon {
   background: var(--bg-primary);
   border-radius: 12px;
   padding: 1.2rem 1.4rem;
-  box-shadow: 0 8px 24px var(--card-shadow);
+  border: 1px solid var(--bg-hover);
+  box-shadow: none;
 }
 
 .player-info:hover {
@@ -133,7 +145,8 @@ body.dark-mode .header-icon {
   background: var(--bg-primary);
   border-radius: 12px;
   padding: 1.2rem 1.4rem;
-  box-shadow: 0 8px 24px var(--card-shadow);
+  border: 1px solid var(--bg-hover);
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -181,6 +194,76 @@ body.dark-mode .header-icon {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-transparent);
+}
+
+.input-reset-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.input-reset-row input,
+.input-reset-row select {
+  flex: 1;
+}
+
+.field-reset-btn {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-hover);
+  border-radius: 8px;
+  padding: .45rem .7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .18s ease;
+}
+
+.field-reset-btn:hover:not(:disabled) {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.field-reset-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.reset-all-row {
+  margin-top: .4rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reset-all-btn {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: .55rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .18s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.reset-all-btn:hover:not(:disabled) {
+  border-color: var(--bg-hover);
+}
+
+.reset-all-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-grid-3x3 input.field-changed,
+.form-grid-3x3 select.field-changed,
+.form-field select.field-changed {
+  background: rgba(46, 204, 113, 0.1);
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
 }
 
 .feature-selector {
@@ -235,9 +318,7 @@ body.dark-mode .header-icon {
   cursor: pointer;
 }
 
-.estimate-btn-green {
-  background: var(--accent);
-  color: #0b0f17;
+.estimate-btn {
   border: none;
   border-radius: 8px;
   padding: .85rem 1.2rem;
@@ -247,13 +328,37 @@ body.dark-mode .header-icon {
   text-align: center;
 }
 
-.estimate-btn-green:hover {
+.estimate-btn:hover {
   filter: brightness(1.05);
   transform: translateY(-1px);
 }
 
+.estimate-btn:disabled {
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  filter: none;
+  transform: none;
+}
+
+.estimate-btn-green {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.estimate-btn-orange {
+  background: #f39c12;
+  color: #0b0f17;
+}
+
+.estimate-helper {
+  margin-top: .5rem;
+  color: var(--text-muted);
+  font-size: .9rem;
+}
+
 .customize-btn {
-  background: var(--accent);
+  background: #fff;
   color: #0b0f17;
   border: none;
   border-radius: 8px;
@@ -269,10 +374,64 @@ body.dark-mode .header-icon {
   transform: translateY(-1px);
 }
 
-.estimate-result {
+.estimate-results {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  margin-top: .6rem;
+}
+
+.estimate-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--bg-hover);
+  box-shadow: none;
+  font-weight: 700;
+}
+
+.estimate-card-custom {
+  border-color: rgba(46, 204, 113, 0.3);
+  background: rgba(46, 204, 113, 0.06);
+}
+
+.estimate-card-default {
+  border-color: rgba(243, 156, 18, 0.35);
+  background: rgba(243, 156, 18, 0.08);
+}
+
+.estimate-card-market {
+  border-color: rgba(52, 152, 219, 0.3);
+  background: rgba(52, 152, 219, 0.06);
+}
+
+.estimate-title {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.estimate-icon {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
+}
+
+.estimate-label {
+  font-size: .9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.estimate-value {
+  font-size: 1.1rem;
   color: var(--accent);
-  font-weight: 800;
-  text-align: center;
 }
 
 

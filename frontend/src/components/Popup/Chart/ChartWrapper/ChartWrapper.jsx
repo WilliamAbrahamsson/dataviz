@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import ValuationChart from '../ValuationChart/ValuationChart.jsx'
 import ChartDropdown from '../ChartDropdown.jsx'
 import './ChartWrapper.css'
@@ -31,7 +31,13 @@ function parseSeasonEndYear(season) {
   return Number.isNaN(year) ? null : year
 }
 
-function ChartWrapper({ valuations = [], season }) {
+function ChartWrapper({
+  valuations = [],
+  season,
+  defaultPrediction = null,
+  customPrediction = null,
+  onDataChange = () => {},
+}) {
   const [pointWindow, setPointWindow] = useState('4')
 
   const valuationData = useMemo(() => {
@@ -77,6 +83,10 @@ function ChartWrapper({ valuations = [], season }) {
     }))
   }, [valuations, pointWindow, season])
 
+  useEffect(() => {
+    onDataChange(valuationData)
+  }, [valuationData, onDataChange])
+
   return (
     <div className="chart-section">
       <div className="chart-header">
@@ -85,7 +95,12 @@ function ChartWrapper({ valuations = [], season }) {
       </div>
 
       <div className="chart-card">
-        <ValuationChart data={valuationData} height={250} />
+        <ValuationChart
+          data={valuationData}
+          height={250}
+          defaultPrediction={defaultPrediction}
+          customPrediction={customPrediction}
+        />
       </div>
     </div>
   )
