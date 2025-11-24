@@ -90,8 +90,8 @@ def predict(payload):
     
     elif pos in {"MF", "MF/DF", "MF/FW"}:
         drop_cols = ["position", "club",
-                    "matches_played",
-                    "matches_started"]
+            "matches_played",
+            "matches_started"]
 
         df = df.replace([np.inf, -np.inf], np.nan).dropna()
         df = df.replace(r'^\s*$', 0, regex=True)
@@ -119,7 +119,7 @@ def predict(payload):
             "matches_played",
             "matches_started",
             "goals_scored",
-            "goal_plus_assists",
+            "goals_plus_assists",
             "penalty_goals",
             "penalty_attempts",
             "expected_goals",
