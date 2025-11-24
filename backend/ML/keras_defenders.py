@@ -13,10 +13,11 @@ from sklearn.metrics import make_scorer, mean_absolute_error
 
 conn = db.get_conn()
 df = db.labeled_seasons()
-drop_cols = ["id", "player_id", "year_code", "nation", "position", "club", "born_year"]
+drop_cols = ["id", "player_id", "year_code", "nation", "position", "club"]
 target_col = "valuation_amount"
 features = [c for c in df.columns if c not in drop_cols + [target_col]]
 
+df = df[df["position"] == "DF"]
 df = df.replace([np.inf, -np.inf], np.nan).dropna()
 df = df[df[target_col] != 0]
 
@@ -65,8 +66,8 @@ model.fit(
 
 loss, mae, rmse = model.evaluate(X_test, y_test, verbose=0)
 
-model.save("models/regression_model.keras")
-joblib.dump(scaler, "models/scaler.pkl")
+#model.save("models/regression_model.keras")
+#joblib.dump(scaler, "models/scaler.pkl")
 
 print("median", np.median(y))
 print("mean", np.mean(y))

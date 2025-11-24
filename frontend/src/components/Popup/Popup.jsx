@@ -243,10 +243,24 @@ function Popup({ player, season, isOpen, onClose }) {
   }
 
   const handleEstimate = () => {
-    const baseValue = playerData?.valuations?.[0]?.amount / 1_000_000 || 5
-    const perf = goals * 2 + assists * 1.5 + minutes / 400
-    const newVal = (baseValue + perf / ((age || 25) / 25)).toFixed(1)
-    setEstimatedValue(newVal)
+    if (!player) return
+
+    const payload = {
+      featureValues
+    }
+
+    fetch('http://127.0.0.1:5000/api/estimate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setEstimatedValue(data.estimated_value)
+      })
+      .catch((error) => {
+        console.error('Error estimating value:', error)
+      })
   }
 
   return (
