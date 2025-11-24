@@ -169,7 +169,7 @@ function Popup({ player, season, isOpen, onClose }) {
   const valuations = playerData?.valuations || []
 
   const formatDisplayValue = (key, fallback) => {
-    const value = featureValues?.[key]
+    const value = initialFeatureValues?.[key]
     if (value === 0) return 0
     if (value === '' || value === undefined || value === null) return fallback ?? '—'
     return value
