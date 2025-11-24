@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { X, ArrowLeft, ArrowRight } from 'lucide-react'
-import ValuationChart from '../ValuationChart/ValuationChart.jsx'
+import ChartWrapper from './Chart/ChartWrapper/ChartWrapper.jsx'
 import mapPositions from '../Map/mapd.json'
 import './Popup.css'
 
@@ -287,12 +287,10 @@ function Popup({ player, season, isOpen, onClose }) {
                   <p><strong>Minutes:</strong> {formatDisplayValue('minutes_played')}</p>
                 </div>
 
-                <div className="chart-section">
-                  <h4>Valuation History</h4>
-                  <div className="chart-card">
-                    <ValuationChart data={valuationData} height={250} />
-                  </div>
-                </div>
+                <ChartWrapper
+                  valuations={playerData?.valuations || []}
+                  season={season}
+                />
 
                 {!expanded && (
                   <button className="customize-btn" onClick={() => setExpanded(true)}>

@@ -1,0 +1,36 @@
+.chart-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.chart-dropdown-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.chart-dropdown-select {
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent-transparent);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px var(--bg-hover);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.chart-dropdown-select:hover {
+  background: var(--bg-hover);
+  box-shadow: 0 0 0 2px var(--accent-transparent);
+  transform: translateY(-1px);
+}
+
+.chart-dropdown-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-transparent);
+}
+

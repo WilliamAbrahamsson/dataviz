@@ -37,7 +37,6 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--bg-hover);
 }
 
 .header-icon {
@@ -127,23 +126,6 @@ body.dark-mode .header-icon {
 .player-info p {
   margin: .2rem 0;
   color: var(--text-muted);
-}
-
-.chart-section h4 {
-  font-size: 1.05rem;
-  margin: .2rem 0 .4rem;
-  color: var(--text-primary);
-}
-
-.chart-card {
-  background: var(--bg-primary);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px var(--card-shadow);
-  padding: .6rem .8rem .9rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .right-panel {

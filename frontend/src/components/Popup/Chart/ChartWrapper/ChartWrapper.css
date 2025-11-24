@@ -1,0 +1,29 @@
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chart-section h4 {
+  font-size: 1.05rem;
+  margin: 0.2rem 0 0.4rem;
+  color: var(--text-primary);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.chart-card {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px var(--card-shadow);
+  padding: 0.6rem 0.8rem 0.9rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

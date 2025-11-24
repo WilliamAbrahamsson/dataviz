@@ -64,6 +64,12 @@ body.dark-mode {
   text-shadow: 0 0 10px var(--accent-glow);
 }
 
+.logo-tail {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
 .topbar-right {
   display: flex;
   align-items: center;

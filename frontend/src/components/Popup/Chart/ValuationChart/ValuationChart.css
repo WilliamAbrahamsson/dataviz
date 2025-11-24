@@ -2,6 +2,7 @@
   width: 100%;
   height: auto;
   position: relative;
+  z-index: 1;
 }
 
 .valuation-chart .axis text {
@@ -12,10 +13,12 @@
 .valuation-chart .axis path,
 .valuation-chart .axis line {
   stroke: var(--bg-hover);
+  stroke-width: 0.75;
 }
 
 .valuation-chart .grid line {
   stroke: var(--bg-hover);
+  stroke-width: 0.75;
 }
 
 .vc-tooltip {
@@ -30,11 +33,5 @@
   box-shadow: 0 2px 8px var(--card-shadow);
   transform: translate(-50%, -100%);
   white-space: nowrap;
-}
-
-.chart-card {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 10;
 }

@@ -11,7 +11,8 @@ function Topbar({ onPlayerSelect, selectedSeason }) {
       <div className="topbar-content">
         <div className="topbar-left">
           <h1 className="topbar-logo">
-            <span className="logo-accent">Footballer</span>Valuation Tool
+            <span className="logo-accent">PL EVALUATION LAB</span>
+            <span className="logo-tail">Deluxe Edition</span>
           </h1>
         </div>
 
