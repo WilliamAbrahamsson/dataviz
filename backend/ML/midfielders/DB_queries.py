@@ -2,7 +2,9 @@ import sqlite3
 import pandas as pd
 from datetime import datetime
 
-DB_PATH = "../instance/mydatabase.db"
+from pathlib import Path
+
+DB_PATH = Path(__file__).resolve().parents[2] / "instance" / "mydatabase.db"
 
 def get_conn(db_path=DB_PATH):
     conn = sqlite3.connect(db_path)

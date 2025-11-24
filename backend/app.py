@@ -47,26 +47,126 @@ def predict(payload):
     pos = df["position"].values
     pos = str(pos[0])
 
-    drop_cols = ["position", "club"]
+    if pos in {"FW", "FW/MF"}:
+        drop_cols = ["position", "club",
+                    "matches_played",
+                    "matches_started",
+                    "tackles",
+                    "tackles_won",
+                    "tackles_def_3rd",
+                    "tackles_mid_3rd", 
+                    "challenges_tackles",
+                    "challenges_attempted",
+                    "challenges_tackle_pct",
+                    "challenges_lost",
+                    "blocks",
+                    "blocks_shots",
+                    "blocks_passes",
+                    "interceptions",
+                    "tackles_plus_interceptions",
+                    "clearances",
+                    "errors_leading_to_shot"]
 
-    df = df.replace([np.inf, -np.inf], np.nan).dropna()
-    df = df.replace(r'^\s*$', 0, regex=True)
-    df = df.apply(pd.to_numeric, errors='coerce')
-    df = df.fillna(0)
+        df = df.replace([np.inf, -np.inf], np.nan).dropna()
+        df = df.replace(r'^\s*$', 0, regex=True)
+        df = df.apply(pd.to_numeric, errors='coerce')
+        df = df.fillna(0)
 
-    # Drop only the columns that actually exist in the frame.
-    cols_to_drop = [col for col in drop_cols if col in df.columns]
-    X = df.drop(columns=cols_to_drop)
-    X = X.values
+        # Drop only the columns that actually exist in the frame.
+        cols_to_drop = [col for col in drop_cols if col in df.columns]
+        X = df.drop(columns=cols_to_drop)
+        X = X.values
 
-    print(X)
-    scaler = joblib.load("ML/models/scaler.pkl")
-    model = tf.keras.models.load_model("ML/models/regression_model.keras")
+        print(X)
+        scaler = joblib.load("ML/models/scaler_attackers.pkl")
+        model = tf.keras.models.load_model("ML/models/regression_model_attackers.keras")
 
-    x = X[0].reshape(1, -1) # 2D
-    x_scaled = scaler.transform(x)
-    pred = model.predict(x_scaled)
-    return float(np.asarray(pred))
+        x = X[0].reshape(1, -1) # 2D
+        x_scaled = scaler.transform(x)
+        pred = model.predict(x_scaled)
+        print(float(np.asarray(pred)))
+        return float(np.asarray(pred))
+    
+    elif pos in {"MF", "MF/DF", "MF/FW"}:
+        drop_cols = ["position", "club",
+                    "matches_played",
+                    "matches_started"]
+
+        df = df.replace([np.inf, -np.inf], np.nan).dropna()
+        df = df.replace(r'^\s*$', 0, regex=True)
+        df = df.apply(pd.to_numeric, errors='coerce')
+        df = df.fillna(0)
+
+        # Drop only the columns that actually exist in the frame.
+        cols_to_drop = [col for col in drop_cols if col in df.columns]
+        X = df.drop(columns=cols_to_drop)
+        X = X.values
+
+        print(X)
+        scaler = joblib.load("ML/models/scaler_midfielders.pkl")
+        model = tf.keras.models.load_model("ML/models/regression_model_midfielders.keras")
+
+        x = X[0].reshape(1, -1) # 2D
+        x_scaled = scaler.transform(x)
+        pred = model.predict(x_scaled)
+        print(float(np.asarray(pred)))
+
+        return float(np.asarray(pred))
+    
+    elif pos in {"DF", "DF/MF"}:
+        drop_cols = ["position", "club",
+            "matches_played",
+            "matches_started",
+            "goals_scored",
+            "goal_plus_assists",
+            "penalty_goals",
+            "penalty_attempts",
+            "expected_goals",
+            "non_penalty_expected_goals",
+            "combined_non_penalty_expected_goal_contributions"]
+
+        df = df.replace([np.inf, -np.inf], np.nan).dropna()
+        df = df.replace(r'^\s*$', 0, regex=True)
+        df = df.apply(pd.to_numeric, errors='coerce')
+        df = df.fillna(0)
+
+        # Drop only the columns that actually exist in the frame.
+        cols_to_drop = [col for col in drop_cols if col in df.columns]
+        X = df.drop(columns=cols_to_drop)
+        X = X.values
+
+        print(X)
+        scaler = joblib.load("ML/models/scaler_defenders.pkl")
+        model = tf.keras.models.load_model("ML/models/regression_model_defenders.keras")
+
+        x = X[0].reshape(1, -1) # 2D
+        x_scaled = scaler.transform(x)
+        pred = model.predict(x_scaled)
+        print(float(np.asarray(pred)))
+        return float(np.asarray(pred))
+    
+    else:
+    
+        drop_cols = ["position", "club"]
+
+        df = df.replace([np.inf, -np.inf], np.nan).dropna()
+        df = df.replace(r'^\s*$', 0, regex=True)
+        df = df.apply(pd.to_numeric, errors='coerce')
+        df = df.fillna(0)
+
+        # Drop only the columns that actually exist in the frame.
+        cols_to_drop = [col for col in drop_cols if col in df.columns]
+        X = df.drop(columns=cols_to_drop)
+        X = X.values
+
+        print(X)
+        scaler = joblib.load("ML/models/scaler.pkl")
+        model = tf.keras.models.load_model("ML/models/regression_model.keras")
+
+        x = X[0].reshape(1, -1) # 2D
+        x_scaled = scaler.transform(x)
+        pred = model.predict(x_scaled)
+        return float(np.asarray(pred))
 
 if __name__ == '__main__':
     with app.app_context():
