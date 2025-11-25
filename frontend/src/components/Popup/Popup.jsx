@@ -4,7 +4,8 @@ import ChartWrapper from './Chart/ChartWrapper/ChartWrapper.jsx'
 import mapPositions from '../Map/mapd.json'
 import './Popup.css'
 
-const API_BASE_URL = 'http://localhost:5000'
+const API_BASE_URL = 'http://127.0.0.1:5000'
+const PREDICTION_DIVISOR = 1_000_000_000
 
 const STATIC_FIELDS = ['position','club']
 const GK_FALLBACK_ORDER = [
@@ -162,7 +163,7 @@ function Popup({ player, season, isOpen, onClose }) {
     setDefaultPrediction(null)
     setCustomPrediction(null)
 
-    const url = `http://127.0.0.1:5000/api/players/${player.id}?year_code=${encodeURIComponent(season)}`
+    const url = `${API_BASE_URL}/api/players/${player.id}?year_code=${encodeURIComponent(season)}`
     fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch player data')
@@ -425,7 +426,7 @@ function Popup({ player, season, isOpen, onClose }) {
   }
 
   const callModel = (values) =>
-    fetch('http://127.0.0.1:5000/api/estimate', {
+    fetch(`${API_BASE_URL}/api/estimate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ featureValues: values }),
@@ -442,7 +443,7 @@ function Popup({ player, season, isOpen, onClose }) {
       .then((res) => {
         if (cancelled) return
         const raw = Number(res?.estimated_value)
-        const val = Number.isFinite(raw) ? raw / 1_000_000 : null
+        const val = Number.isFinite(raw) ? raw / PREDICTION_DIVISOR : null
         setDefaultPrediction(val)
         setEstimatedValue(val)
       })
@@ -462,7 +463,7 @@ function Popup({ player, season, isOpen, onClose }) {
     callModel(featureValues)
       .then((customRes) => {
         const custRaw = Number(customRes?.estimated_value)
-        const custVal = Number.isFinite(custRaw) ? custRaw / 1_000_000 : null
+        const custVal = Number.isFinite(custRaw) ? custRaw / PREDICTION_DIVISOR : null
         setCustomPrediction(custVal)
         setEstimatedValue(custVal)
       })
