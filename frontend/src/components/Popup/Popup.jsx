@@ -5,7 +5,7 @@ import mapPositions from '../Map/mapd.json'
 import './Popup.css'
 
 const API_BASE_URL = 'http://127.0.0.1:5000'
-const PREDICTION_DIVISOR = 1_000_000_000
+const PREDICTION_DIVISOR = 1_000_000
 
 const STATIC_FIELDS = ['position','club']
 const GK_FALLBACK_ORDER = [
@@ -91,6 +91,61 @@ const buildFeatureOrder = (position = '', featureLists = {}) => {
 
 const POSITION_OPTIONS = ['GK', 'DF', 'MF', 'FW']
 const CLUB_OPTIONS = Object.keys(mapPositions).sort((a, b) => a.localeCompare(b))
+
+// Backend expects this canonical column order; we pad with blanks when the UI omits some fields.
+const BACKEND_COLUMN_ORDER = [
+  'position',
+  'club',
+  'age',
+  'matches_played',
+  'matches_started',
+  'minutes_played',
+  'goals_scored',
+  'assists_made',
+  'goals_plus_assists',
+  'penalty_goals',
+  'penalty_attempts',
+  'yellow_cards',
+  'red_cards',
+  'expected_goals',
+  'non_penalty_expected_goals',
+  'expected_assists',
+  'combined_non_penalty_expected_goal_contributions',
+  'progressive_carries',
+  'progressive_passes',
+  'progressive_receptions',
+  'passes_completed',
+  'passes_attempted',
+  'pass_completion_pct',
+  'pass_total_distance',
+  'pass_progressive_distance',
+  'short_passes_completed',
+  'short_passes_attempted',
+  'medium_passes_completed',
+  'medium_passes_attempted',
+  'long_passes_completed',
+  'long_passes_attempted',
+  'key_passes',
+  'passes_into_final_third',
+  'passes_into_penalty_area',
+  'crosses_into_pa',
+  'tackles',
+  'tackles_won',
+  'tackles_def_3rd',
+  'tackles_mid_3rd',
+  'tackles_att_3rd',
+  'challenges_tackles',
+  'challenges_attempted',
+  'challenges_tackle_pct',
+  'challenges_lost',
+  'blocks',
+  'blocks_shots',
+  'blocks_passes',
+  'interceptions',
+  'tackles_plus_interceptions',
+  'clearances',
+  'errors_leading_to_shot',
+]
 
 function Popup({ player, season, isOpen, onClose }) {
   const [expanded, setExpanded] = useState(false)
@@ -197,6 +252,22 @@ function Popup({ player, season, isOpen, onClose }) {
       setLatestChartValue(null)
     }
   }, [isOpen])
+
+  const buildApiPayload = useCallback(
+    (values = {}) => {
+      const payload = {}
+      BACKEND_COLUMN_ORDER.forEach((key) => {
+        payload[key] =
+          values[key] ??
+          seasonData?.[key] ??
+          playerData?.[key] ??
+          player?.[key] ??
+          ''
+      })
+      return payload
+    },
+    [player, playerData, seasonData]
+  )
 
   useEffect(() => {
     if (!seasonData) return
@@ -429,7 +500,7 @@ function Popup({ player, season, isOpen, onClose }) {
     fetch(`${API_BASE_URL}/api/estimate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ featureValues: values }),
+      body: JSON.stringify({ featureValues: buildApiPayload(values) }),
     }).then((response) => response.json())
 
   useEffect(() => {
