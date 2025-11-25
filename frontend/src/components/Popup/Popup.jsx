@@ -2,10 +2,9 @@ import { useState, useEffect, useMemo, useCallback, Fragment } from 'react'
 import { X, ArrowLeft, ArrowRight } from 'lucide-react'
 import ChartWrapper from './Chart/ChartWrapper/ChartWrapper.jsx'
 import mapPositions from '../Map/mapd.json'
-import attackerFeatures from './featureLists/attackers.json'
-import defenderFeatures from './featureLists/defenders.json'
-import midfielderFeatures from './featureLists/midfielders.json'
 import './Popup.css'
+
+const API_BASE_URL = 'http://localhost:5000'
 
 const STATIC_FIELDS = ['position','club']
 const GK_FALLBACK_ORDER = [
@@ -60,12 +59,6 @@ const GK_FALLBACK_ORDER = [
   'errors_leading_to_shot',
 ]
 
-const POSITION_FEATURE_FILES = {
-  attackers: attackerFeatures,
-  defenders: defenderFeatures,
-  midfielders: midfielderFeatures,
-}
-
 const POSITION_TO_GROUP = {
   FW: 'attackers',
   'FW/MF': 'attackers',
@@ -84,11 +77,13 @@ const labelize = (key) =>
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
 
-const buildFeatureOrder = (position = '') => {
+const buildFeatureOrder = (position = '', featureLists = {}) => {
   const normalized = position?.toUpperCase?.() || ''
   const group = POSITION_TO_GROUP[normalized]
-  const positionFeatures = group ? POSITION_FEATURE_FILES[group] : null
-  const ordered = positionFeatures ? positionFeatures.map((item) => item.feature) : GK_FALLBACK_ORDER
+  const positionFeatures = group ? featureLists[group] : null
+  const ordered = Array.isArray(positionFeatures) && positionFeatures.length
+    ? positionFeatures.map((item) => item.feature)
+    : GK_FALLBACK_ORDER
   const merged = [...STATIC_FIELDS, ...ordered]
   return Array.from(new Set(merged))
 }
@@ -112,6 +107,11 @@ function Popup({ player, season, isOpen, onClose }) {
   const [selectedFeatures, setSelectedFeatures] = useState([])
   const [clubLogo, setClubLogo] = useState('/static/images/teams/default_logo.png')
   const [isFeatureDropdownOpen, setIsFeatureDropdownOpen] = useState(false)
+  const [featureLists, setFeatureLists] = useState({
+    attackers: [],
+    defenders: [],
+    midfielders: [],
+  })
 
   const normalize = (name) =>
     name?.toLowerCase().replace(/football club|fc|afc|city|united|\.|-/g, '').trim()
@@ -128,7 +128,10 @@ function Popup({ player, season, isOpen, onClose }) {
 
   const currentPosition = seasonData?.position || playerData?.position || player?.position || ''
 
-  const featureOrder = useMemo(() => buildFeatureOrder(currentPosition), [currentPosition])
+  const featureOrder = useMemo(
+    () => buildFeatureOrder(currentPosition, featureLists),
+    [currentPosition, featureLists]
+  )
 
   const featureOptions = useMemo(
     () =>
@@ -200,6 +203,39 @@ function Popup({ player, season, isOpen, onClose }) {
     setFeatureValues(baseValues)
     setInitialFeatureValues(baseValues)
   }, [seasonData, buildFeatureValues])
+
+  useEffect(() => {
+    let cancelled = false
+    const fetchGroup = async (group) => {
+      const response = await fetch(`${API_BASE_URL}/api/feature-importance/${group}`)
+      if (!response.ok) throw new Error(`Failed to fetch ${group} feature importance`)
+      return response.json()
+    }
+
+    const loadFeatureLists = async () => {
+      try {
+        const [attackers, midfielders, defenders] = await Promise.all([
+          fetchGroup('attackers'),
+          fetchGroup('midfielders'),
+          fetchGroup('defenders'),
+        ])
+        if (cancelled) return
+        setFeatureLists({
+          attackers: attackers || [],
+          defenders: defenders || [],
+          midfielders: midfielders || [],
+        })
+      } catch (err) {
+        if (cancelled) return
+        console.error('Failed to load feature importance from backend:', err)
+      }
+    }
+
+    loadFeatureLists()
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   useEffect(() => {
     if (!featureOrder.length) return
