@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import make_scorer, mean_absolute_error
+import json
 
 conn = db.get_conn()
 df = db.labeled_seasons()
@@ -88,7 +89,7 @@ print("mean", np.mean(y))
 print(df.shape)
 print(f"Test MAE: {mae:.3f}")
 
-exit(1)
+#exit(1)
 ## -------- FEATURE IMPORTANCE -------
 
 ## ---- Permutation importance -----
@@ -130,7 +131,12 @@ shap_global_df = (
       .reset_index(drop=True)
 )
 print("{\nSHAP importance")
-print(shap_global_df.head(4))
+print(shap_global_df)
+
+# Save SHAP importance
+shap_json_path = models_dir / "defenders_shap_importance.json"
+shap_global_df.to_json(shap_json_path, orient="records", indent=4)
+print(f"Saved SHAP importance → {shap_json_path}")
 
 
 ## --------- PLOTS -------------

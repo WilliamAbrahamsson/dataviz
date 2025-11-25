@@ -11,6 +11,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import make_scorer, mean_absolute_error
+import json
+
 
 conn = db.get_conn()
 df = db.labeled_seasons()
@@ -96,7 +98,6 @@ print("mean", np.mean(y))
 print(df.shape)
 print(f"Test MAE: {mae:.3f}")
 
-exit(1)
 ## -------- FEATURE IMPORTANCE -------
 
 ## ---- Permutation importance -----
@@ -117,14 +118,14 @@ importance_df = pd.DataFrame({
     "importance": importances
 }).sort_values("importance", ascending=False)
 
-print("Permutation Importance")
-print(importance_df.head(4))
+# print("Permutation Importance")
+# print(importance_df)
 
 ## ----- SHAP values -------
 
 # get a random sample
 rng = np.random.default_rng(42)
-bg_size = 250
+bg_size = 500
 bg_idx = rng.choice(X_train.shape[0], size=bg_size, replace=False)
 X_bg = X_train[bg_idx]
 
@@ -140,6 +141,10 @@ shap_global_df = (
 print("{\nSHAP importance")
 print(shap_global_df.head(4))
 
+# Save SHAP importance
+shap_json_path = models_dir / "attackers_shap_importance.json"
+shap_global_df.to_json(shap_json_path, orient="records", indent=4)
+print(f"Saved SHAP importance → {shap_json_path}")
 
 ## --------- PLOTS -------------
 
