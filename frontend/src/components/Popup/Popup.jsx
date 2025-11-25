@@ -1,12 +1,14 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback, Fragment } from 'react'
 import { X, ArrowLeft, ArrowRight } from 'lucide-react'
 import ChartWrapper from './Chart/ChartWrapper/ChartWrapper.jsx'
 import mapPositions from '../Map/mapd.json'
+import attackerFeatures from './featureLists/attackers.json'
+import defenderFeatures from './featureLists/defenders.json'
+import midfielderFeatures from './featureLists/midfielders.json'
 import './Popup.css'
 
-const FEATURE_KEYS = [
-  'position',
-  'club',
+const STATIC_FIELDS = ['position','club']
+const GK_FALLBACK_ORDER = [
   'age',
   'matches_played',
   'matches_started',
@@ -58,29 +60,41 @@ const FEATURE_KEYS = [
   'errors_leading_to_shot',
 ]
 
-const TEXT_FEATURES = new Set(['position', 'club'])
+const POSITION_FEATURE_FILES = {
+  attackers: attackerFeatures,
+  defenders: defenderFeatures,
+  midfielders: midfielderFeatures,
+}
 
-const FEATURE_OPTIONS = FEATURE_KEYS.map((key) => ({
-  key,
-  label: key
+const POSITION_TO_GROUP = {
+  FW: 'attackers',
+  'FW/MF': 'attackers',
+  MF: 'midfielders',
+  'MF/DF': 'midfielders',
+  'MF/FW': 'midfielders',
+  DF: 'defenders',
+  'DF/MF': 'defenders',
+}
+
+const TEXT_FEATURES = new Set(STATIC_FIELDS)
+
+const labelize = (key) =>
+  key
     .split('_')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' '),
-  type: TEXT_FEATURES.has(key) ? 'text' : 'number',
-}))
+    .join(' ')
+
+const buildFeatureOrder = (position = '') => {
+  const normalized = position?.toUpperCase?.() || ''
+  const group = POSITION_TO_GROUP[normalized]
+  const positionFeatures = group ? POSITION_FEATURE_FILES[group] : null
+  const ordered = positionFeatures ? positionFeatures.map((item) => item.feature) : GK_FALLBACK_ORDER
+  const merged = [...STATIC_FIELDS, ...ordered]
+  return Array.from(new Set(merged))
+}
 
 const POSITION_OPTIONS = ['GK', 'DF', 'MF', 'FW']
 const CLUB_OPTIONS = Object.keys(mapPositions).sort((a, b) => a.localeCompare(b))
-
-const DEFAULT_SELECTED_FEATURES = ['age', 'goals_scored', 'assists_made', 'matches_played']
-
-const buildFeatureValues = (stats = {}) => {
-  const values = {}
-  FEATURE_OPTIONS.forEach(({ key }) => {
-    values[key] = stats[key] ?? ''
-  })
-  return values
-}
 
 function Popup({ player, season, isOpen, onClose }) {
   const [expanded, setExpanded] = useState(false)
@@ -95,7 +109,7 @@ function Popup({ player, season, isOpen, onClose }) {
 
   const [featureValues, setFeatureValues] = useState({})
   const [initialFeatureValues, setInitialFeatureValues] = useState({})
-  const [selectedFeatures, setSelectedFeatures] = useState(DEFAULT_SELECTED_FEATURES)
+  const [selectedFeatures, setSelectedFeatures] = useState([])
   const [clubLogo, setClubLogo] = useState('/static/images/teams/default_logo.png')
   const [isFeatureDropdownOpen, setIsFeatureDropdownOpen] = useState(false)
 
@@ -111,6 +125,31 @@ function Popup({ player, season, isOpen, onClose }) {
     }
     return '/static/images/teams/default_logo.png'
   }
+
+  const currentPosition = seasonData?.position || playerData?.position || player?.position || ''
+
+  const featureOrder = useMemo(() => buildFeatureOrder(currentPosition), [currentPosition])
+
+  const featureOptions = useMemo(
+    () =>
+      featureOrder.map((key) => ({
+        key,
+        label: labelize(key),
+        type: TEXT_FEATURES.has(key) ? 'text' : 'number',
+      })),
+    [featureOrder]
+  )
+
+  const buildFeatureValues = useCallback(
+    (stats = {}) => {
+      const values = {}
+      featureOrder.forEach((key) => {
+        values[key] = stats[key] ?? ''
+      })
+      return values
+    },
+    [featureOrder]
+  )
 
   useEffect(() => {
     if (!isOpen || !player) return
@@ -129,10 +168,7 @@ function Popup({ player, season, isOpen, onClose }) {
       .then((data) => {
         setPlayerData(data)
         const s = data.seasons?.find((x) => x.year_code === season) || player.seasonData || {}
-        const baseValues = buildFeatureValues(s)
         setSeasonData(s)
-        setFeatureValues(baseValues)
-        setInitialFeatureValues(baseValues)
         setCustomPrediction(null)
         setClubLogo(findTeamLogo(s.club))
         setLoading(false)
@@ -159,6 +195,24 @@ function Popup({ player, season, isOpen, onClose }) {
   }, [isOpen])
 
   useEffect(() => {
+    if (!seasonData) return
+    const baseValues = buildFeatureValues(seasonData)
+    setFeatureValues(baseValues)
+    setInitialFeatureValues(baseValues)
+  }, [seasonData, buildFeatureValues])
+
+  useEffect(() => {
+    if (!featureOrder.length) return
+    setSelectedFeatures((prev) => {
+      const validPrev = prev.filter((key) => featureOrder.includes(key))
+      if (validPrev.length) return validPrev
+      const defaults = featureOrder.filter((key) => !STATIC_FIELDS.includes(key)).slice(0, 6)
+      if (defaults.length) return defaults
+      return featureOrder.slice(0, Math.min(6, featureOrder.length))
+    })
+  }, [featureOrder])
+
+  useEffect(() => {
     if (!expanded) setIsFeatureDropdownOpen(false)
   }, [expanded])
 
@@ -176,9 +230,9 @@ function Popup({ player, season, isOpen, onClose }) {
   }
 
   const hasCustomChanges = useMemo(() => {
-    const numberKeys = new Set(FEATURE_OPTIONS.filter((o) => o.type === 'number').map((o) => o.key))
+    const numberKeys = new Set(featureOptions.filter((o) => o.type === 'number').map((o) => o.key))
 
-    return FEATURE_KEYS.some((key) => {
+    return featureOrder.some((key) => {
       const initial = initialFeatureValues?.[key]
       const current = featureValues?.[key]
       if (numberKeys.has(key)) {
@@ -190,10 +244,10 @@ function Popup({ player, season, isOpen, onClose }) {
       }
       return (initial ?? '') !== (current ?? '')
     })
-  }, [featureValues, initialFeatureValues])
+  }, [featureValues, initialFeatureValues, featureOrder, featureOptions])
 
   const handleFeatureChange = (featureKey, value) => {
-    const option = FEATURE_OPTIONS.find((opt) => opt.key === featureKey)
+    const option = featureOptions.find((opt) => opt.key === featureKey)
     const parsedValue =
       option?.type === 'number' ? (value === '' ? '' : Number(value)) : value
     setFeatureValues((prev) => ({
@@ -227,7 +281,7 @@ function Popup({ player, season, isOpen, onClose }) {
   }
 
   const isFieldChanged = (featureKey) => {
-    const option = FEATURE_OPTIONS.find((opt) => opt.key === featureKey)
+    const option = featureOptions.find((opt) => opt.key === featureKey)
     const isNumber = option?.type === 'number'
     const initial = initialFeatureValues?.[featureKey]
     const current = featureValues?.[featureKey]
@@ -459,16 +513,22 @@ function Popup({ player, season, isOpen, onClose }) {
                       </button>
                       {isFeatureDropdownOpen && (
                         <div className="feature-dropdown-list">
-                          {FEATURE_OPTIONS.map((feature) => (
-                            <label key={feature.key} className="feature-option">
-                              <input
-                                type="checkbox"
-                                checked={selectedFeatures.includes(feature.key)}
-                                onChange={() => toggleFeatureSelection(feature.key)}
-                              />
-                              {feature.label}
-                            </label>
-                          ))}
+                          {featureOptions.map((feature, idx) => {
+                            const showDivider = idx === STATIC_FIELDS.length && featureOptions.length > STATIC_FIELDS.length
+                            return (
+                              <Fragment key={feature.key}>
+                                {showDivider && <div className="feature-separator" aria-hidden="true" />}
+                                <label className="feature-option">
+                                  <input
+                                    type="checkbox"
+                                    checked={selectedFeatures.includes(feature.key)}
+                                    onChange={() => toggleFeatureSelection(feature.key)}
+                                  />
+                                  {feature.label}
+                                </label>
+                              </Fragment>
+                            )
+                          })}
                         </div>
                       )}
                     </div>
@@ -480,7 +540,7 @@ function Popup({ player, season, isOpen, onClose }) {
                   ) : (
                     <div className="form-grid-3x3">
                       {selectedFeatures.map((featureKey) => {
-                        const option = FEATURE_OPTIONS.find((opt) => opt.key === featureKey)
+                        const option = featureOptions.find((opt) => opt.key === featureKey)
                         if (!option) return null
 
                         return (
