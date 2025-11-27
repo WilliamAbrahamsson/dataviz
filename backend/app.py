@@ -17,12 +17,51 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 register_routes(app)
 
+#nn_scaler = joblib.load("models/player_similarity_scaler.pkl")
+#nn_model = joblib.load("models/player_similarity_knn.pkl")
+#players_df = joblib.load("models/player_similarity_players.pkl")
+#feature_cols = joblib.load("models/player_similarity_features.pkl")
+
 
 @app.route('/')
 def home():
     # Redirect to the players list endpoint
     return redirect(url_for('players.get_players'))
 
+@app.route('/similar', methods=['POST', 'OPTIONS'])
+def similar():
+    if request.method == 'OPTIONS':
+        return ('', 204, {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        })
+    
+
+    payload = request.get_json(silent=True) or {}
+    featureValues = payload.get('featureValues') or {}
+
+    df_input = pd.json_normalize(featureValues)
+    use_data = df_input[feature_cols]
+
+    x = use_data.to_numpy().reshape(1, -1)
+    x_scaled = nn_scaler.transform(x)
+
+    distances, indices = nn_model.kneighbors(x_scaled, n_neighbors=6)
+
+    similar_players = players_df.iloc[indices[0]].copy()
+    similar_players["distance"] = distances[0]
+
+    IDs = similar_players["player_id"].tolist()
+    names = db.match(IDs)
+    
+    response = jsonify({
+        "players": names,
+        "player_ids": IDs,
+        "distances": similar_players["distance"].tolist(),
+    })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 @app.route('/api/estimate', methods=['POST', 'OPTIONS'])
 def estimate():

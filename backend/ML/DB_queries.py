@@ -72,3 +72,12 @@ def labeled_seasons(db_path=DB_PATH,
     result = result.drop(columns=["season_end_date", "date"], errors="ignore")
 
     return result[orig_season_cols + ["valuation_amount"]].reset_index(drop=True)
+
+def match(IDs, db_path=DB_PATH, season_table="player"):
+    conn = sqlite3.connect(db_path)
+    df_players = pd.read_sql_query(f"SELECT * FROM {season_table}", conn)
+    conn.close()
+
+    matched = df_players[df_players["player_id"].isin(IDs)]
+    names = matched["player_name"].tolist()
+    return names
