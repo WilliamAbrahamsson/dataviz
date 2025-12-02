@@ -190,7 +190,7 @@ const BACKEND_COLUMN_ORDER = [
   'errors_leading_to_shot',
 ]
 
-function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason }) {
+function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason, onSelectTeam }) {
   const [expanded, setExpanded] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -216,6 +216,19 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
 
   const normalize = (name) =>
     name?.toLowerCase().replace(/football club|fc|afc|city|united|\.|-/g, '').trim()
+  const normalizeSeasonCode = (code = '') => String(code).toLowerCase().replace(/[^0-9]/g, '')
+
+  const findSeasonData = (playerObj, seasonCode) => {
+    if (!playerObj?.seasons) return null
+    const normalized = normalizeSeasonCode(seasonCode)
+    if (normalized) {
+      const exact = playerObj.seasons.find(
+        (s) => normalizeSeasonCode(s?.year_code) === normalized
+      )
+      if (exact) return exact
+    }
+    return playerObj.seasons[0] || null
+  }
 
   const findTeamLogo = (clubName) => {
     if (!clubName) return '/static/images/teams/default_logo.png'
@@ -702,11 +715,11 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
                   season={season}
                   onSelect={(p) => {
                     const targetSeason = p?.matched_season_year_code || season
-                    const seasonData =
-                      p?.seasons?.find((s) => s?.year_code === targetSeason) ||
-                      p?.seasons?.[0] ||
-                      null
+                    const seasonData = findSeasonData(p, targetSeason)
+                    const targetTeam = seasonData?.club || p?.club || p?.team || null
                     if (targetSeason) onSelectSeason?.(targetSeason)
+                    if (targetTeam) onSelectTeam?.(targetTeam)
+                    setExpanded(true)
                     onSelectPlayer?.({
                       ...p,
                       season: targetSeason,

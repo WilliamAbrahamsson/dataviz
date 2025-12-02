@@ -7,6 +7,9 @@ const DEFAULT_LOGO = '/static/images/teams/default_logo.png'
 const normalize = (name = '') =>
   name.toLowerCase().replace(/football club|fc|afc|city|united|\.|-/g, '').trim()
 
+const normalizeSeasonCode = (code = '') =>
+  String(code).toLowerCase().replace(/[^0-9]/g, '')
+
 const findTeamLogo = (clubName = '') => {
   if (!clubName) return DEFAULT_LOGO
   const normalized = normalize(clubName)
@@ -22,7 +25,8 @@ const findTeamLogo = (clubName = '') => {
 const pickSeason = (player = {}, season) => {
   if (!player?.seasons) return null
   if (season) {
-    const exact = player.seasons.find((s) => s?.year_code === season)
+    const target = normalizeSeasonCode(season)
+    const exact = player.seasons.find((s) => normalizeSeasonCode(s?.year_code) === target)
     if (exact) return exact
   }
   return player.seasons[0] || null
@@ -116,9 +120,9 @@ function SimilarPlayers({ players = [], loading = false, season, onSelect }) {
             </thead>
             <tbody>
               {rows.map((p, idx) => {
-                const seasonInfo = pickSeason(p, season)
-                const logo = findTeamLogo(seasonInfo?.club || p.club || p.team || '')
                 const targetSeason = p?.matched_season_year_code || season
+                const seasonInfo = pickSeason(p, targetSeason)
+                const logo = findTeamLogo(seasonInfo?.club || p.club || p.team || '')
                 const valuation = formatValuation(p, targetSeason)
                 const displayPosition = seasonInfo?.position || p.position || '—'
                 const displaySeason = p?.matched_season_year_code || seasonInfo?.year_code || '—'

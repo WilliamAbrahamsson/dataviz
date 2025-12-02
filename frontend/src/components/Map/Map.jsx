@@ -3,7 +3,7 @@ import initialPositions from './mapd.json'
 import seasonTeams from './teamsd.json'
 import './Map.css'
 
-function Map({ onTeamSelect, season }) {
+function Map({ onTeamSelect, season, selectedTeam }) {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
   const [positions, setPositions] = useState(() => {
@@ -32,14 +32,19 @@ function Map({ onTeamSelect, season }) {
     return () => observer.disconnect()
   }, [])
 
-  // Select a random team when season changes
+  // Select team when season changes; prefer externally selected team, else random.
   useEffect(() => {
     const teams = seasonTeams[season] || []
-    if (teams.length && onTeamSelect) {
-      const randomTeam = teams[Math.floor(Math.random() * teams.length)]
-      onTeamSelect(randomTeam)
+    if (!teams.length || !onTeamSelect) return
+
+    if (selectedTeam && teams.includes(selectedTeam)) {
+      onTeamSelect(selectedTeam)
+      return
     }
-  }, [season, onTeamSelect])
+
+    const randomTeam = teams[Math.floor(Math.random() * teams.length)]
+    onTeamSelect(randomTeam)
+  }, [season, onTeamSelect, selectedTeam])
 
   const teamsInSeason = seasonTeams[season] || []
   const mapImage = isDarkMode

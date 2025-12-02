@@ -65,7 +65,15 @@ function getSeasonValuation(valuations = [], season) {
   return Number.isFinite(amount) ? amount : null
 }
 
-function Table({ teamName, season, externalPlayer, onClosePlayer, onSelectSeason }) {
+function Table({
+  teamName,
+  season,
+  externalPlayer,
+  onClosePlayer,
+  onSelectSeason,
+  onSelectTeam,
+  onPlayerSelected,
+}) {
   const [players, setPlayers] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -117,6 +125,7 @@ function Table({ teamName, season, externalPlayer, onClosePlayer, onSelectSeason
                 <th>Player</th>
                 <th>Position</th>
                 <th>Age</th>
+                <th>Season</th>
                 <th>Valuation (€M)</th>
               </tr>
             </thead>
@@ -137,6 +146,7 @@ function Table({ teamName, season, externalPlayer, onClosePlayer, onSelectSeason
                     onClick={() => {
                       if (rowDisabled) return
                       setSelectedPlayer({ ...player, seasonData })
+                      onPlayerSelected?.()
                     }}
                   >
                     <td className="player-cell">
@@ -145,6 +155,7 @@ function Table({ teamName, season, externalPlayer, onClosePlayer, onSelectSeason
                     </td>
                     <td>{seasonData?.position || '—'}</td>
                     <td>{seasonData?.age || '—'}</td>
+                    <td>{seasonData?.year_code || season || '—'}</td>
                     <td className={`valuation ${valuation ? '' : 'valuation-nan'}`}>
                       {valuation ? `€${valuation}M` : 'No Valuation Data'}
                     </td>
@@ -165,7 +176,11 @@ function Table({ teamName, season, externalPlayer, onClosePlayer, onSelectSeason
         season={season}
         isOpen={!!selectedPlayer}
         onSelectSeason={onSelectSeason}
-        onSelectPlayer={(p) => setSelectedPlayer(p)}
+        onSelectTeam={onSelectTeam}
+        onSelectPlayer={(p) => {
+          setSelectedPlayer(p)
+          onPlayerSelected?.()
+        }}
         onClose={() => {
           setSelectedPlayer(null)
           onClosePlayer?.()

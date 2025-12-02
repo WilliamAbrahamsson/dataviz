@@ -20,6 +20,7 @@ function Main() {
   const [selectedTeam, setSelectedTeam] = useState(null)
   const [selectedSeason, setSelectedSeason] = useState(seasons[0] || null)
   const [selectedPlayer, setSelectedPlayer] = useState(null)
+  const [teamInfoRefreshKey, setTeamInfoRefreshKey] = useState(0)
 
   const handlePlayerSelect = (player) => {
     const season = selectedSeason || player.seasons?.[0]?.year_code
@@ -29,6 +30,7 @@ function Main() {
     if (seasonData?.club) {
       setSelectedTeam(seasonData.club)
       setSelectedPlayer(player)
+      setTeamInfoRefreshKey((k) => k + 1)
     }
   }
 
@@ -54,12 +56,17 @@ function Main() {
           <Map
             onTeamSelect={setSelectedTeam}
             season={selectedSeason}
+            selectedTeam={selectedTeam}
           />
         </div>
 
         <div className="right-side">
           <div className="right-top">
-            <TeamInfo teamName={selectedTeam} season={selectedSeason} />
+            <TeamInfo
+              teamName={selectedTeam}
+              season={selectedSeason}
+              refreshKey={teamInfoRefreshKey}
+            />
           </div>
           <div className="right-bottom">
             <Table
@@ -67,6 +74,8 @@ function Main() {
               season={selectedSeason}
               externalPlayer={selectedPlayer}
               onSelectSeason={setSelectedSeason}
+              onSelectTeam={setSelectedTeam}
+              onPlayerSelected={() => setTeamInfoRefreshKey((k) => k + 1)}
               onClosePlayer={() => setSelectedPlayer(null)}
             />
           </div>

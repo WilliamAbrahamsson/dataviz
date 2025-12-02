@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './TeamInfo.css'
 import mapPositions from '../Map/mapd.json'
 
-function TeamInfo({ teamName, season }) {
+function TeamInfo({ teamName, season, refreshKey = 0 }) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [stats, setStats] = useState({
@@ -46,7 +46,7 @@ function TeamInfo({ teamName, season }) {
         setError(err.message)
         setLoading(false)
       })
-  }, [teamName, season])
+  }, [teamName, season, refreshKey])
 
   return (
     <div className="team-info">
