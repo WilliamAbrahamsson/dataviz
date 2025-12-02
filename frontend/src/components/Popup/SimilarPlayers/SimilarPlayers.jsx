@@ -28,15 +28,64 @@ const pickSeason = (player = {}, season) => {
   return player.seasons[0] || null
 }
 
-const formatValuation = (player) => {
-  const amount =
-    player?.valuations?.[0]?.amount ??
-    player?.valuation ??
-    player?.value ??
-    player?.market_value ??
-    null
+const parseSeasonEndYear = (season) => {
+  if (!season) return null
+  const str = String(season)
+  const rangeMatch = str.match(/(\d{4})\s*[/\-]\s*(\d{2,4})/)
+  if (rangeMatch) {
+    const startYear = Number(rangeMatch[1]) || null
+    const second = rangeMatch[2]
+    if (second.length === 4) {
+      const endYear = Number(second)
+      return Number.isNaN(endYear) ? null : endYear
+    }
+    return startYear != null && !Number.isNaN(startYear) ? startYear + 1 : null
+  }
+  const singleYear = str.match(/\d{4}/)
+  if (!singleYear) return null
+  const year = Number(singleYear[0])
+  return Number.isNaN(year) ? null : year
+}
 
-  if (!Number.isFinite(Number(amount))) return 'NaN'
+const getSeasonValuation = (valuations = [], season) => {
+  if (!Array.isArray(valuations) || valuations.length === 0) return null
+
+  const endYear = parseSeasonEndYear(season)
+  const seasonFiltered = endYear
+    ? valuations.filter((v) => {
+        if (!v?.date) return false
+        const d = new Date(v.date)
+        const year = d.getFullYear()
+        return !Number.isNaN(year) && year <= endYear
+      })
+    : valuations.filter((v) => v?.date)
+
+  if (seasonFiltered.length === 0) return null
+
+  const sorted = [...seasonFiltered].sort((a, b) => new Date(a.date) - new Date(b.date))
+
+  let seasonWindow = sorted
+  if (endYear) {
+    const juneCutoff = new Date(endYear, 5, 30)
+    const firstAfterJuneIdx = sorted.findIndex((v) => {
+      const d = new Date(v.date)
+      return d > juneCutoff && d.getFullYear() === endYear
+    })
+    if (firstAfterJuneIdx !== -1) {
+      seasonWindow = sorted.slice(0, firstAfterJuneIdx + 1)
+    }
+  }
+
+  if (seasonWindow.length === 0) return null
+
+  const latest = seasonWindow[seasonWindow.length - 1]
+  const amount = Number(latest?.amount)
+  return Number.isFinite(amount) ? amount : null
+}
+
+const formatValuation = (player, seasonCode) => {
+  const amount = getSeasonValuation(player?.valuations, seasonCode)
+  if (!Number.isFinite(Number(amount))) return 'No Valuation Data'
   return `€${(Number(amount) / 1_000_000).toFixed(1)}M`
 }
 
@@ -46,7 +95,7 @@ function SimilarPlayers({ players = [], loading = false, season, onSelect }) {
   return (
     <div className="similar-players-section">
       <div className="similar-players-header">
-        <h4>Similar Players</h4>
+        <h4>Similar Player Season Performances</h4>
         <span className="similar-players-caption">Top 5 nearest neighbors</span>
       </div>
 
@@ -69,7 +118,8 @@ function SimilarPlayers({ players = [], loading = false, season, onSelect }) {
               {rows.map((p, idx) => {
                 const seasonInfo = pickSeason(p, season)
                 const logo = findTeamLogo(seasonInfo?.club || p.club || p.team || '')
-                const valuation = formatValuation(p)
+                const targetSeason = p?.matched_season_year_code || season
+                const valuation = formatValuation(p, targetSeason)
                 const displayPosition = seasonInfo?.position || p.position || '—'
                 const displaySeason = p?.matched_season_year_code || seasonInfo?.year_code || '—'
                 return (
