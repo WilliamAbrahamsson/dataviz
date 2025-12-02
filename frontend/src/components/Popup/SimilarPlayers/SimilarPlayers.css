@@ -1,0 +1,65 @@
+.similar-players-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.85rem 0.9rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--bg-hover);
+  border-radius: 12px;
+  width: 100%;
+}
+
+.similar-players-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.similar-players-header h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.similar-players-caption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.similar-players-table {
+  border: 1px solid var(--bg-hover);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-primary);
+  min-height: 290px;
+  width: 100%;
+}
+
+.similar-players-table .player-table {
+  margin: 0;
+  background: transparent;
+}
+
+.similar-players-table .player-table thead {
+  background: var(--bg-secondary);
+}
+
+.similar-players-table .player-table tbody tr {
+  background: var(--bg-primary);
+}
+
+.similar-players-table .player-table tbody tr:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+.player-table.compact th,
+.player-table.compact td {
+  padding: 0.55rem 0.9rem;
+}
+
+.similar-players-empty {
+  margin: 0;
+  padding: 1rem;
+  color: var(--text-muted);
+}

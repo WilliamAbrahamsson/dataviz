@@ -3,6 +3,68 @@ import Popup from '../Popup/Popup.jsx'
 import mapPositions from '../Map/mapd.json'
 import './Table.css'
 
+function parseSeasonEndYear(season) {
+  if (!season) return null
+  const str = String(season)
+
+  const rangeMatch = str.match(/(\d{4})\s*[/\-]\s*(\d{2,4})/)
+  if (rangeMatch) {
+    const startYear = Number(rangeMatch[1]) || null
+    const second = rangeMatch[2]
+
+    if (second.length === 4) {
+      const endYear = Number(second)
+      return Number.isNaN(endYear) ? null : endYear
+    }
+
+    return startYear != null && !Number.isNaN(startYear)
+      ? startYear + 1
+      : null
+  }
+
+  const singleYear = str.match(/\d{4}/)
+  if (!singleYear) return null
+  const year = Number(singleYear[0])
+  return Number.isNaN(year) ? null : year
+}
+
+function getSeasonValuation(valuations = [], season) {
+  if (!Array.isArray(valuations) || valuations.length === 0) return null
+
+  const endYear = parseSeasonEndYear(season)
+  const seasonFiltered = endYear
+    ? valuations.filter((v) => {
+        if (!v?.date) return false
+        const d = new Date(v.date)
+        const year = d.getFullYear()
+        return !Number.isNaN(year) && year <= endYear
+      })
+    : valuations.filter((v) => v?.date)
+
+  if (seasonFiltered.length === 0) return null
+
+  const sorted = [...seasonFiltered].sort((a, b) => new Date(a.date) - new Date(b.date))
+
+  let seasonWindow = sorted
+  if (endYear) {
+    const juneCutoff = new Date(endYear, 5, 30)
+    const firstAfterJuneIdx = sorted.findIndex((v) => {
+      const d = new Date(v.date)
+      return d > juneCutoff && d.getFullYear() === endYear
+    })
+
+    if (firstAfterJuneIdx !== -1) {
+      seasonWindow = sorted.slice(0, firstAfterJuneIdx + 1)
+    }
+  }
+
+  if (seasonWindow.length === 0) return null
+
+  const latest = seasonWindow[seasonWindow.length - 1]
+  const amount = Number(latest?.amount)
+  return Number.isFinite(amount) ? amount : null
+}
+
 function Table({ teamName, season, externalPlayer, onClosePlayer }) {
   const [players, setPlayers] = useState([])
   const [loading, setLoading] = useState(false)
@@ -61,16 +123,21 @@ function Table({ teamName, season, externalPlayer, onClosePlayer }) {
             <tbody>
               {players.map((player) => {
                 const seasonData = player.seasons?.find((s) => s.year_code === season)
-                const valuationAmount = player.valuations?.[0]?.amount
-                const valuation = valuationAmount
+                const valuationAmount = getSeasonValuation(player.valuations, season)
+                const hasValuation = Number.isFinite(valuationAmount)
+                const valuation = hasValuation
                   ? (valuationAmount / 1_000_000).toFixed(1)
                   : null
+                const rowDisabled = !hasValuation
 
                 return (
                   <tr
                     key={player.id}
-                    className="clickable-row"
-                    onClick={() => setSelectedPlayer({ ...player, seasonData })}
+                    className={`clickable-row${rowDisabled ? ' row-disabled' : ''}`}
+                    onClick={() => {
+                      if (rowDisabled) return
+                      setSelectedPlayer({ ...player, seasonData })
+                    }}
                   >
                     <td className="player-cell">
                       <img src={teamLogo} alt={teamName} className="player-logo" />
@@ -79,7 +146,7 @@ function Table({ teamName, season, externalPlayer, onClosePlayer }) {
                     <td>{seasonData?.position || '—'}</td>
                     <td>{seasonData?.age || '—'}</td>
                     <td className={`valuation ${valuation ? '' : 'valuation-nan'}`}>
-                      {valuation ? `€${valuation}M` : 'NaN'}
+                      {valuation ? `€${valuation}M` : 'No Valuation Data'}
                     </td>
                   </tr>
                 )

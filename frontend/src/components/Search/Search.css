@@ -8,10 +8,10 @@
   width: 100%;
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
-  border: none;
-  background: var(--bg-secondary);
+  border: 1px solid #ffffff;
+  background: var(--bg-primary);
   color: var(--text-primary);
-  transition: all 0.25s ease;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .search-input::placeholder {
@@ -20,8 +20,9 @@
 
 .search-input:focus {
   outline: none;
-  background: var(--bg-hover);
-  box-shadow: 0 0 0 3px var(--accent-transparent);
+  background: var(--bg-secondary);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
 }
 
 .search-dropdown {

@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, Fragment } from 'react'
 import { X, ArrowLeft, ArrowRight } from 'lucide-react'
 import ChartWrapper from './Chart/ChartWrapper/ChartWrapper.jsx'
+import SimilarPlayers from './SimilarPlayers/SimilarPlayers.jsx'
 import mapPositions from '../Map/mapd.json'
 import './Popup.css'
 
@@ -91,6 +92,48 @@ const buildFeatureOrder = (position = '', featureLists = {}) => {
 
 const POSITION_OPTIONS = ['GK', 'DF', 'MF', 'FW']
 const CLUB_OPTIONS = Object.keys(mapPositions).sort((a, b) => a.localeCompare(b))
+const MOCK_SIMILAR_PLAYERS = [
+  {
+    id: 'sim-1',
+    name: 'Alex Moreno',
+    position: 'DF',
+    age: 28,
+    club: 'Real Betis',
+    valuations: [{ amount: 18_000_000 }],
+  },
+  {
+    id: 'sim-2',
+    name: 'Robin Gosens',
+    position: 'DF',
+    age: 29,
+    club: 'Inter',
+    valuations: [{ amount: 16_500_000 }],
+  },
+  {
+    id: 'sim-3',
+    name: 'Nahuel Molina',
+    position: 'DF',
+    age: 26,
+    club: 'Atletico Madrid',
+    valuations: [{ amount: 28_000_000 }],
+  },
+  {
+    id: 'sim-4',
+    name: 'Giovanni Di Lorenzo',
+    position: 'DF',
+    age: 30,
+    club: 'Napoli',
+    valuations: [{ amount: 24_000_000 }],
+  },
+  {
+    id: 'sim-5',
+    name: 'Jeremie Frimpong',
+    position: 'DF',
+    age: 22,
+    club: 'Bayer Leverkusen',
+    valuations: [{ amount: 40_000_000 }],
+  },
+]
 
 // Backend expects this canonical column order; we pad with blanks when the UI omits some fields.
 const BACKEND_COLUMN_ORDER = [
@@ -328,7 +371,16 @@ function Popup({ player, season, isOpen, onClose }) {
     if (e.target === e.currentTarget) onClose()
   }
 
-  const valuations = playerData?.valuations || []
+  const similarPlayers = useMemo(() => {
+    const raw =
+      playerData?.similarPlayers ||
+      playerData?.similar_players ||
+      playerData?.similar ||
+      []
+
+    const normalized = Array.isArray(raw) ? raw.slice(0, 5) : []
+    return normalized.length ? normalized : MOCK_SIMILAR_PLAYERS
+  }, [playerData])
 
   const formatDisplayValue = (key, fallback) => {
     const value = initialFeatureValues?.[key]
@@ -598,6 +650,8 @@ function Popup({ player, season, isOpen, onClose }) {
                     setLatestChartValue(vals[vals.length - 1].value)
                   }}
                 />
+
+                <SimilarPlayers players={similarPlayers} />
 
                 {!expanded && (
                   <button className="customize-btn" onClick={() => setExpanded(true)}>

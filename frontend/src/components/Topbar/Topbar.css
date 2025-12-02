@@ -82,10 +82,10 @@ body.dark-mode {
   width: 260px;
   padding: .5rem 0.9rem;
   border-radius: 999px;
-  border: none;
-  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: var(--bg-primary);
   color: var(--text-primary);
-  transition: all .25s ease;
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 
 .search-input::placeholder {
@@ -94,8 +94,9 @@ body.dark-mode {
 
 .search-input:focus {
   outline: none;
-  background: var(--bg-hover);
-  box-shadow: 0 0 0 3px var(--accent-transparent);
+  background: var(--bg-secondary);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
 }
 
 .theme-toggle-btn {

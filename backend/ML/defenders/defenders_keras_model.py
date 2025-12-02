@@ -61,10 +61,10 @@ model.compile(
 
 lr_scheduler = tf.keras.callbacks.ReduceLROnPlateau(
     monitor='val_mae',     # what to watch (can also be 'val_mae')
-    factor=0.5,             # how much to reduce the LR (new_lr = lr * factor)
-    patience=5,             # epochs with no improvement before reducing
-    min_lr=1e-6,            # lower bound for learning rate
-    verbose=1               # print updates
+    factor=0.5,            # how much to reduce the LR (new_lr = lr * factor)
+    patience=5,            # epochs with no improvement before reducing
+    min_lr=1e-6,           # lower bound for learning rate
+    verbose=1              # print updates
 )
 
 model.fit(
