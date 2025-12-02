@@ -1,5 +1,7 @@
 from flask import Flask, jsonify, redirect, url_for, request
-from models import db
+from models import db, Player
+from routes.players import serialize_player
+from sqlalchemy.orm import joinedload
 from routes import register_routes
 from flask_cors import CORS
 import pandas as pd
@@ -17,10 +19,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 register_routes(app)
 
-#nn_scaler = joblib.load("models/player_similarity_scaler.pkl")
-#nn_model = joblib.load("models/player_similarity_knn.pkl")
-#players_df = joblib.load("models/player_similarity_players.pkl")
-#feature_cols = joblib.load("models/player_similarity_features.pkl")
+nn_scaler = joblib.load("ML/models/player_similarity_scaler.pkl")
+nn_model = joblib.load("ML/models/player_similarity_knn.pkl")
+players_df = joblib.load("ML/models/player_similarity_players.pkl")
+feature_cols = joblib.load("ML/models/player_similarity_features.pkl")
 
 
 @app.route('/')
@@ -42,7 +44,17 @@ def similar():
     featureValues = payload.get('featureValues') or {}
 
     df_input = pd.json_normalize(featureValues)
-    use_data = df_input[feature_cols]
+
+    for col in feature_cols:
+        if col not in df_input.columns:
+            df_input[col] = 0
+
+    use_data = (
+        df_input[feature_cols]
+        .replace([np.inf, -np.inf], np.nan)
+        .apply(pd.to_numeric, errors='coerce')
+        .fillna(0)
+    )
 
     x = use_data.to_numpy().reshape(1, -1)
     x_scaled = nn_scaler.transform(x)
@@ -52,14 +64,21 @@ def similar():
     similar_players = players_df.iloc[indices[0]].copy()
     similar_players["distance"] = distances[0]
 
-    IDs = similar_players["player_id"].tolist()
-    names = db.match(IDs)
-    
-    response = jsonify({
-        "players": names,
-        "player_ids": IDs,
-        "distances": similar_players["distance"].tolist(),
-    })
+    similar_subset = similar_players.iloc[1:6] if len(similar_players) > 5 else similar_players.iloc[:5]
+
+    IDs = [int(pid) for pid in similar_subset["player_id"].tolist()]
+    players = (
+        Player.query.options(
+            joinedload(Player.seasons),
+            joinedload(Player.valuations)
+        )
+        .filter(Player.id.in_(IDs))
+        .all()
+    )
+    player_map = {player.id: player for player in players}
+    serialized_players = [serialize_player(player_map[pid]) for pid in IDs if pid in player_map]
+
+    response = jsonify(serialized_players)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
