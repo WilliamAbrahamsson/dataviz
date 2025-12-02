@@ -65,7 +65,7 @@ function getSeasonValuation(valuations = [], season) {
   return Number.isFinite(amount) ? amount : null
 }
 
-function Table({ teamName, season, externalPlayer, onClosePlayer }) {
+function Table({ teamName, season, externalPlayer, onClosePlayer, onSelectSeason }) {
   const [players, setPlayers] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -164,6 +164,7 @@ function Table({ teamName, season, externalPlayer, onClosePlayer }) {
         player={selectedPlayer}
         season={season}
         isOpen={!!selectedPlayer}
+        onSelectSeason={onSelectSeason}
         onSelectPlayer={(p) => setSelectedPlayer(p)}
         onClose={() => {
           setSelectedPlayer(null)

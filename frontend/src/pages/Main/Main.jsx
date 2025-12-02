@@ -66,6 +66,7 @@ function Main() {
               teamName={selectedTeam}
               season={selectedSeason}
               externalPlayer={selectedPlayer}
+              onSelectSeason={setSelectedSeason}
               onClosePlayer={() => setSelectedPlayer(null)}
             />
           </div>

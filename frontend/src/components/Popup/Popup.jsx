@@ -190,7 +190,7 @@ const BACKEND_COLUMN_ORDER = [
   'errors_leading_to_shot',
 ]
 
-function Popup({ player, season, isOpen, onClose, onSelectPlayer }) {
+function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason }) {
   const [expanded, setExpanded] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -607,6 +607,7 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer }) {
       })
       .then((data) => {
         if (cancelled) return
+        console.log('Similar players response:', data)
         setSimilarPlayers(Array.isArray(data) ? data : [])
       })
       .catch((err) => {
@@ -699,7 +700,19 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer }) {
                   players={resolvedSimilarPlayers}
                   loading={similarLoading}
                   season={season}
-                  onSelect={(p) => onSelectPlayer?.(p)}
+                  onSelect={(p) => {
+                    const targetSeason = p?.matched_season_year_code || season
+                    const seasonData =
+                      p?.seasons?.find((s) => s?.year_code === targetSeason) ||
+                      p?.seasons?.[0] ||
+                      null
+                    if (targetSeason) onSelectSeason?.(targetSeason)
+                    onSelectPlayer?.({
+                      ...p,
+                      season: targetSeason,
+                      seasonData,
+                    })
+                  }}
                 />
 
                 {!expanded && (

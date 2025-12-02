@@ -61,7 +61,7 @@ function SimilarPlayers({ players = [], loading = false, season, onSelect }) {
               <tr>
                 <th>Player</th>
                 <th>Position</th>
-                <th>Age</th>
+                <th>Season</th>
                 <th>Valuation (€M)</th>
               </tr>
             </thead>
@@ -71,7 +71,7 @@ function SimilarPlayers({ players = [], loading = false, season, onSelect }) {
                 const logo = findTeamLogo(seasonInfo?.club || p.club || p.team || '')
                 const valuation = formatValuation(p)
                 const displayPosition = seasonInfo?.position || p.position || '—'
-                const displayAge = seasonInfo?.age ?? p.age ?? '—'
+                const displaySeason = p?.matched_season_year_code || seasonInfo?.year_code || '—'
                 return (
                   <tr
                     key={`${p.id || p.name || 'similar'}-${idx}`}
@@ -90,7 +90,7 @@ function SimilarPlayers({ players = [], loading = false, season, onSelect }) {
                       <span>{p.name || 'Unknown'}</span>
                     </td>
                     <td>{displayPosition}</td>
-                    <td>{displayAge}</td>
+                    <td>{displaySeason}</td>
                     <td className={`valuation ${valuation === 'NaN' ? 'valuation-nan' : ''}`}>
                       {valuation}
                     </td>
