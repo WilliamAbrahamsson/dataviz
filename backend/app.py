@@ -65,6 +65,7 @@ def similar():
     similar_players["distance"] = distances[0]
 
     similar_subset = similar_players.iloc[1:6] if len(similar_players) > 5 else similar_players.iloc[:5]
+    similar_subset = similar_subset.copy()
 
     IDs = [int(pid) for pid in similar_subset["player_id"].tolist()]
     players = (
@@ -76,7 +77,20 @@ def similar():
         .all()
     )
     player_map = {player.id: player for player in players}
-    serialized_players = [serialize_player(player_map[pid]) for pid in IDs if pid in player_map]
+    serialized_players = []
+    for _, row in similar_subset.iterrows():
+        pid = int(row["player_id"])
+        player = player_map.get(pid)
+        if not player:
+            continue
+
+        serialized = serialize_player(player)
+        season_code = row.get("year_code")
+        serialized_players.append({
+            **serialized,
+            "matched_season_year_code": season_code,
+            "similarity_distance": float(row.get("distance", 0.0)),
+        })
 
     response = jsonify(serialized_players)
     response.headers.add('Access-Control-Allow-Origin', '*')

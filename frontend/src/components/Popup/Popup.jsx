@@ -728,7 +728,12 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer }) {
                             const showDivider = idx === STATIC_FIELDS.length && featureOptions.length > STATIC_FIELDS.length
                             return (
                               <Fragment key={feature.key}>
-                                {showDivider && <div className="feature-separator" aria-hidden="true" />}
+                                {showDivider && (
+                                  <>
+                                    <div className="feature-separator" aria-hidden="true" />
+                                    <p className="feature-sort-note">Features sorted by importance</p>
+                                  </>
+                                )}
                                 <label className="feature-option">
                                   <input
                                     type="checkbox"
