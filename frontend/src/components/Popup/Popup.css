@@ -310,6 +310,13 @@ body.dark-mode .header-icon {
   margin: .35rem 0;
 }
 
+.feature-sort-note {
+  grid-column: 1 / -1;
+  margin: -.15rem 0 .35rem;
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+
 .feature-option {
   display: flex;
   align-items: center;
