@@ -123,5 +123,10 @@
     "logo": "/static/images/teams/norwich.png",
     "top": "64.8%",
     "left": "93.6%"
+  },
+  "Huddersfield": {
+    "logo": "/static/images/teams/huddersfield.png",
+    "top": "55.5%",
+    "left": "70.6%"
   }
 }
