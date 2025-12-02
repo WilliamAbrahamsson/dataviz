@@ -20,7 +20,23 @@ df = df[df["position"].isin(defender_positions)].copy()
 feature_cols = [
     "minutes_played",
     "goals_scored",
-    "passes_into_penalty_area"
+    "passes_into_penalty_area",
+    "age",
+    "goals_plus_assists",
+    "progressive_receptions",
+    "pass_progressive_distance",
+    "progressive_carries",
+    "pass_completion_pct",
+    "crosses_into_pa",
+    "medium_passes_completed",
+    "pass_total_distance",
+    "passes_completed",
+    "tackles_mid_3rd",
+    "passes_into_final_third",
+    "long_passes_completed",
+    "tackles_won",
+    "challenges_tackles",
+    "assists_made"
 ]
 
 # Clean
