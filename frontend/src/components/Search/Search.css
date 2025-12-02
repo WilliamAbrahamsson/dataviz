@@ -7,11 +7,13 @@
 .search-input {
   width: 100%;
   padding: 0.5rem 0.9rem;
-  border-radius: 999px;
+  border-radius: 4px;
   border: 1px solid #ffffff;
   background: var(--bg-primary);
   color: var(--text-primary);
   transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  height: 38px;
+  box-sizing: border-box;
 }
 
 .search-input::placeholder {

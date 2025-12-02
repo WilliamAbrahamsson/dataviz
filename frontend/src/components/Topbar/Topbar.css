@@ -78,10 +78,70 @@ body.dark-mode {
   justify-content: flex-end;
 }
 
+.season-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--bg-primary);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 0.5rem 0.9rem;
+  margin: 1px 0;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+}
+
+.season-label {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.season-select {
+  border: none;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 800;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  padding-right: 0.4rem;
+}
+
+.season-select:focus {
+  outline: none;
+  box-shadow: none;
+  background: var(--bg-secondary);
+}
+
+.season-caret {
+  font-weight: 800;
+  color: var(--text-muted);
+  pointer-events: none;
+  font-size: 0.9rem;
+  margin-left: 0.1rem;
+}
+
+.season-select option {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.season-picker:hover {
+  border-color: #ffffff;
+  background: var(--bg-secondary);
+  box-shadow: 0 3px 12px var(--card-shadow);
+}
+
 .search-input {
   width: 260px;
   padding: .5rem 0.9rem;
-  border-radius: 999px;
+  border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.9);
   background: var(--bg-primary);
   color: var(--text-primary);

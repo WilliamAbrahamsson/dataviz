@@ -3,13 +3,7 @@ import initialPositions from './mapd.json'
 import seasonTeams from './teamsd.json'
 import './Map.css'
 
-function Map({ onTeamSelect, onSeasonChange }) {
-  const allSeasons = Object.keys(seasonTeams).sort((a, b) => {
-    const ay = parseInt(String(a).slice(0, 4), 10) || 0
-    const by = parseInt(String(b).slice(0, 4), 10) || 0
-    return by - ay
-  })
-  const [season, setSeason] = useState(allSeasons[0])
+function Map({ onTeamSelect, season }) {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
   const [positions, setPositions] = useState(() => {
@@ -38,15 +32,14 @@ function Map({ onTeamSelect, onSeasonChange }) {
     return () => observer.disconnect()
   }, [])
 
-  // Notify parent and select a random team
+  // Select a random team when season changes
   useEffect(() => {
-    onSeasonChange?.(season)
     const teams = seasonTeams[season] || []
     if (teams.length && onTeamSelect) {
       const randomTeam = teams[Math.floor(Math.random() * teams.length)]
       onTeamSelect(randomTeam)
     }
-  }, [season, onSeasonChange, onTeamSelect])
+  }, [season, onTeamSelect])
 
   const teamsInSeason = seasonTeams[season] || []
   const mapImage = isDarkMode
@@ -55,21 +48,7 @@ function Map({ onTeamSelect, onSeasonChange }) {
 
   return (
     <div className="map-container">
-      <div className="season-selector">
-        <span className="season-label">Season:</span>
-        <select
-          className="season-select"
-          id="season"
-          value={season}
-          onChange={(e) => setSeason(e.target.value)}
-        >
-          {allSeasons.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </select>
-        <span className="divider" />
+      {/* <div className="season-selector">
         <label className="edit-toggle">
           <input
             type="checkbox"
@@ -78,7 +57,7 @@ function Map({ onTeamSelect, onSeasonChange }) {
           />
           Edit positions
         </label>
-      </div>
+      </div> */}
 
       <div
         className={`map-wrapper${isEditing ? ' editing' : ''}`}

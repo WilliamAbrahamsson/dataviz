@@ -67,10 +67,6 @@ function TeamInfo({ teamName, season }) {
           <img src={teamInfo.logo} alt={teamName} className="team-logo-card" />
           <div className="team-details">
             <h2 className="team-name">{teamName.toUpperCase()}</h2>
-            <p>
-              Current Players: <strong>{stats.totalPlayers}</strong> (With valuation:{' '}
-              <strong>{stats.withValuation}</strong>)
-            </p>
             <div className="value-badges">
               <span className="badge">
                 <span className="badge-label">Current Players</span>

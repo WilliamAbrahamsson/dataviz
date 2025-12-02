@@ -21,11 +21,18 @@
   color: var(--text-primary);
 }
 
+.team-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
 .value-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-top: 0.4rem;
+  margin-top: 0.2rem;
   align-items: center;
 }
 
