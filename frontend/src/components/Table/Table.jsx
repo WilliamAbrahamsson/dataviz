@@ -164,6 +164,7 @@ function Table({ teamName, season, externalPlayer, onClosePlayer }) {
         player={selectedPlayer}
         season={season}
         isOpen={!!selectedPlayer}
+        onSelectPlayer={(p) => setSelectedPlayer(p)}
         onClose={() => {
           setSelectedPlayer(null)
           onClosePlayer?.()

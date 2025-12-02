@@ -19,6 +19,15 @@ const findTeamLogo = (clubName = '') => {
   return DEFAULT_LOGO
 }
 
+const pickSeason = (player = {}, season) => {
+  if (!player?.seasons) return null
+  if (season) {
+    const exact = player.seasons.find((s) => s?.year_code === season)
+    if (exact) return exact
+  }
+  return player.seasons[0] || null
+}
+
 const formatValuation = (player) => {
   const amount =
     player?.valuations?.[0]?.amount ??
@@ -31,7 +40,7 @@ const formatValuation = (player) => {
   return `€${(Number(amount) / 1_000_000).toFixed(1)}M`
 }
 
-function SimilarPlayers({ players = [] }) {
+function SimilarPlayers({ players = [], loading = false, season, onSelect }) {
   const rows = Array.isArray(players) ? players.slice(0, 5) : []
 
   return (
@@ -42,7 +51,9 @@ function SimilarPlayers({ players = [] }) {
       </div>
 
       <div className="similar-players-table">
-        {rows.length === 0 ? (
+        {loading ? (
+          <p className="similar-players-empty">Loading similar players...</p>
+        ) : rows.length === 0 ? (
           <p className="similar-players-empty">No similar players available yet.</p>
         ) : (
           <table className="player-table compact">
@@ -56,16 +67,30 @@ function SimilarPlayers({ players = [] }) {
             </thead>
             <tbody>
               {rows.map((p, idx) => {
-                const logo = findTeamLogo(p.club || p.team || '')
+                const seasonInfo = pickSeason(p, season)
+                const logo = findTeamLogo(seasonInfo?.club || p.club || p.team || '')
                 const valuation = formatValuation(p)
+                const displayPosition = seasonInfo?.position || p.position || '—'
+                const displayAge = seasonInfo?.age ?? p.age ?? '—'
                 return (
-                  <tr key={`${p.id || p.name || 'similar'}-${idx}`}>
+                  <tr
+                    key={`${p.id || p.name || 'similar'}-${idx}`}
+                    className={onSelect ? 'clickable-row' : ''}
+                    onClick={() => {
+                      if (!onSelect) return
+                      onSelect(p)
+                    }}
+                  >
                     <td className="player-cell">
-                      <img src={logo} alt={p.club || p.team || 'Club'} className="player-logo" />
+                      <img
+                        src={logo}
+                        alt={seasonInfo?.club || p.club || p.team || 'Club'}
+                        className="player-logo"
+                      />
                       <span>{p.name || 'Unknown'}</span>
                     </td>
-                    <td>{p.position || '—'}</td>
-                    <td>{p.age ?? '—'}</td>
+                    <td>{displayPosition}</td>
+                    <td>{displayAge}</td>
                     <td className={`valuation ${valuation === 'NaN' ? 'valuation-nan' : ''}`}>
                       {valuation}
                     </td>

@@ -190,7 +190,7 @@ const BACKEND_COLUMN_ORDER = [
   'errors_leading_to_shot',
 ]
 
-function Popup({ player, season, isOpen, onClose }) {
+function Popup({ player, season, isOpen, onClose, onSelectPlayer }) {
   const [expanded, setExpanded] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -200,6 +200,8 @@ function Popup({ player, season, isOpen, onClose }) {
   const [defaultPrediction, setDefaultPrediction] = useState(null)
   const [customPrediction, setCustomPrediction] = useState(null)
   const [latestChartValue, setLatestChartValue] = useState(null)
+  const [similarPlayers, setSimilarPlayers] = useState([])
+  const [similarLoading, setSimilarLoading] = useState(false)
 
   const [featureValues, setFeatureValues] = useState({})
   const [initialFeatureValues, setInitialFeatureValues] = useState({})
@@ -293,6 +295,8 @@ function Popup({ player, season, isOpen, onClose }) {
       setDefaultPrediction(null)
       setCustomPrediction(null)
       setLatestChartValue(null)
+      setSimilarPlayers([])
+      setSimilarLoading(false)
     }
   }, [isOpen])
 
@@ -371,16 +375,17 @@ function Popup({ player, season, isOpen, onClose }) {
     if (e.target === e.currentTarget) onClose()
   }
 
-  const similarPlayers = useMemo(() => {
+  const resolvedSimilarPlayers = useMemo(() => {
     const raw =
       playerData?.similarPlayers ||
       playerData?.similar_players ||
       playerData?.similar ||
+      similarPlayers ||
       []
 
     const normalized = Array.isArray(raw) ? raw.slice(0, 5) : []
     return normalized.length ? normalized : MOCK_SIMILAR_PLAYERS
-  }, [playerData])
+  }, [playerData, similarPlayers])
 
   const formatDisplayValue = (key, fallback) => {
     const value = initialFeatureValues?.[key]
@@ -579,6 +584,40 @@ function Popup({ player, season, isOpen, onClose }) {
     }
   }, [initialFeatureValues, isOpen])
 
+  useEffect(() => {
+    if (!isOpen) return
+    if (!initialFeatureValues || Object.keys(initialFeatureValues).length === 0) return
+
+    let cancelled = false
+    setSimilarLoading(true)
+
+    fetch(`${API_BASE_URL}/similar`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ featureValues: buildApiPayload(initialFeatureValues) }),
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('Failed to fetch similar players')
+        return response.json()
+      })
+      .then((data) => {
+        if (cancelled) return
+        setSimilarPlayers(Array.isArray(data) ? data : [])
+      })
+      .catch((err) => {
+        if (cancelled) return
+        console.error('Error loading similar players:', err)
+        setSimilarPlayers([])
+      })
+      .finally(() => {
+        if (!cancelled) setSimilarLoading(false)
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [initialFeatureValues, isOpen, buildApiPayload])
+
   const handleEstimate = () => {
     if (!player) return
     if (!hasCustomChanges) return
@@ -651,7 +690,12 @@ function Popup({ player, season, isOpen, onClose }) {
                   }}
                 />
 
-                <SimilarPlayers players={similarPlayers} />
+                <SimilarPlayers
+                  players={resolvedSimilarPlayers}
+                  loading={similarLoading}
+                  season={season}
+                  onSelect={(p) => onSelectPlayer?.(p)}
+                />
 
                 {!expanded && (
                   <button className="customize-btn" onClick={() => setExpanded(true)}>
