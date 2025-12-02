@@ -414,7 +414,11 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer }) {
   const handleFeatureChange = (featureKey, value) => {
     const option = featureOptions.find((opt) => opt.key === featureKey)
     const parsedValue =
-      option?.type === 'number' ? (value === '' ? '' : Number(value)) : value
+      option?.type === 'number'
+        ? value === ''
+          ? ''
+          : Math.max(0, Number(value))
+        : value
     setFeatureValues((prev) => ({
       ...prev,
       [featureKey]: parsedValue,
@@ -533,6 +537,7 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer }) {
       <div className="input-reset-row">
         <input
           type={option.type === 'number' ? 'number' : 'text'}
+          min={option.type === 'number' ? 0 : undefined}
           value={
             featureValues[featureKey] === '' || featureValues[featureKey] === undefined
               ? ''

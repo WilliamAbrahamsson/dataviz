@@ -71,22 +71,32 @@ function TeamInfo({ teamName, season }) {
               Current Players: <strong>{stats.totalPlayers}</strong> (With valuation:{' '}
               <strong>{stats.withValuation}</strong>)
             </p>
-            <p>
-              Total Squad Value:{' '}
-              <strong>
-                {stats.totalValue > 0
-                  ? `€${(stats.totalValue / 1_000_000_000).toFixed(3)}B`
-                  : '—'}
-              </strong>
-            </p>
-            <p>
-              Average Player Value:{' '}
-              <strong>
-                {stats.avgValue > 0
-                  ? `€${(stats.avgValue / 1_000_000).toFixed(1)}M`
-                  : '—'}
-              </strong>
-            </p>
+            <div className="value-badges">
+              <span className="badge">
+                <span className="badge-label">Current Players</span>
+                <span className="badge-value">{stats.totalPlayers}</span>
+              </span>
+              <span className="badge">
+                <span className="badge-label">With Valuation</span>
+                <span className="badge-value">{stats.withValuation}</span>
+              </span>
+              <span className="badge">
+                <span className="badge-label">Total Squad Value</span>
+                <span className="badge-value">
+                  {stats.totalValue > 0
+                    ? `€${(stats.totalValue / 1_000_000_000).toFixed(3)}B`
+                    : '—'}
+                </span>
+              </span>
+              <span className="badge">
+                <span className="badge-label">Avg Player Value</span>
+                <span className="badge-value">
+                  {stats.avgValue > 0
+                    ? `€${(stats.avgValue / 1_000_000).toFixed(1)}M`
+                    : '—'}
+                </span>
+              </span>
+            </div>
           </div>
         </>
       )}
