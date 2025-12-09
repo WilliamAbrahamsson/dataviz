@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback, Fragment } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import { X, ArrowLeft, ArrowRight } from 'lucide-react'
 import ChartWrapper from './Chart/ChartWrapper/ChartWrapper.jsx'
 import SimilarPlayers from './SimilarPlayers/SimilarPlayers.jsx'
@@ -208,6 +208,7 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
   const [selectedFeatures, setSelectedFeatures] = useState([])
   const [clubLogo, setClubLogo] = useState('/static/images/teams/default_logo.png')
   const [isFeatureDropdownOpen, setIsFeatureDropdownOpen] = useState(false)
+  const [featureSearch, setFeatureSearch] = useState('')
   const [featureLists, setFeatureLists] = useState({
     attackers: [],
     defenders: [],
@@ -247,15 +248,30 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
     [currentPosition, featureLists]
   )
 
+  const editableFeatureOrder = useMemo(
+    () => featureOrder.filter((key) => !STATIC_FIELDS.includes(key)),
+    [featureOrder]
+  )
+
   const featureOptions = useMemo(
     () =>
-      featureOrder.map((key) => ({
+      editableFeatureOrder.map((key) => ({
         key,
         label: labelize(key),
         type: TEXT_FEATURES.has(key) ? 'text' : 'number',
       })),
-    [featureOrder]
+    [editableFeatureOrder]
   )
+
+  const filteredFeatureOptions = useMemo(() => {
+    const term = featureSearch.trim().toLowerCase()
+    if (!term) return featureOptions
+    return featureOptions.filter(
+      (opt) =>
+        opt.label.toLowerCase().includes(term) ||
+        opt.key.toLowerCase().includes(term)
+    )
+  }, [featureOptions, featureSearch])
 
   const buildFeatureValues = useCallback(
     (stats = {}) => {
@@ -370,19 +386,23 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
   }, [])
 
   useEffect(() => {
-    if (!featureOrder.length) return
+    if (!editableFeatureOrder.length) return
     setSelectedFeatures((prev) => {
-      const validPrev = prev.filter((key) => featureOrder.includes(key))
+      const validPrev = prev.filter((key) => editableFeatureOrder.includes(key))
       if (validPrev.length) return validPrev
-      const defaults = featureOrder.filter((key) => !STATIC_FIELDS.includes(key)).slice(0, 6)
+      const defaults = editableFeatureOrder.slice(0, 6)
       if (defaults.length) return defaults
-      return featureOrder.slice(0, Math.min(6, featureOrder.length))
+      return editableFeatureOrder.slice(0, Math.min(6, editableFeatureOrder.length))
     })
-  }, [featureOrder])
+  }, [editableFeatureOrder])
 
   useEffect(() => {
     if (!expanded) setIsFeatureDropdownOpen(false)
   }, [expanded])
+
+  useEffect(() => {
+    if (!isFeatureDropdownOpen) setFeatureSearch('')
+  }, [isFeatureDropdownOpen])
 
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) onClose()
@@ -444,6 +464,15 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
         ? prev.filter((key) => key !== featureKey)
         : [...prev, featureKey]
     )
+  }
+
+  const handleSelectAllFeatures = () => {
+    const allKeys = filteredFeatureOptions.map((opt) => opt.key)
+    setSelectedFeatures(allKeys)
+  }
+
+  const handleDeselectAllFeatures = () => {
+    setSelectedFeatures([])
   }
 
   const handleResetAll = () => {
@@ -750,27 +779,49 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
                       </button>
                       {isFeatureDropdownOpen && (
                         <div className="feature-dropdown-list">
-                          {featureOptions.map((feature, idx) => {
-                            const showDivider = idx === STATIC_FIELDS.length && featureOptions.length > STATIC_FIELDS.length
-                            return (
-                              <Fragment key={feature.key}>
-                                {showDivider && (
-                                  <>
-                                    <div className="feature-separator" aria-hidden="true" />
-                                    <p className="feature-sort-note">Features sorted by importance</p>
-                                  </>
-                                )}
-                                <label className="feature-option">
-                                  <input
-                                    type="checkbox"
-                                    checked={selectedFeatures.includes(feature.key)}
-                                    onChange={() => toggleFeatureSelection(feature.key)}
-                                  />
-                                  {feature.label}
-                                </label>
-                              </Fragment>
-                            )
-                          })}
+                          <div className="feature-dropdown-header">
+                            <strong>Features sorted by importance</strong>
+                          </div>
+
+                          <div className="feature-dropdown-actions">
+                            <input
+                              type="text"
+                              className="feature-search"
+                              placeholder="Search features"
+                              value={featureSearch}
+                              onChange={(e) => setFeatureSearch(e.target.value)}
+                            />
+                            <button
+                              type="button"
+                              className="select-all-btn"
+                              onClick={handleSelectAllFeatures}
+                              disabled={!filteredFeatureOptions.length}
+                            >
+                              Select All
+                            </button>
+                            <button
+                              type="button"
+                              className="deselect-all-btn"
+                              onClick={handleDeselectAllFeatures}
+                              disabled={selectedFeatures.length === 0}
+                            >
+                              Deselect All
+                            </button>
+                          </div>
+                          {filteredFeatureOptions.length === 0 ? (
+                            <p className="feature-empty">No features match your search.</p>
+                          ) : (
+                            filteredFeatureOptions.map((feature) => (
+                              <label className="feature-option" key={feature.key}>
+                                <input
+                                  type="checkbox"
+                                  checked={selectedFeatures.includes(feature.key)}
+                                  onChange={() => toggleFeatureSelection(feature.key)}
+                                />
+                                {feature.label}
+                              </label>
+                            ))
+                          )}
                         </div>
                       )}
                     </div>
