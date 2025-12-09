@@ -371,7 +371,18 @@ body.dark-mode .header-icon {
   font-size: .9rem;
 }
 
+/* Ensure the page's scrolling container is the body (or the element that scrolls).
+   If some parent has overflow:auto/hidden, sticky will be relative to that parent. */
+
 .customize-btn {
+  position: sticky;
+  bottom: 0.5rem;        /* distance from viewport bottom when it "sticks" */
+  z-index: 999;        /* keep it above content */
+  margin-left: auto;   /* center / align as you prefer */
+  margin-right: auto;
+  display: inline-block;
+
+  /* existing styles */
   background: #fff;
   color: #0b0f17;
   border: none;
@@ -381,7 +392,9 @@ body.dark-mode .header-icon {
   cursor: pointer;
   transition: all .22s ease;
   text-align: center;
+  width: 400px;
 }
+
 
 .customize-btn:hover {
   filter: brightness(1.05);
