@@ -607,6 +607,19 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
       body: JSON.stringify({ featureValues: buildApiPayload(values) }),
     }).then((response) => response.json())
 
+  const callSimilar = useCallback(
+    (values) =>
+      fetch(`${API_BASE_URL}/similar`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ featureValues: buildApiPayload(values) }),
+      }).then((response) => {
+        if (!response.ok) throw new Error('Failed to fetch similar players')
+        return response.json()
+      }),
+    [buildApiPayload]
+  )
+
   useEffect(() => {
     if (!isOpen) return
     if (!initialFeatureValues || Object.keys(initialFeatureValues).length === 0) return
@@ -638,15 +651,7 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
     let cancelled = false
     setSimilarLoading(true)
 
-    fetch(`${API_BASE_URL}/similar`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ featureValues: buildApiPayload(initialFeatureValues) }),
-    })
-      .then((response) => {
-        if (!response.ok) throw new Error('Failed to fetch similar players')
-        return response.json()
-      })
+    callSimilar(initialFeatureValues)
       .then((data) => {
         if (cancelled) return
         console.log('Similar players response:', data)
@@ -664,7 +669,7 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
     return () => {
       cancelled = true
     }
-  }, [initialFeatureValues, isOpen, buildApiPayload])
+  }, [initialFeatureValues, isOpen, callSimilar])
 
   const handleEstimate = () => {
     if (!player) return
@@ -679,6 +684,20 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
       })
       .catch((error) => {
         console.error('Error estimating value:', error)
+      })
+
+    setSimilarLoading(true)
+    callSimilar(featureValues)
+      .then((data) => {
+        console.log('Similar players response (custom features):', data)
+        setSimilarPlayers(Array.isArray(data) ? data : [])
+      })
+      .catch((err) => {
+        console.error('Error loading similar players with custom features:', err)
+        setSimilarPlayers([])
+      })
+      .finally(() => {
+        setSimilarLoading(false)
       })
   }
 
