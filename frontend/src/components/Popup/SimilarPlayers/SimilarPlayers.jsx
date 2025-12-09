@@ -1,26 +1,13 @@
-import mapPositions from '../../Map/mapd.json'
+import { findTeamLogo as resolveTeamLogo, DEFAULT_TEAM_LOGO } from '../../../utils/teamLogos.js'
 import '../../Table/Table.css'
 import './SimilarPlayers.css'
 
-const DEFAULT_LOGO = '/static/images/teams/default_logo.png'
-
-const normalize = (name = '') =>
-  name.toLowerCase().replace(/football club|fc|afc|city|united|\.|-/g, '').trim()
+const DEFAULT_LOGO = DEFAULT_TEAM_LOGO
 
 const normalizeSeasonCode = (code = '') =>
   String(code).toLowerCase().replace(/[^0-9]/g, '')
 
-const findTeamLogo = (clubName = '') => {
-  if (!clubName) return DEFAULT_LOGO
-  const normalized = normalize(clubName)
-
-  for (const key of Object.keys(mapPositions)) {
-    const nk = normalize(key)
-    if (normalized.includes(nk) || nk.includes(normalized)) return mapPositions[key].logo
-  }
-
-  return DEFAULT_LOGO
-}
+const findTeamLogo = (clubName = '') => resolveTeamLogo(clubName) || DEFAULT_LOGO
 
 const pickSeason = (player = {}, season) => {
   if (!player?.seasons) return null

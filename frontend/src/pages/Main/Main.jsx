@@ -37,11 +37,15 @@ function Main() {
   useEffect(() => {
     if (!selectedSeason) return
     const teams = seasonTeams[selectedSeason] || []
-    if (teams.length) {
-      const randomTeam = teams[Math.floor(Math.random() * teams.length)]
-      setSelectedTeam(randomTeam)
+    if (!teams.length) return
+
+    if (selectedTeam && teams.includes(selectedTeam)) {
+      return
     }
-  }, [selectedSeason])
+
+    const randomTeam = teams[Math.floor(Math.random() * teams.length)]
+    setSelectedTeam(randomTeam)
+  }, [selectedSeason, selectedTeam])
 
   return (
     <div className="app-root">

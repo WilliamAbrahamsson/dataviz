@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Popup from '../Popup/Popup.jsx'
-import mapPositions from '../Map/mapd.json'
+import { findTeamLogo } from '../../utils/teamLogos.js'
 import './Table.css'
 
 function parseSeasonEndYear(season) {
@@ -79,10 +79,7 @@ function Table({
   const [error, setError] = useState(null)
   const [selectedPlayer, setSelectedPlayer] = useState(null)
 
-  const teamLogo =
-    teamName && mapPositions[teamName]
-      ? mapPositions[teamName].logo
-      : '/static/images/teams/default_logo.png'
+  const teamLogo = findTeamLogo(teamName)
 
   useEffect(() => {
     if (!teamName || !season) return

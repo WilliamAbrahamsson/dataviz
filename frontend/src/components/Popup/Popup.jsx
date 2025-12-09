@@ -3,6 +3,7 @@ import { X, ArrowLeft, ArrowRight } from 'lucide-react'
 import ChartWrapper from './Chart/ChartWrapper/ChartWrapper.jsx'
 import SimilarPlayers from './SimilarPlayers/SimilarPlayers.jsx'
 import mapPositions from '../Map/mapd.json'
+import { findTeamLogo as resolveTeamLogo } from '../../utils/teamLogos.js'
 import './Popup.css'
 
 const API_BASE_URL = 'http://127.0.0.1:5000'
@@ -215,8 +216,6 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
     midfielders: [],
   })
 
-  const normalize = (name) =>
-    name?.toLowerCase().replace(/football club|fc|afc|city|united|\.|-/g, '').trim()
   const normalizeSeasonCode = (code = '') => String(code).toLowerCase().replace(/[^0-9]/g, '')
 
   const findSeasonData = (playerObj, seasonCode) => {
@@ -231,15 +230,7 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
     return playerObj.seasons[0] || null
   }
 
-  const findTeamLogo = (clubName) => {
-    if (!clubName) return '/static/images/teams/default_logo.png'
-    const n = normalize(clubName)
-    for (const key of Object.keys(mapPositions)) {
-      const nk = normalize(key)
-      if (n.includes(nk) || nk.includes(n)) return mapPositions[key].logo
-    }
-    return '/static/images/teams/default_logo.png'
-  }
+  const findClubLogo = useCallback((clubName) => resolveTeamLogo(clubName), [])
 
   const currentPosition = seasonData?.position || playerData?.position || player?.position || ''
 
@@ -303,7 +294,7 @@ function Popup({ player, season, isOpen, onClose, onSelectPlayer, onSelectSeason
         const s = data.seasons?.find((x) => x.year_code === season) || player.seasonData || {}
         setSeasonData(s)
         setCustomPrediction(null)
-        setClubLogo(findTeamLogo(s.club))
+        setClubLogo(findClubLogo(s.club))
         setLoading(false)
       })
       .catch((err) => {

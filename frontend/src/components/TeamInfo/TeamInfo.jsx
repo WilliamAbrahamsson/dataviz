@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './TeamInfo.css'
-import mapPositions from '../Map/mapd.json'
+import { resolveTeamInfo } from '../../utils/teamLogos.js'
 
 function TeamInfo({ teamName, season, refreshKey = 0 }) {
   const [loading, setLoading] = useState(false)
@@ -12,7 +12,7 @@ function TeamInfo({ teamName, season, refreshKey = 0 }) {
     avgValue: 0,
   })
 
-  const teamInfo = teamName ? mapPositions[teamName] : null
+  const teamInfo = teamName ? resolveTeamInfo(teamName) : null
 
   useEffect(() => {
     if (!teamName || !season) return
