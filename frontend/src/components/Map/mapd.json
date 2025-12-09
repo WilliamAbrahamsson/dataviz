@@ -128,5 +128,20 @@
     "logo": "/static/images/teams/huddersfield.png",
     "top": "55.5%",
     "left": "70.6%"
+  },
+  "Stoke": {
+    "logo": "/static/images/teams/stoke.png",
+    "top": "60.3%",
+    "left": "58.1%"
+  },
+  "Swansea": {
+    "logo": "/static/images/teams/swansea.png",
+    "top": "75.4%",
+    "left": "44.3%"
+  },
+  "West Brom": {
+    "logo": "/static/images/teams/west_brom.png",
+    "top": "70.2%",
+    "left": "55.3%"
   }
 }
